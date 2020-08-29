@@ -1,0 +1,78 @@
+\usepackage[T2A]{fontenc} % кодировка
+\usepackage[utf8]{inputenc} % кодировка исходного текста
+\usepackage[english,russian]{babel} % локализация и переносы
+
+% colors
+\usepackage[dvipsnames,table,xcdraw]{xcolor}          
+\definecolor{light-blue}{rgb}{0.8,0.85,1}
+
+
+%symbols
+\usepackage{upgreek}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} %math
+% теоремы
+\theoremstyle{plain}
+\newtheorem{definition}{Определение}[section] 
+\newtheorem{theorem}{Теорема}
+\newtheorem{example}{Пример}
+\numberwithin{equation}{section}
+
+
+
+% гиперссылки:
+\usepackage{hyperref}
+\definecolor{darkblue}{HTML}{0000A0}
+\definecolor{linkcolor}{HTML}{0000FF}
+\hypersetup{pdfstartview=FitH, citecolor=linkcolor, linkcolor=darkblue,urlcolor=red, colorlinks=true}
+
+
+% графика:
+\usepackage{graphics}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg, .eps}
+\usepackage{caption} % а что без этого летит? (забыл)
+\usepackage[section,above,below]{placeins} % управление плавающими объектами (?)
+\usepackage{floatflt}
+\usepackage{framed}
+
+
+
+% работа с таблицами (?)
+\usepackage{multirow}
+\newcommand{\specialcell}[2][c]{%
+	\begin{tabular}[#1]{@{}c@{}}#2\end{tabular}} % перенос строки в ячейке таблицы при пакете multirow
+
+
+\newcommand{\comment}[1]{} % for multiline comments
+
+% defining red box
+\newsavebox{\selvestebox}
+\newenvironment{colbox}[1]
+{\newcommand\colboxcolor{#1}%
+	\begin{lrbox}{\selvestebox}%
+		\begin{minipage}{\dimexpr\columnwidth-2\fboxsep\relax}}
+		{\end{minipage}\end{lrbox}%
+	\begin{center}
+		\colorbox[HTML]{\colboxcolor}{\usebox{\selvestebox}}
+\end{center}}
+
+% предметный указатель и библиография
+\usepackage{makeidx}
+\makeindex
+\usepackage[nottoc]{tocbibind}
+
+% разметка и стиль (???)
+\usepackage[left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[L]{\rightmark}
+%\lhead{ краткое название}
+\chead{}
+\rhead{\thepage}
+\cfoot{} % get rid of the page number 
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{0pt}
+\usepackage{indentfirst}
+
+\usepackage{framed}
+\usepackage{fancyvrb} %for fraim aroun verbatim
