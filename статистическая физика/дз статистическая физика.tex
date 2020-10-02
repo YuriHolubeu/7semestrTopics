@@ -27,76 +27,245 @@
 \clearpage
 \part{упражнения}
 
-\section{модели статфиза}
 
-(потом назову главы по типам)
+\begin{task}\textbf{1}
 
-\begin{task}textbf{1}
+$ N $ молекул идеального газа в объеме $ V $. 
+Определить вероятность того, что в объеме $v < V$ находится $ n $ молекул.
 
-$ N $ молекул идеального газа в объеме $ V $. Определить вероятность того, что в объеме $v < V$ находится $ n $ молекул.
+Получить приближенное выражение, когда  $v \ll V $. 
+Найти среднее число частиц $\overline{n}$ в объеме $ v $, его среднюю абсолютную и относительную флуктуации.  
 
-Получить приближенное выражение, когда  $v \le V $. 
-Найти среднее число частиц n в объеме v, его среднюю абсолютную и относительную флуктуации. Найти вид распределения в случае v V, n  1. 
+Вероятность попадания ровно одной молекулы в объем $ V$ равна $ p=\frac{v}{V}$. 
+Поэтому вероятность попадания ровно $n$ молекул в объем $V$ равна 
+\[ p^n (1-p)^{N-n} \]
+В объем сосуда могут попасть разные молекулы, всего нужных нам комбинаций:
+\[ C_N^n =\frac{N!}{n!(N-n)!}\]
+Поэтому итоговая вероятность:
+\[ P(n)=\frac{N!}{n!(N-n)!}p^n (1-p)^{N-n} \]
+
+Поищем предел $v \ll V$,  для него можно считать, что $ p\ll 1, n\gg 1$, также можно предположить, что $ np=\lambda$, которое конечно и не слишком мало, не слишком велико.
+В таком случае имеется известный предел - распределение становится распределением Пуассона.
+\[ P(n)=\frac{\lambda^k}{k!}e^{-\lambda}=
+\frac{np^k}{k!}e^{-np}\]
+
+Среднее значение $\overline{n}$ найдется с помощью
+\[ \overline{n}=\int_0^N n P(n) dn= \]
+
+???
+
+а вот про флуктуации я хз.
+
+\end{task}
+
+
+\begin{task}\textbf{2}
+
+Вычислить $ C_p-C_v$ в  переменных $ V, T $ и $ P, T$. 
+
+Определить $ C_p-C_v$ для больцмановского газа,
+газа Ван-дер-Ваальса,фермии бозе-газа и черного излучения.
+
+Первое начало термодинамики:
+$$
+\delta Q=d U+p d V,
+$$
+поэтому:
+$$
+C_{V}=\left(\frac{\partial U}{\partial T}\right)_{V}
+$$
+Считая внутреннюю энергию $U$ функцией температуры и объема, можем записать
+\begin{equation}\label{1}
+C_{p}=C_{V}+\left[\left(\frac{\partial U}{\partial V}\right)_{T}+p\right]\left(\frac{\partial V}{\partial T}\right)_{p}
+\end{equation}
+Выражение в квадратных скобках в правой части легко вычислить, воспользовавшись фундаментальным равенством Гиббса:
+$$
+T d S=d U+p d V
+$$
+Имеем:
+$$
+T\left(\frac{\partial S}{\partial V}\right)_{T}=\left(\frac{\partial U}{\partial V}\right)_{T}+p
+$$
+Далее, из соотношения
+$$
+d F=-S d T-p d V
+$$
+следует равенство
+$$
+\left(\frac{\partial S}{\partial V}\right)_{T}=\left(\frac{\partial p}{\partial T}\right)_{V}
+$$
+Поэтому
+$$
+\left(\frac{\partial U}{\partial V}\right)_{T}+p=T\left(\frac{\partial p}{\partial T}\right)_{V}
+$$
+Теперь с помощью соотношения \ref{1} получаем
+$$
+C_{p}-C_{V}=T\left(\frac{\partial p}{\partial T}\right)_{V}\left(\frac{\partial V}{\partial T}\right)_{P}
+$$
+
+И используя 
+\[ \left(\frac{\partial z}{\partial x}\right)_{y}\left(\frac{\partial x}{\partial y}\right)_{z}\left(\frac{\partial y}{\partial z}\right)_{x}=-1, \]
+запишем:
+\begin{equation}\label{2}
+C_{p}-C_{V}=
+-T\left(\frac{\partial V}{\partial T}\right)_{p}^{2}\left(\frac{\partial V}{\partial p}\right)_{T}^{-1}
+\end{equation}
+или
+\begin{equation}\label{3}
+C_{p}-C_{V}=
+-T\left(\frac{\partial p}{\partial T}\right)_{V}^{2}\left(\frac{\partial p}{\partial V}\right)_{T}^{-1}
+\end{equation}
+
+
+Теперь применим эти формулы для больцмановского газа, для которого $ pV=\nu RT $, имеем:
+\[ \left(\frac{\partial V}{\partial T}\right)_{p}=\frac{\nu R}{p} \]
+\[\left(\frac{\partial V}{\partial p}\right)_{T} =-\frac{\nu RT}{p^2} \]
+Поэтому при подстановке в \ref{2} много множителей сокращаются и имеем:
+\[ C_p-C_V=\nu R \]
+
+Теперь применим эти формулы для газа Ван-дер-Ваальса, для которого $ \left(p+\frac{a\nu^2}{V^{2}}\right)\left(\frac{V}{\nu}-b\right)=R T$. 
+Будем для просто ты считать, что $\nu=1$. 
+И также тут разумнее подставлять все в \ref{3}
+Получаем:
+\[ \left(\frac{\partial p}{\partial T}\right)_{V}=\frac{R}{V-b} \]
+\[ \left(\frac{\partial p}{\partial V}\right)_{T}=-\frac{RT}{(V-b)^2}+\frac{2a}{V^3} \]
+Таким образом, подставляем и получаем:
+\[ C_p-C_V=\frac{TR^2}{RT-\frac{a}{V}\left(1-\frac{b}{V}\right)} \]
+
+
+Теперь применим эти формулы для фермии и бозе-газа 
+
+
+
+???
+
+Теперь применим эти формулы для черного излучения.
+
+
+????
 
 
 \end{task}
 
 
-\begin{task}
+\begin{task}\textbf{3}
 
-2
-Вычислить $ c_p-C_v$ в  переменных V, T и P, T. 
+Вычислить число состояний одноатомного больцмановского газа.
 
-Определить $ c_p-C_v$ для больцмановского газа,
-газа Ван-дер-Ваальса,фермии бозе-газа и черного излучения
+Пусть имеется частиц $N$ частиц в объеме $V$. 
+Поступательное движение частиц всегда квазиклассично. 
+В классической механике состояние системы характеризуется точкой в $6 N-$ мерном фазовом пространстве
+\begin{equation}\label{ss}
+\alpha=
+\left(\mathbf{r}_{1}, \mathbf{p}_{1}, \mathbf{r}_{2}, \mathbf{p}_{2}, \ldots, \mathbf{r}_{\mathbf{N}}, \mathbf{p}_{\mathbf{N}}\right)
+\end{equation}
+Число точек в элементе 6 -мерного фазового объема $d r^{3} d p^{3}$ согласно правилу Бора-Зоммерфельда равно отношению этого объема к $(2 \pi \hbar)^{3} .$ 
+Обобщение этого правила на случай $N$ одинаковых частиц дает дифференциал числа состояний
+$$
+d \Gamma_{\alpha}=\frac{1}{N !} \prod_{i=1}^{N} \frac{d^{3} r_{i} d^{3} p_{i}}{(2 \pi \hbar)^{3}}
+$$
+Произведение дифференциалов поделено на $N !$ для того, чтобы все конфигурации, положения частиц в $6 N$ -мерном фазовом пространстве, 
+отличающиеся друг от друга лишь перестановками тождествен ных частиц, учитывались только один раз. 
+С помощью \ref{ss} произвольная сумма по состояниям может быть представлена в форме интеграла
+$$
+\sum_{\alpha} F_{\alpha}=\int d \Gamma_{\alpha} F_{\alpha}
+$$
+
+
+Полное число состоя ний - число точек в $6 N$ -мерном пространстве с энерг ией
+$$
+E_{\alpha}=\sum_{i=1}^{N} \frac{p_{i}^{2}}{2 m}
+$$
+А так как $ \Gamma(E)=\sum_{\alpha} \theta\left(E-E_{\alpha}\right)$, то в интервале между 0 и $E$ выражается интегралом:
+$$
+\Gamma(E)=\int d \Gamma_{\alpha} \theta\left(E-E_{\alpha}\right)=\frac{1}{N !} \int \prod_{i=1}^{N} \frac{d^{3} r_{i} d^{3} p_{i}}{(2 \pi \hbar)^{3}} \theta\left(E-\sum_{i=1}^{N} \frac{p_{i}^{2}}{2 m}\right)
+$$
+Интегрирование по пространственным координатам каждой частицы дает объем $V,$ и с учетом формулы Стильтьеса получаем
+$$
+\begin{aligned}
+\Gamma(E) &=\left(\frac{V e}{N(2 \pi \hbar)^{3}}\right)^{N} J_{3 N}(E) \\
+J_{3 N}(E) &=\int \prod_{i=1}^{N} d^{3} p_{i} \theta\left(E-\sum_{i=1}^{N} \frac{p_{i}^{2}}{2 m}\right)
+\end{aligned}
+$$
+
+Вот такое вот число состояний, как видно нужно знать $ V, N,E, m$ и уметь считать такие интегралы, чтобы прийти к финальной цифре.
 
 
 \end{task}
 
 
-\begin{task}
+\begin{task}\textbf{4}
 
-3. Вычислить число состояний одноатомного больцмановского газа
+Вычислить число состояний системы $ N $ независимых спинов 1/2.
+
+
+Систему $N$ спинов $S=\frac{1}{2},$ находящихся в магнит ном поле $B,$ будем описывать гамильтонианом
+$$
+H=-2 \mu B \sum_{i=1}^{N}\left(s_{i}^{z}-\frac{1}{2}\right)
+$$
+Энергия одного спина в магнитном поле, равная $-2 \mu B s^{z}\left(s^{z}=\pm \frac{1}{2}\right),$ сдвинута на константу, чтобы минимальная энергия была равна нулю. 
+Если $(\vec{N}-M)$ спинов находятся в основном состоя нии $\left(s^{z}=1 / 2\right),$ а $M$ спинов $-$ в возбужденном $(s^{z}=-1 / 2),$ то система имеет энергию $E=M \Delta E,$ где $\Delta E=2 \mu B .$ 
+Такая энергия может быть полу чена числом способов, равным:
+\begin{equation}\label{ll}
+\Delta \Gamma_{M}=\frac{N !}{M !(N-M) !}
+\end{equation}
+
+Это и есть наше требуемое число состояний.
+
+При больших значениях аргумента по формуле Стирлинга факториал приближенно равен
+$$
+N ! \approx(N / e)^{N}
+$$
+и выражение \ref{ll} принимает вид
+$$
+\Delta \Gamma=\left(\frac{N}{e}\right)^{N}\left(\frac{e}{M}\right)^{M}\left(\frac{e}{N-M}\right)^{N-M}=\frac{N^{N}}{M^{M}(N-M)^{N-M}}
+$$
+
+Из этого выражения можно найти энтропию и другие характеристики, но о них не спрашивается, так что задача решена.
 
 
 \end{task}
 
 
-\begin{task}
+\begin{task}\textbf{5}
 
-4
+Вычислить число состояний системы $ N $ одинаковых независимых осцилляторов.
 
-Вычислить число состояний системы N независимых спинов 1/2.
+
+За вычетом энергии нулевых колебаний энергия системы равна
+$$
+E=\Delta E \sum_{i=1}^{N} n_{i}, \quad \Delta E=\hbar \omega
+$$
+где $n_{i}$ - номер возбуждения $i$ -того осциллятора. Это значение энергии может быть получено числом способов, которое следует из комбинаторики
+$$
+\frac{(N+M-1) !}{(N-1) ! M !} \approx \frac{\left.(N+M)^{N+M}\right)}{N^{N} M^{M}}
+$$
+
+
 
 
 \end{task}
 
 
-\begin{task}
-
-5. Вычислитьчислосостоянийсистемы N одинаковыхнезависимых осцилляторов
-
-
-
-\end{task}
-
-
-\begin{task}
-
-6
+\begin{task}\textbf{6}
 
 Получить выражения для неравновесной энтропии ферми- и бозе-газов
 
 
+
+
+
 \end{task}
 
 
-\begin{task}
-7
+\begin{task}\textbf{7}
 
-Вычислить основные термодинамические величины ферми- и
+Вычислить основные термодинамические величины ферми- и бозе-газов при $T=0$
 
-бозе-газов при $T=0$
+
+
+
+
 
 
 \end{task}
@@ -189,14 +358,6 @@ $ N $ молекул идеального газа в объеме $ V $. Опр
 
 16
 
-
-
-
-\end{task}
-
-
-\begin{task}
-
 В преобразовании Боголюбова для электронов получить при T  Tc связь операторов поглощения квазичастиц и поглощения голых электронов.
 
 
@@ -205,15 +366,16 @@ $ N $ молекул идеального газа в объеме $ V $. Опр
 
 
 
+
+
+
 \clearpage
 \part{задачи}
 
-\section{модели статфиза}
 
-(мб добавлю разбивку на разделы позже)
 
-\begin{task}
-(задача 1)
+\begin{ttask}\textbf{1}
+
 
 Показать, что замкнутая система из двух равновесных подсистем имеет максимальную энтропию, 
 когда у подсистемы равны температура, давление и химические потенциалы.
@@ -230,7 +392,7 @@ $$
 при постоянстве полной энергии $E=E_{1}+E_{2}$ будет выполняться:
 {\Large $$
 	\begin{array}{c}
-	\frac{d S}{d E_{1}}=\frac{d S_{1}}{d E_{1}}+\frac{d S_{2}}{d E_{2}} \frac{d\left(E-E_{1}\right)}{d E_{1}}=\frac{1}{T_{1}}-\frac{1}{T_{2}}=0 \\
+	\frac{d S}{d E_{1}}=\frac{d S_{1}}{d E_{1}}+\frac{d S_{2}}{d E_{2}} \frac{d\left(E-E_{1}\right)}{d E_{1}}=\frac{1}{T_{1}}-\frac{1}{T_{2}}=0 \\ \\
 	\frac{d^{2} S}{d E^{2}}=-\left(\frac{1}{T^{2} C_{V}}\right)_{1}-\left(\frac{1}{T^{2} C_{V}}\right)_{2}<0
 	\end{array}
 	$$}
@@ -245,193 +407,392 @@ $\left(\right.$ Используя $\left.\frac{\partial S}{\partial V}=
 
 
 
-\end{task}
+\end{ttask}
 
 
-\begin{task}
-(задача 2)
+\begin{ttask} \textbf{2}
 
-Найти кривую фазового равновесия газ-жидкость P(T).
-
-
-\end{task}
+Найти кривую фазового равновесия газ-жидкость $ p(T) $.
 
 
-\begin{task}
+При изменении $T$ и $P$ выполняются равенства
+$$
+d \mu_{1}=-s_{1} d T^{\prime}+v_{1} d P, \quad d \mu_{2}=-s_{2} d T+v_{2} d P
+$$
+Поскольку $\mu_{1}(P, T)=\mu_{2}\left(P, T^{\prime}\right),$ то $d \mu_{1}=d \mu_{2},$ отку да следует
+$$
+\left(s_{2}-s_{1}\right) d T=\left(v_{2}-v_{1}\right) d P \quad \text { или } \quad \frac{d p}{d T}=\frac{s_{2}-s_{1}}{v_{2}-v_{1}}
+$$
+Введем обозначение: $q_{12}=T\left(s_{2}-s_{1}\right) .$ Тогда последнее уравнение примет вид
+$$
+\frac{d P}{d T}=
+\frac{q_{12}}{T\left(v_{2}-v_{1}\right)}
+$$
 
-3
+
+????
+
+
+
+\end{ttask}
+
+
+\begin{ttask} \textbf{3}
 
 Определить энтропию газа $ N $ невзаимодействующих спинов  $\sigma= 1/2$ в магнитном поле при заданной энергии. 
 Определить понятие температуры и показать, что она может быть отрицательной. 
 Обсудить температурную зависимость теплоемкости. 
-Сравнить с задачей о системе невзаимодействующих двухуровневых частиц
+Сравнить с задачей о системе невзаимодействующих двухуровневых частиц.
 
 
+Вспомним упражнение, в котором мы вычисляли число состояний для системы спинов. Это число оказалось равным
+$$
+\Delta \Gamma=\left(\frac{N}{e}\right)^{N}\left(\frac{e}{M}\right)^{M}\left(\frac{e}{N-M}\right)^{N-M}=\frac{N^{N}}{M^{M}(N-M)^{N-M}}
+$$
+
+Логарифм этой величины можно представить в форме
+$$
+\sigma^{*}=\ln \Delta \Gamma=-N(n \ln (n)+(1-n) \ln (1-n))
+$$
+Величина
+$$
+n=\frac{M}{N}=\frac{E}{(N \Delta E)}
+$$
+
+Определим температуру $\tau$  с помощью формул статистической физики:
+$$
+\begin{array}{l}
+\frac{1}{\tau}=\frac{d \sigma}{d E}=\frac{1}{\Delta E} \ln \left(\frac{1-n}{n}\right) \\
+\frac{d^{2} \sigma}{d E^{2}}=-\frac{1}{N(\Delta E)^{2} n(1-n)}
+\end{array}
+$$
+Обратим внимание, что с ростом среднего числа возбужденных спинов $n$ от нуля до половины температура $\tau$ растет от нуля до бесконечности, а при дальнейшем возрастании числа $n$ в интервале $1 / 2<n<1$ "температура" $\tau$ отрицательна. 
+
+Состояние с отрицательной температурой возможно только для систем с конечным числом всех состоя ний системы. 
+В данном случае это число равно $2^{N}$.
 
 
+Вроде бы итог этой задачи такой же, как и итоге задачи о двухуровневых частицах.
 
 
-
-\end{task}
-
-
-\begin{task}
-4. Определить энтропию газа N невзаимодействующих осцилляторов при заданной энергии E. Получить связь между энергией и температурой T. Обсудить отличие температурного поведения теплоемкости от предыдущей задачи.
+\end{ttask}
 
 
+\begin{ttask}\textbf{4}
 
-\end{task}
+Определить энтропию газа $ N $ невзаимодействующих осцилляторов при заданной энергии $ E$. 
+Получить связь между энергией и температурой $ T$.
+Обсудить отличие температурного поведения теплоемкости от предыдущей задачи.
 
-
-\begin{task}
-
-5. Вычислить магнитную восприимчивость одноатомного парамагнитного газа (T) с моментом J.
-
-
-\end{task}
-
-
-\begin{task}
-
-$6 .$ Вычислить для парамагнитного газа изменение температуры при адиабатическом изменении магнитного поля $(\partial T / \partial H)_{S},$ если его свободная энергия может быть представлена в виде: $F=F_{0}(T)-$ $-(1 / 2) \chi(T) H^{2}$
-
-
-\end{task}
-
-
-\begin{task}
-
-7
-
+Из упражнения про осциллятор мы имеем значение числа состояний:
+$$
+\frac{(N+M-1) !}{(N-1) ! M !} \approx \frac{\left.(N+M)^{N+M}\right)}{N^{N} M^{M}}
+$$
+Статистическая энтропия системы равен логарифму формулы выше:
+$$
+\sigma=\ln \Delta \Gamma=N(-n \ln (n)+(1+n) \ln (1+n)), \quad n=\frac{M}{N}
+$$
+здесь $n=M / N=E /(N \Delta E)-$ среднее число возбуждений, приходящихся на Один осциллятор.
+Производные статистической энтропии равны
 $$
 \begin{aligned}
-&\text { 7. Найти флуктуации } \overline{\Delta E^{2}}, \overline{\Delta N^{2}}, \overline{\Delta S^{2}}, \overline{\Delta P^{2}}, \overline{\Delta S \Delta P}, \overline{\Delta V \Delta P} \text { , }\\
-&\overline{\Delta S \Delta T}, \overline{\Delta T^{2}}, \overline{\Delta V^{2}}, \overline{\Delta T \Delta V}, \overline{\Delta T \Delta P}, \overline{\Delta S \Delta V}
-\end{aligned}$$
+\frac{d \sigma}{d E} &=\frac{1}{\Delta E} \ln \left(\frac{1+n}{n}\right) \\
+\frac{d^{2} \sigma}{d E^{2}} &=-\frac{1}{N(\Delta E)^{2} n(1+n)}
+\end{aligned}
+$$
 
-
-\end{task}
-
-
-\begin{task}
-
-8 Вычислить для одноатомного и двухатомного больцмановских газов 
-
-$ F, \mu, P, S, C,(\partial P)(\partial \rho)_{S}$
+Число состоя ний системы осцилляторов бесконечно, и состояния с отрицательной температурой отсутствуют.
 
 
 
 
-\end{task}
+
+\end{ttask}
 
 
-\begin{task}
+\begin{ttask} \textbf{5}
+
+Вычислить магнитную восприимчивость одноатомного парамагнитного газа $ \chi(T) $ с моментом $ J $.
+
+
+
+
+
+
+
+\end{ttask}
+
+
+\begin{ttask}\textbf{6}
+
+Вычислить для парамагнитного газа изменение температуры при адиабатическом изменении магнитного поля $(\partial T / \partial H)_{S},$ 
+если его свободная энергия может быть представлена в виде: $F=F_{0}(T)-$ $-(1 / 2) \chi(T) H^{2}$
+
+
+
+
+\end{ttask}
+
+
+
+
+\begin{ttask} \textbf{7}
+Найти флуктуации 
+\[ \overline{\Delta E^{2}}, \overline{\Delta N^{2}}, \overline{\Delta S^{2}}, \overline{\Delta P^{2}}, 
+\overline{\Delta S \Delta P}, \overline{\Delta V \Delta P},\overline{\Delta S \Delta T}, 
+\overline{\Delta T^{2}}, \overline{\Delta V^{2}}, \overline{\Delta T \Delta V}, \overline{\Delta T \Delta P}, \overline{\Delta S \Delta V} \]
+
+Используя гауссову теорию флуктуаций, выразим в формуле $ w \sim \exp \frac{\Delta p \Delta V-\Delta T \Delta S}{2 k T} $ 
+величины $\Delta S$ и $\Delta p$ через флуктуации независимых переменных $V$ и $T:$
+\begin{equation}\label{nn}
+\begin{aligned}
+\Delta S &=\left(\frac{\partial S}{\partial V}\right)_{T} \Delta V+\left(\frac{\partial S}{\partial T}\right)_{V} \Delta T \\
+\Delta p &=\left(\frac{\partial p}{\partial V}\right)_{T} \Delta V+\left(\frac{\partial p}{\partial T}\right)_{V} \Delta T
+\end{aligned}
+\end{equation}С помощью равенства $d F=-S d T-p d V$ имеем $\left(\frac{\partial S}{\partial V}\right)_{T}=$ $=\left(\frac{\partial p}{\partial T}\right)_{V} \cdot$ Далее, $\left(\frac{\partial S}{\partial T}\right)_{V}=\frac{C_{V}}{T} . \quad$ Подставляя $\quad$ эти значения
+в \ref{nn} имеем
+$$
+\Delta S=\left(\frac{\partial p}{\partial T}\right)_{V} \Delta V+\frac{C_{V}}{T} \Delta T
+$$
+Теперь выражение для плотности вероятности $ w$ после подстановки найденных выражений для $\Delta S$ и $\Delta p$ принимает гауссов вид в переменных $V$ и $T:$
+\begin{equation}\label{kkkk}
+w \sim \exp \left[-\frac{C_{V}}{2 k T^{2}}(\Delta T)^{2}+\frac{1}{2 k T}\left(\frac{\partial p}{\partial V}\right)_{T}(\Delta V)^{2}\right]
+\end{equation}
+Из\ref{kkkk} видно, что плотность вероятности распалась на произведение...
+
+Это означает, что флуктуации температуры и объема статистически Независимы:
+$$
+\langle\Delta V \Delta T\rangle=0
+$$
+
+Сравнивая \ref{kkkk} с соотношением $\left\langle x^{2}\right\rangle=\int_{-\infty}^{\infty} x^{2} w(x) d x=\alpha^{-1}$ 
+находим
+$$
+\begin{array}{c}
+\left\langle(\Delta T)^{2}\right\rangle=\frac{k T^{2}}{\mathrm{C}_{V}} \\
+\left\langle(\Delta V)^{2}\right\rangle=-k T\left(\frac{\partial V}{\partial p}\right)_{T}
+\end{array}
+$$
+Для вычисления средних значений комбинаций, содержащих одну из выбранных независимых переменных, удобно выразить флуктуации второй величины через $\Delta V$ и $\Delta T .$ Тогда получим, например, для $\langle\Delta T \Delta p\rangle$
+$$
+\langle\Delta T \Delta p\rangle=\left(\frac{\partial p}{\partial V}\right)_{T}\langle\Delta T \Delta V\rangle+\left(\frac{\partial p}{\partial T}\right)_{V}\left\langle(\Delta T)^{2}\right\rangle
+$$
+Подставляя сюда соотношения (5.53) и $(5.54),$ найдем
+$$
+\langle\Delta T \Delta p\rangle=\frac{k T^{2}}{C_{V}}\left(\frac{\partial p}{\partial T}\right)_{V}
+$$
+Аналогично
+$$
+\langle\Delta V \Delta p\rangle=\left(\frac{\partial p}{\partial V}\right)_{T}\left\langle(\Delta V)^{2}\right\rangle+\left(\frac{\partial p}{\partial T}\right)_{V}\langle\Delta V \Delta T\rangle
+$$
+Подставляя (5.53) и $(5.55),$ имеем
+$$
+\langle\Delta V \Delta p\rangle=-k T
+$$
+
+Далее,
+$$
+\begin{aligned}
+\langle\Delta S \Delta V\rangle=\left(\frac{\partial S}{\partial V}\right)_{T}\langle&\left.(\Delta V)^{2}\right\rangle+\left(\frac{\partial S}{\partial T}\right)_{V}\langle\Delta V \Delta T\rangle=\\
+&=-k T\left(\frac{\partial V}{\partial p}\right)_{T}\left(\frac{\partial p}{\partial T}\right)_{V}=k T\left(\frac{\partial V}{\partial T}\right)_{p}
+\end{aligned}
+$$
+Для вычисления флуктуации $\left\langle(\Delta S)^{2}\right\rangle,\left\langle(\Delta p)^{2}\right\rangle,$ и $\langle\Delta p \Delta S\rangle,$ можно
+выразить их через $\Delta V$ и $\Delta T .$ Например,
+$$
+\left\langle(\Delta S)^{2}\right\rangle=\left\langle\left[\left(\frac{\partial p}{\partial T}\right)_{V} \Delta V+\frac{C_{V}}{T} \Delta T\right]^{2}\right\rangle
+$$
+Раскрывая квадрат суммы и учитывая формулы $(5.53)-(5.55),$ найдем
+$$
+\left\langle(\Delta S)^{2}\right\rangle=-\left(\frac{\partial p}{\partial T}\right)_{V}^{2}\left(\frac{\partial V}{\partial p}\right)_{T} k T+\frac{C_{V}^{2}}{T^{2}} \frac{k T^{2}}{C_{V}}
+$$
+Учитывая соотношение
+$$
+C_{p}-C_{V}=-T\left(\frac{\partial p}{\partial T}\right)_{V}^{2}\left(\frac{\partial V}{\partial p}\right)_{T}
+$$
+
+
+окончательно получаем
+$$
+\left\langle(\Delta S)^{2}\right\rangle=k C_{p}
+$$
+Аналогично
+$$
+\begin{aligned}
+\left\langle(\Delta p)^{2}\right\rangle=\left\langle\left[\left(\frac{\partial p}{\partial V}\right)_{T} \Delta V+\left(\frac{\partial p}{\partial T}\right)_{V} \Delta T\right.\right.&\left.]^{2}\right\rangle=\\
+&=-k T\left(\frac{\partial p}{\partial V}\right)_{T}+\left(\frac{\partial p}{\partial T}\right)_{V}^{2} \frac{k T^{2}}{C_{V}}
+\end{aligned}
+$$
+С помощью (5.59) имеем
+$$
+\left(\frac{\partial p}{\partial T}\right)_{V}^{2}=-\frac{C_{p}-C_{V}}{T}\left(\frac{\partial p}{\partial V}\right)_{T}
+$$
+Подставим это выражение в (5.61) и приведем подобные члены:
+$$
+\left\langle(\Delta p)^{2}\right\rangle=-k T \frac{\mathrm{C}_{p}}{C_{V}}\left(\frac{\partial p}{\partial V}\right)_{T}=-k T\left(\frac{\partial p}{\partial V}\right)_{S}
+$$
+Наконец,
+$$
+\begin{aligned}
+\langle\Delta p \Delta S\rangle=\langle[&\left.\left.\left(\frac{\partial p}{\partial V}\right)_{T} \Delta V+\left(\frac{\partial p}{\partial T}\right)_{V} \Delta T\right]\left[\left(\frac{\partial p}{\partial T}\right)_{V} \Delta V+\frac{C_{V}}{T} \Delta V\right]\right\rangle=\\
+&=\left(\frac{\partial p}{\partial V}\right)_{T}\left(\frac{\partial p}{\partial T}\right)_{V}\left\langle(\Delta V)^{2}\right\rangle+\frac{C_{V}}{T}\left(\frac{\partial p}{\partial T}\right)_{V}\left\langle(\Delta T)^{2}\right\rangle
+\end{aligned}
+$$
+
+Подставляя сюда (5.54) и $(5.55),$ приходим к равенству
+$$
+\langle\Delta p \Delta S\rangle=0
+$$
+
+
+
+\end{ttask}
+
+
+\begin{ttask}\textbf{8}
+
+Вычислить для одноатомного и двухатомного больцмановских газов 
+$ F, \mu, P, S, C$, $(\partial P)(\partial \rho)_{S}$
+
+
+
+
+\end{ttask}
+
+
+\begin{ttask}
 
 Найти теплоемкость идеального газа без внутренних степеней свободы, помещенного в однородное гравитационное поле в коническом сосуде высоты h (основание конуса расположено внизу, вверху). Рассмотреть случаи:
 
 
 
-\end{task}
+\end{ttask}
 
 
-\begin{task}
+\begin{ttask}
 
 10. Вычислить температурную зависимость теплоемкости двухатомного больцмановского газа, учесть диссоциацию молекул. 
 
 
-\end{task}
 
 
-\begin{task}
+
+\end{ttask}
+
+
+\begin{ttask}
 
 11. Построить изохоры, изобары и изотермы для бозе-газа. 
 
 
 
-\end{task}
+\end{ttask}
 
 
-\begin{task}
+\begin{ttask}
 
 12. Построить изохоры, изобары и изотермы для ферми-газа. 
 
 
-\end{task}
+\end{ttask}
 
 
-\begin{task}
+\begin{ttask}
 
 13. Вычислить теплоемкость двумерного вырожденного идеального ферми-газа. 
 
 
-\end{task}
 
 
-\begin{task}
 
-14. Вычислить теплоемкость черного излучения. 
-
-
-\end{task}
+\end{ttask}
 
 
-\begin{task}
+\begin{ttask}14. 
 
-Найти равновесную плотность и теплоемкость акустических фононов в кристалле при температурах выше T  и ниже T  дебаевской
-
-
-\end{task}
+Вычислить теплоемкость черного излучения. 
 
 
-\begin{task}
 
-Бспользуя представление оператора смещения гармонического осциллятора $\hat{x}=\left(\frac{\hbar}{2 m \omega}\right)^{1 / 2}\left(\hat{b}^{+}+\hat{b}\right),$ получить формулу $\left\langle e^{i k \hat{x}}\right\rangle=$
+
+ 
+
+\end{ttask}
+
+
+\begin{ttask}\textbf{15}
+
+Найти равновесную плотность и теплоемкость акустических фононов в кристалле при температурах выше $ T $  и ниже $ T $  дебаевской
+
+
+
+
+\end{ttask}
+
+
+\begin{ttask}\textbf{16}
+
+Используя представление оператора смещения гармонического осциллятора 
+
+$\hat{x}=\left(\frac{\hbar}{2 m \omega}\right)^{1 / 2}\left(\hat{b}^{+}+\hat{b}\right),$ 
+получить формулу $\left\langle e^{i k \hat{x}}\right\rangle=$
 $=e^{-\frac{k^{2} \hbar}{4 m \omega}}$ при температуре $T=0$
 
-\end{task}
 
 
 
 
-\begin{task}
-17. Описать парамагнетизм Паули и диамагнетизм Ландау. Рассмотреть эффект де Гааза–ван Альфена в двумерном металле. 
-
-\end{task}
+\end{ttask}
 
 
-\begin{task}
+
+
+\begin{ttask} \textbf{17}
+
+
+Описать парамагнетизм Паули и диамагнетизм Ландау. 
+Рассмотреть эффект де Гааза–ван Альфена в двумерном металле. 
+
+
+
+
+
+\end{ttask}
+
+
+\begin{ttask}
 
 18. Сравнить низкотемпературные зависимости теплоемкости идеальных бозе- и ферми-газов, черного излучения и твердого тела, парамагнетика и ферромагнетика, неидеального бозе-газа и, наконец, сверхпроводника. 
 
 
-\end{task}
+\end{ttask}
 
 
 
 
 
 
-\begin{task}
+\begin{ttask}
 
 19. Показать, что фазовая скорость элементарного возбуждения в бозе-конденсате равна гидродинамической скорости звука.
 
 
-\end{task}
+\end{ttask}
 
 
 
-\begin{task}
+\begin{ttask}
 
 20
 
 . Найти распределение частиц по импульсам и полное число надконденсатных частиц в идеальном и неидеальном бозе-газах при T = 0 и низких температурах.
 
 
-\end{task}
+\end{ttask}
 
 
 
-\begin{task}
+\begin{ttask}
 
 21
 
@@ -439,72 +800,71 @@ $=e^{-\frac{k^{2} \hbar}{4 m \omega}}$ при температуре $T=0$
 
 $$\hat{H}=-J \sum_{k}^{N} \hat{\sigma}_{k}^{z} \hat{\sigma}_{k+1}^{z}, \quad \hat{\sigma}_{N+1}^{z}=\hat{\sigma}_{1}^{z}$$
 Вычислить теплоёмкость и объяснить причину отсутствия фазового перехода при $ X\ne 0 $
-\end{task}
+\end{ttask}
 
 
 
-\begin{task}
+\begin{ttask}
 
 22. Для ферромагнетика в модели Гейзенберга при T  Tc определить спектр возбуждений (магнонов) и найти температурную зависимость намагниченности и теплоемкости спиновых волн.
 
-\end{task}
+\end{ttask}
 
 
 
-\begin{task}
+\begin{ttask}
 
 23. Для ферромагнетика в модели Гейзенберга в приближении самосогласованного поля определить температуру Кюри Tc, температурную зависимость магнитной восприимчивости  и спонтанной намагниченности вблизи Tc. Сравнить с результатами теории Ландау.
 
-\end{task}
+\end{ttask}
 
 
 
-\begin{task}
+\begin{ttask}
 
 Определить корреляционный радиус флуктуации параметра порядка в нулевом внешнем поле вблизи точки фазового перехода II рода. Найти флуктуационную поправку к теплоемкости при T = Tc в теории Гинзбурга–Ландау.
 
-\end{task}
+\end{ttask}
 
 
 
 
 
-\begin{task}
+\begin{ttask}
 
 25. Доказать, что плотность сверхтекучей компоненты электронного газа при T = 0 равна полной плотности числа частиц.  
 
-\end{task}
+\end{ttask}
 
 
-\begin{task}
+\begin{ttask}
 
 26. В модели БКШ определить скачок теплоемкости.
 
-\end{task}
+\end{ttask}
 
-\begin{task}
+\begin{ttask}
 
 27. Диагонализуя гамильтониан для фотонов и экситонов с учетом гибридизации, получить спектр поляритонов. 
 
 
-\end{task}
+\end{ttask}
 
 
 
-\begin{task}
+\begin{ttask}
 
 28. Мешок Нагаоки (спиновый полярон большого радиуса в антиферромагнетике)
 
 
-\end{task}
 
 
 
 
-\printindex
+\end{ttask}
 
-\bibliographystyle{plain}
-\bibliography{bibliography}
+
+
 
 
 \end{document}
