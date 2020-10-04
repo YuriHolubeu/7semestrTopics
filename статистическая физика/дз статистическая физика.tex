@@ -13,13 +13,16 @@
 \maketitle
 
 \begin{abstract}
-статистическая физика
+Задачи по статической физике.
 \end{abstract}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
 \tableofcontents
 
 \section*{Предисловие}
 \addcontentsline{toc}{section}{Предисловие}
+
+Здесь следующие есть интересные вещи:
+...
 
 
 
@@ -64,7 +67,7 @@ $ N $ молекул идеального газа в объеме $ V $.
 Вычислить $ C_p-C_v$ в  переменных $ V, T $ и $ P, T$. 
 
 Определить $ C_p-C_v$ для больцмановского газа,
-газа Ван-дер-Ваальса,фермии бозе-газа и черного излучения.
+газа Ван-дер-Ваальса, ферми и бозе-газа и черного излучения.
 
 Первое начало термодинамики:
 $$
@@ -577,7 +580,7 @@ $$
 $$
 \langle\Delta T \Delta p\rangle=\left(\frac{\partial p}{\partial V}\right)_{T}\langle\Delta T \Delta V\rangle+\left(\frac{\partial p}{\partial T}\right)_{V}\left\langle(\Delta T)^{2}\right\rangle
 $$
-Подставляя сюда соотношения (5.53) и $(5.54),$ найдем
+Подставляя сюда соотношения $\langle$ найдем
 $$
 \langle\Delta T \Delta p\rangle=\frac{k T^{2}}{C_{V}}\left(\frac{\partial p}{\partial T}\right)_{V}
 $$
@@ -585,7 +588,7 @@ $$
 $$
 \langle\Delta V \Delta p\rangle=\left(\frac{\partial p}{\partial V}\right)_{T}\left\langle(\Delta V)^{2}\right\rangle+\left(\frac{\partial p}{\partial T}\right)_{V}\langle\Delta V \Delta T\rangle
 $$
-Подставляя (5.53) и $(5.55),$ имеем
+Подставляя $ \left\langle(\Delta T)^{2}\right\rangle $ и $\langle\Delta V \Delta T\rangle=0$ имеем
 $$
 \langle\Delta V \Delta p\rangle=-k T
 $$
@@ -602,32 +605,38 @@ $$
 $$
 \left\langle(\Delta S)^{2}\right\rangle=\left\langle\left[\left(\frac{\partial p}{\partial T}\right)_{V} \Delta V+\frac{C_{V}}{T} \Delta T\right]^{2}\right\rangle
 $$
-Раскрывая квадрат суммы и учитывая формулы $(5.53)-(5.55),$ найдем
+Раскрывая квадрат суммы и учитывая формулы других флуктуаций найдем
 $$
 \left\langle(\Delta S)^{2}\right\rangle=-\left(\frac{\partial p}{\partial T}\right)_{V}^{2}\left(\frac{\partial V}{\partial p}\right)_{T} k T+\frac{C_{V}^{2}}{T^{2}} \frac{k T^{2}}{C_{V}}
 $$
 Учитывая соотношение
-$$
+\begin{equation}\label{lll}
 C_{p}-C_{V}=-T\left(\frac{\partial p}{\partial T}\right)_{V}^{2}\left(\frac{\partial V}{\partial p}\right)_{T}
-$$
-
+\end{equation}
 
 окончательно получаем
 $$
 \left\langle(\Delta S)^{2}\right\rangle=k C_{p}
 $$
 Аналогично
-$$
+\begin{equation}\label{ddd}
 \begin{aligned}
-\left\langle(\Delta p)^{2}\right\rangle=\left\langle\left[\left(\frac{\partial p}{\partial V}\right)_{T} \Delta V+\left(\frac{\partial p}{\partial T}\right)_{V} \Delta T\right.\right.&\left.]^{2}\right\rangle=\\
-&=-k T\left(\frac{\partial p}{\partial V}\right)_{T}+\left(\frac{\partial p}{\partial T}\right)_{V}^{2} \frac{k T^{2}}{C_{V}}
+\left\langle(\Delta p)^{2}\right\rangle=
+\left\langle\left[
+\left(\frac{\partial p}{\partial V}\right)_{T} \Delta V+
+\left(\frac{\partial p}{\partial T}\right)_{V} \Delta T
+\right]^{2}\right\rangle=\\
+=-k T&
+\left(\frac{\partial p}{\partial V}\right)_{T}+
+\left(\frac{\partial p}{\partial T}\right)_{V}^{2} 
+\frac{k T^{2}}{C_{V}}
 \end{aligned}
-$$
-С помощью (5.59) имеем
+\end{equation}
+С помощью \ref{lll} имеем
 $$
 \left(\frac{\partial p}{\partial T}\right)_{V}^{2}=-\frac{C_{p}-C_{V}}{T}\left(\frac{\partial p}{\partial V}\right)_{T}
 $$
-Подставим это выражение в (5.61) и приведем подобные члены:
+Подставим это выражение в \ref{ddd} и приведем подобные члены:
 $$
 \left\langle(\Delta p)^{2}\right\rangle=-k T \frac{\mathrm{C}_{p}}{C_{V}}\left(\frac{\partial p}{\partial V}\right)_{T}=-k T\left(\frac{\partial p}{\partial V}\right)_{S}
 $$
@@ -639,7 +648,7 @@ $$
 \end{aligned}
 $$
 
-Подставляя сюда (5.54) и $(5.55),$ приходим к равенству
+Подставляя сюда $ \left\langle(\Delta T)^{2}\right\rangle $  и $ \left\langle(\Delta V)^{2}\right\rangle $  приходим к равенству
 $$
 \langle\Delta p \Delta S\rangle=0
 $$
