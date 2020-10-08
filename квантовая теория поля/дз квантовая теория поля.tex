@@ -5,8 +5,13 @@
 
 
 \author{Юрий Голубев\\ yura.winter@gmail.com }
-\title{квантовая теория поля}
+\title{Задание по квантовой теории поля}
 \date{\today}
+
+
+
+\newcommand{\parder}[2]{\frac{\partial {#1}}{\partial {#2}}} % в самом деле, это удобно.
+
 
 
 \begin{document}
@@ -18,10 +23,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
 \tableofcontents
 
+
 \section*{Предисловие}
 \addcontentsline{toc}{section}{Предисловие}
 
 тренируемся, практикуемся
+
+
+
 
 
 \clearpage
@@ -34,6 +43,53 @@
 \begin{task}\textbf{1}
 
 Рассмотреть вещественный 4-вектор в представлении группы Лоренца $\left(\frac{1}{2}, \frac{1}{2}\right)$
+
+
+!!! потом разберу, пока просто из киселева выписки.
+
+4-вектор. Произвольная эрмитово самосопряженная величина $V$ в представлении $\left(\frac{1}{2}, \frac{1}{2}\right),$ т.е. несушая пару индексов $\{\alpha \dot{\alpha}\},$ может быть разложена по базису матриц $\sigma^{n}:$
+$$
+(\hat{V})_{\alpha \dot{\alpha}}=\sigma_{\alpha \dot{\alpha}}^{n} V_{n}
+$$
+причем
+$$
+V^{m}=\frac{1}{2} \operatorname{tr}\left\{\bar{\sigma}^{m} \hat{V}\right\}
+$$
+так как, очеви Дно,
+$$
+\operatorname{tr}\left\{\bar{\sigma}^{m} \sigma^{n}\right\}=2 g^{m n}
+$$
+CorJacно установленным нами законами преобразования верхних и нижних спинорных инДексов, преобразования группы $S L(2, \mathbb{C})$ переводят $\hat{V}$ в эрмитову величину
+$$
+\hat{V}^{\prime}=\Lambda_{-} \hat{V} \Lambda_{-}^{\dagger}
+$$
+Которая опять может быть разложена по исходному базису:
+$$
+V^{\prime} m=\frac{1}{2} \operatorname{tr}\left\{\bar{\sigma}^{m} \hat{V}^{\prime}\right\}
+$$
+Заметим, что
+$$
+\operatorname{det} \hat{V}^{\prime}=\operatorname{det}\left\{\Lambda_{-} \hat{V} \Lambda_{-}^{\dagger}\right\}=\left|\operatorname{det} \Lambda_{-}\right|^{2} \operatorname{det} \hat{V}=\operatorname{det} \hat{V}
+$$
+$\Pi$ ри этом
+$$
+\hat{V}=\left(\begin{array}{cc}
+	V_{0}+V_{3} & V_{1}-i V_{2} \\
+	V_{1}+i V_{2} & V_{0}-V_{3}
+\end{array}\right)
+$$
+
+
+a paвenctBo детерминантов (3.61) означает, что преобразование сохраняет лоренцИн вариантную длину 4-вектора, т.е. представляет собой элемент группы Лоренца на $4-$ векторах. Это представление является Двузначным, так как матрицы $\Lambda_{-}$ и $-\Lambda_{-}$ приводят К иденти чным преобразованиям 4-вектора. $\mathrm{B}$ случае инфинитезималь ных преобразований $\omega^{k l} \rightarrow 0$
+$$
+\Lambda_{-}=\mathbb{1}-\frac{i}{2} \sigma_{k l} \omega^{k l}, \quad \Lambda_{-}^{\dagger}=1+\frac{i}{2} \bar{\sigma}_{k l} \omega^{k l}
+$$
+находим, что
+$$
+V^{\prime} m=V^{m}+\frac{i}{4} \operatorname{tr}\left\{\bar{\sigma}_{k l} \bar{\sigma}^{m} \sigma^{n}-\sigma_{k l} \sigma^{n} \sigma^{m}\right\} \omega^{k l} V_{n}
+$$
+
+
 
 
 
@@ -55,7 +111,35 @@ $$
 \end{array}
 $$
 
+По определению $ \sigma^{\mu}=(1,\sigma^{i}), \bar{\sigma}^{\mu}= (1,-\sigma^i)$.
+
+Посчитаем отдельно 
+$$
+\begin{array}{l}
+	\left(\sigma^{0} \bar{\sigma}^{i}+\sigma^{i} \bar{\sigma}^{0}\right)=
+	(-\sigma^{i}+\sigma^{i})=0
+	\\
+	\left(\sigma^{i} \bar{\sigma}^{j}+\sigma^{j} \bar{\sigma}^{i}\right)=
+-(\sigma^{i}\sigma^{j}+\sigma^{j}\sigma^{i})=-2\delta^{ij}
+\end{array}
+$$
+
+Поэтому 
+\[ \left(\sigma^{\mu} \bar{\sigma}^{\nu}+\sigma^{\nu} \bar{\sigma}^{\mu}\right)_{\beta}^{\alpha}=
+2 g^{\mu \nu} \delta_{\beta}^{\alpha} \]
+
+
+?????????
+
+Что с точечным индексом? в чем его особенность?
+
+
+
+
+
+
 \end{task}
+
 
 
 \begin{task}\textbf{3}
@@ -63,10 +147,93 @@ $$
 Доказать равенства
 $$
 \begin{array}{l}
-\operatorname{tr}\left\{\bar{\sigma}_{\lambda \rho} \bar{\sigma}^{\mu \nu}\right\}=\frac{1}{2}\left\{\delta_{\lambda}^{\mu} \delta_{\rho}^{\nu}-\delta_{\lambda}^{\nu} \delta_{\rho}^{\mu}\right\}-\frac{\mathrm{i}}{2} \hat{\epsilon}_{\lambda \rho}^{\mu \nu} \\
-\operatorname{tr}\left\{\sigma_{\lambda \rho} \sigma^{\mu \nu}\right\}=\frac{1}{2}\left\{\delta_{\lambda}^{\mu} \delta_{\rho}^{\nu}-\delta_{\lambda}^{\nu} \delta_{\rho}^{\mu}\right\}+\frac{\mathrm{i}}{2} \hat{\epsilon}_{\lambda \rho}^{\mu \nu}
+\operatorname{tr}\left\{\bar{\sigma}_{\lambda \rho} \bar{\sigma}^{\mu \nu}\right\}=
+\frac{1}{2}\left\{\delta_{\lambda}^{\mu} \delta_{\rho}^{\nu}-\delta_{\lambda}^{\nu} \delta_{\rho}^{\mu}\right\}
+-\frac{\mathrm{i}}{2} \hat{\epsilon}_{\lambda \rho}^{\mu \nu} 
+\\
+\operatorname{tr}\left\{\sigma_{\lambda \rho} \sigma^{\mu \nu}\right\}=
+\frac{1}{2}\left\{\delta_{\lambda}^{\mu} \delta_{\rho}^{\nu}-\delta_{\lambda}^{\nu} \delta_{\rho}^{\mu}\right\}+
+\frac{\mathrm{i}}{2} \hat{\epsilon}_{\lambda \rho}^{\mu \nu}
 \end{array}
 $$
+
+По определению 
+$$
+\begin{array}{l}
+	\sigma^{\mu\nu}=-\sigma^{\nu \mu}=
+	\frac{i}{4}(\sigma^\mu \bar{\sigma}^\nu - \sigma^\nu \bar{\sigma}^\mu)
+	\\
+	\bar{\sigma}^{\mu \nu}=-	\bar{\sigma}^{\nu \mu}=\frac{i}{4}(\bar{\sigma^\mu}\sigma^\nu-\bar{\sigma^\nu}\sigma^\mu)
+\end{array}
+$$
+
+Посмотрим, как можно их расписать через компоненты.
+$$
+\begin{array}{l}
+	\sigma^{00}=0 
+	\\
+	\sigma^{0i}=	
+	-\sigma^{\nu \mu}=
+	\frac{i}{4}(\sigma^0 (-\sigma^i) - \sigma^i \sigma^0)=
+	-\frac{i}{2}\sigma^i
+	\\
+	\bar{\sigma^{0i}}=\frac{i}{2}\sigma^i
+	\\
+	\bar{\sigma}^{ij}=
+	\frac{i}{4}(-\sigma^i\sigma^j-(-\sigma^j)\sigma^i)=
+	-\frac{i}{4}\cdot 2 i \varepsilon_{ijk}\sigma^k=\frac{1}{2}\varepsilon_{ijk}\sigma^k
+	\\
+	\bar{\sigma}^{ij}=
+	\frac{1}{2}\varepsilon_{ijk}\sigma^k
+\end{array}
+$$
+
+В последних равенствах использовалось соотношение на матрицы Паули:
+\[ \sigma^i \sigma^j=i\varepsilon_{ijk}\sigma^k+\delta_{ij}\sigma^0 \]
+
+Таким образом, исходное уравнение для пространственных индексов $\operatorname{tr}\left\{\sigma_{\lambda \rho} \sigma^{\mu \nu}\right\}$ можно переписать как:
+\[ \operatorname{tr}\left\{\sigma_{i j} \sigma^{kl}\right\}=
+\operatorname{tr}\left\{ 	\frac{1}{2}\varepsilon_{ijm}\sigma^m 	\frac{1}{2}\varepsilon_{kln}\sigma^n \right\}=
+\frac{1}{4}\varepsilon_{ijm}\varepsilon_{kln}\operatorname{tr}\left\{\sigma_{m} \sigma^{n}\right\} =
+\frac{1}{4}\varepsilon_{ijm}\varepsilon_{kln}\operatorname{tr}\left\{2\delta^{mn}\right\} \]
+И дальше просто преобразуем до конца:
+\[ \operatorname{tr}\left\{\sigma_{ij} \sigma^{kl}\right\}=
+\frac{1}{2}\varepsilon_{ijm}\varepsilon_{kln}=1\frac{1}{2}(\delta_{ik}\delta_{jl}-\delta_{il}\delta_{jk})\]
+
+А если есть временной индекс, то 
+\[ \operatorname{tr}\left\{\sigma_{ij } \sigma^{k0}\right\}=
+\operatorname{tr}\left\{\frac{1}{2}\varepsilon_{ijk}\sigma^n \frac{i}{2}\sigma^k\right\}=
+\frac{i}{2}\varepsilon_{ijk}=-\frac{i}{2}\varepsilon_{ijk0}=\frac{i}{2}\varepsilon_{ij}^{k0}\]
+
+В последнем переходе показано как от трехмерного символа Леви-Чевиты перейти к четырехмерному.
+Также при подъеме пространственной части метрика домножилась на (-1), а при подъеме временной - на 1.
+
+Осталось разобрать случай 
+\[ \operatorname{tr}\left\{\sigma_{i0} \sigma^{k0}\right\}=-\left(\frac{i}{2}\right)^2
+\operatorname{tr}\left\{\sigma^i\sigma^k\right\}=
+\frac{1}{2}\delta_{ik}\equiv 
+\frac{1}{2}[\delta_i^k\delta_0^0-\delta_i^0\delta_0^k]\]
+
+Собирая все вместе, получаем
+\[ \operatorname{tr}\left\{\sigma_{\lambda \rho} \sigma^{\mu \nu}\right\}=
+\frac{1}{2}\left\{\delta_{\lambda}^{\mu} \delta_{\rho}^{\nu}-\delta_{\lambda}^{\nu} \delta_{\rho}^{\mu}\right\}+
+\frac{\mathrm{i}}{2} \hat{\epsilon}_{\lambda \rho}^{\mu \nu}
+ \]
+
+
+
+Теперь то же самое для $ \operatorname{tr}\left\{\bar{\sigma}_{\lambda \rho} \bar{\sigma}^{\mu \nu}\right\} $
+
+
+????
+
+действуя аналогично, получаем:
+
+..
+\[ \operatorname{tr}\left\{\sigma_{\lambda \rho} \sigma^{\mu \nu}\right\}=
+\frac{1}{2}\left\{\delta_{\lambda}^{\mu} \delta_{\rho}^{\nu}-\delta_{\lambda}^{\nu} \delta_{\rho}^{\mu}\right\}+
+\frac{\mathrm{i}}{2} \hat{\epsilon}_{\lambda \rho}^{\mu \nu}
+ \]
 
 
 \end{task}
@@ -75,10 +242,21 @@ $$
 
 \begin{task}\textbf{4}
 
-Показать, Что величины
+Показать, что величины
 $$
-\theta \sigma^{\mu} \bar{\chi}=\theta^{\alpha} \sigma_{\alpha \dot{\alpha}}^{\mu} \bar{\chi}^{\dot{\alpha}} \quad \text { и } \quad \bar{\theta} \bar{\sigma}^{\mu} \chi=\bar{\theta}_{\dot{\alpha}}\left(\bar{\sigma}^{\mu}\right)^{\dot{\alpha} \alpha} \chi_{\alpha}
+\theta \sigma^{\mu} \bar{\chi}=
+\theta^{\alpha} \sigma_{\alpha \dot{\alpha}}^{\mu} \bar{\chi}^{\dot{\alpha}} 
+\quad \text { и } \quad 
+\bar{\theta} \bar{\sigma}^{\mu} \chi=
+\bar{\theta}_{\dot{\alpha}}\left(\bar{\sigma}^{\mu}\right)^{\dot{\alpha} \alpha} \chi_{\alpha}
 $$
+ведут себя так же, как 4-векторы.
+
+То есть нужно доказать, что
+
+
+
+
 
 
 \end{task}
@@ -86,8 +264,44 @@ $$
 
 
 \begin{task}\textbf{5}
-	
-$\text { Доказать, что }\left(\theta_{\alpha}\right)^{\dagger}=\bar{\theta}_{\dot{\alpha}} \text { и }\left(\bar{\chi}^{\dot{\alpha}}\right)^{\dagger}=\chi^{\alpha}$.
+
+Доказать, что	
+$\left(\theta_{\alpha}\right)^{\dagger}=\bar{\theta}_{\dot{\alpha}}$ и 
+$\left(\bar{\chi}^{\dot{\alpha}}\right)^{\dagger}=\chi^{\alpha}$.
+
+Напомним, что по определению $ \left(\theta_{\alpha}\right)^{\dagger}=\left(\theta_{\dot{\alpha}}\right)^{*}$, 
+то есть мы совершаем комплексное сопряжение над спинором, а также заменяем точечный индекс на неточечный.
+(????)
+
+Совершим преобразования поднятия индексов и перехода из сопряженного спинора к обычному над $\bar{\theta}_{\dot{\alpha}}$:
+\[ \bar{\theta}_{\dot{\alpha}}=\varepsilon_{\dot{\alpha}\dot{\beta}}\bar{\theta}^{\dot{\beta}}= 
+\varepsilon_{\dot{\alpha}\dot{\beta}}[i\sigma_2^{\alpha\dot{\beta}} \theta_\alpha]^{*}=
+\left(\begin{array}{cc}
+	{0} & {1} \\ {-1} & {0}
+\end{array}\right) \cdot i
+\left(\begin{array}{cc}
+	{0} & {-i} \\ {i} & {0}
+\end{array}\right)\theta_\alpha^{*}=
+\delta_{\dot{\alpha}}^{\alpha}\theta_\alpha^{*}= (\theta_\alpha)^{\dagger}
+\]
+
+Однако то, что компоненты равны не значит, что это один и тот же объект, потому что они могут преобразовываться по-разному.
+Поэтому проверим, что они преобразуются одинаково:
+\[ (\theta^\prime)^\dagger_\alpha=
+((\Lambda_{-})^\beta_\alpha \theta_\beta)^\dagger=
+\exp \left(-\frac{i}{2}\sigma^{\mu\nu}\omega_{\mu\nu}\right)^\beta_\alpha \theta_\beta \]
+
+????
+
+
+
+Теперь докажем что $\left(\bar{\chi}^{\dot{\alpha}}\right)^{\dagger}=\chi^{\alpha}$
+
+
+
+
+
+
 
 
 
@@ -98,15 +312,16 @@ $\text { Доказать, что }\left(\theta_{\alpha}\right)^{\dagger}=\bar{\
 \begin{task}\textbf{5}
 
 Покажите, что представления группы Лоренца со спином $s = 1:
-(1, 0)$ и $(0, 1)$ отвечают самодуальным и антисамодуальным тензорным
-полям второго ранга в пространстве-времени Минковского, т.е. при
+(1, 0)$ и $(0, 1)$ отвечают самодуальным и антисамодуальным 
+тензорным полям второго ранга в пространстве-времени Минковского, т.е. при
 определении поля, дуального к $ B_{\mu\nu}$, как
 $$
 \tilde{B}^{\mu \nu}=\frac{1}{2} \hat{\epsilon}^{\mu \nu \mu^{\prime} \nu^{\prime}} B_{\mu^{\prime} \nu^{\prime}}
 $$
 
 имеют место соотношения самодуальности и антисамодуальности в
-пространстве-времени Минковского:
+пространстве-времени Минковского:
+
 $$
 \tilde{B}^{\mu \nu}=\pm \mathrm{i} B^{\mu \nu}
 $$
@@ -149,9 +364,50 @@ $$
 Доказать, что компоненты псевдовектора Паули–Любанского для
 безмассовых полей равны
 $$
-W_{0}=\hbar \boldsymbol{p} \cdot \boldsymbol{s}, \quad 
-W^{\alpha}=\hbar\left\{p_{0} \boldsymbol{s}^{\alpha} \mp \mathrm{i}(\boldsymbol{p} \times \boldsymbol{s})^{\alpha}\right\}
+W_{0}=
+\hbar \boldsymbol{p} \cdot \boldsymbol{s}, \quad 
+W^{\alpha}=
+\hbar\left\{p_{0} \boldsymbol{s}^{\alpha} \mp \mathrm{i}(\boldsymbol{p} \times \boldsymbol{s})^{\alpha}\right\}
 $$
+
+
+
+
+При этом, конечно, на этих полях (т.е. при действии операторов на поля) проекция спина
+на ось импульса или, как говорят, спиральность имеет значения
+$$
+\frac{\boldsymbol{p} \cdot \boldsymbol{j}^{\pm}}{p_{0}}=\partial_{3}^{\pm}=\pm \lambda_{\pm}
+$$
+Причем на физических полях $W^{2}=0$ Таким образом, среди безмассовых полей со спином базис составляют так назы ваемые
+К иральные поля полуцелого спина и поляризованные поля целого спина:
+npaeble поля с положительной киральностью и спиральностью $\mathfrak{s}=\lambda_{+}$
+$$
+\boldsymbol{J}^{-} \equiv 0 \Rightarrow \mathcal{K}=-\mathrm{i} \boldsymbol{s}, \quad \boldsymbol{J}^{+}=\boldsymbol{s}
+$$
+левъе поля с отрицательной киральностью и спиральностью $\mathfrak{s}=-\lambda_{-}$
+$$
+\boldsymbol{J}^{+} \equiv 0 \Rightarrow \mathcal{K}=\mathrm{i} \boldsymbol{s}, \quad \boldsymbol{J}^{-}=\boldsymbol{s}
+$$
+ванны х полей. С учетом
+$$
+S_{\beta \gamma}=\hbar \epsilon_{\beta \gamma \rho} s^{\rho}
+$$
+нулевая компонента
+$$
+W_{0}=-\frac{1}{2} \hat{\epsilon}^{0 \alpha \beta \gamma} p_{\alpha} S_{\beta \gamma}=\hbar p \cdot s=\pm p_{0} \hbar \lambda_{\pm}
+$$
+
+При вычислении пространственной компоненты необходимо использовать то, что
+$$
+\frac{1}{\hbar} S_{0 \gamma}=\mathcal{K}^{\gamma}=\mp \mathrm{i} s^{\gamma}
+$$
+откуда
+$$
+W^{\alpha}=-\frac{1}{2} \hat{\epsilon}^{\alpha 0 \beta \gamma} p_{0} S_{\beta \gamma}-\frac{1}{2} 2 \hat{\epsilon}^{\alpha \beta 0 \gamma} p_{\beta} S_{0 \gamma}=\hbar\left\{p_{0} s^{\alpha} \mp \mathrm{i}(\boldsymbol{p} \times \boldsymbol{s})^{\alpha}\right\}
+$$
+
+
+
 
 
 
@@ -164,7 +420,66 @@ $$
 
 Доказать, что квадрат псевдовектора Паули-Любанского для безмассовых полей имеет вид
 $$
-W^{2}=-4 p_{0}^{2} \hbar^{2}\left\{\partial^{+} \cdot \partial^{-}-\frac{1}{p_{0}^{2}}\left(\boldsymbol{p} \cdot \boldsymbol{\jmath}^{+}\right)\left(\boldsymbol{p} \cdot \boldsymbol{\jmath}^{-}\right)-\frac{\mathrm{i}}{p_{0}} \boldsymbol{p} \cdot\left(\boldsymbol{J}^{+} \times \boldsymbol{j}^{-}\right)\right\}$$
+W^{2}=-4 p_{0}^{2} \hbar^{2}\left\{
+\partial^{+} \cdot \partial^{-}-
+\frac{1}{p_{0}^{2}}\left(\boldsymbol{p} \cdot \boldsymbol{\jmath}^{+}\right)\left(\boldsymbol{p} \cdot \boldsymbol{\jmath}^{-}\right)-
+\frac{\mathrm{i}}{p_{0}} \boldsymbol{p} \cdot\left(\boldsymbol{J}^{+} \times \boldsymbol{j}^{-}\right)
+\right\}$$
+
+
+
+
+
+
+Псевдовектор Паули-Любанского определяется как
+$$
+W^{m}=-\frac{1}{2} \hat{\epsilon}^{m n k l} p_{n} S_{k l}
+$$
+
+
+При $p^{2}=0$
+$$
+\begin{aligned}
+	W^{2} &=
+	p_{n} p^{k} S_{k l} S^{n l}=p_{n} p^{k} S_{k 0} S^{n 0}+p_{n} p^{k} S_{k \alpha} S^{n \alpha} \\
+	&=-p^{\alpha} p^{\beta} S_{0 \alpha} S^{0 \beta}+p_{0}^{2} S^{0 \alpha} S_{0 \alpha}-p^{\gamma} p^{\beta} S^{\gamma \alpha} S_{\beta \alpha}+p_{0} p^{\beta}\left(S_{\beta \alpha} S^{0 \alpha}-S_{0 \alpha} S^{\beta \alpha}\right) \\
+	&=\hbar^{2}\left\{(\boldsymbol{p} \cdot \mathcal{K})^{2}-p_{0}^{2} \mathcal{K}^{2}-(\boldsymbol{p} \times s)^{2}+p_{0} \boldsymbol{p} \cdot\{(\boldsymbol{s} \times \mathcal{K})-(\mathcal{K} \times \boldsymbol{s})\}
+	\right\}
+\end{aligned}
+$$
+Раскрывая квадрат векторного произведения, находим
+$$
+\frac{1}{\hbar^{2}} W^{2}=-p_{0}^{2}\left(s^{2}+\mathcal{K}^{2}\right)+(\boldsymbol{p} \cdot \boldsymbol{s})^{2}+(\boldsymbol{p} \cdot \boldsymbol{\mathcal { K }})^{2}+p_{0} \boldsymbol{p} \cdot\{(\boldsymbol{s} \times \mathcal{K})-(\mathcal{K} \times \boldsymbol{s})\}
+$$
+Выражая генераторы спина и бустов через эрмитовы векторы $\mathcal{J}^{+}$ и $\mathcal{J}^{-},$ получаем
+$$
+W^{2}=-4 p_{0}^{2} \hbar^{2}\left\{
+\boldsymbol{j}^{+} \cdot \boldsymbol{j}^{-}-
+\frac{1}{p_{0}^{2}}\left(\boldsymbol{p} \cdot \boldsymbol{\jmath}^{+}\right)\left(\boldsymbol{p} \cdot \boldsymbol{\jmath}^{-}\right)-
+\frac{\mathrm{i}}{p_{0}} \boldsymbol{p} \cdot\left(\boldsymbol{\jmath}^{+} \times \boldsymbol{j}^{-}\right)
+\right\}
+$$
+
+
+
+
+Выберем ось проектирования спина вдоль пространственной компоненты импульса: $\boldsymbol{p}$ $\left(0,0, p_{0}\right),$ откуда $\boldsymbol{p} \cdot \boldsymbol{J}=p_{0} \mathcal{J}_{3},$ тогда
+$$
+W^{2}=-4 p_{0}^{2} \hbar^{2}\left\{\partial_{1}^{+} \partial_{1}^{-}+\partial_{2}^{+} \partial_{2}^{-}-\mathrm{i}\left(\partial_{1}^{+} \partial_{2}^{-}-\partial_{2}^{+} \partial_{1}^{-}\right)\right\}
+$$
+или
+$$
+W^{2}=-4 p_{0}^{2} \hbar^{2}\left\{
+\partial_{1}^{+}+\mathrm{i} \partial_{2}^{+}\right\}\left\{\partial_{1}^{-}-\mathrm{i} \partial_{2}^{-}\right\}=-4 p_{0}^{2} \hbar^{2} \partial_{+}^{+} \partial_{-}^{-}
+$$
+
+
+почти доделал, осталось досмотреть мелочи и все.
+
+
+
+
+
 
 
 
@@ -182,6 +497,9 @@ $$
 \left\langle\boldsymbol{k} \mid \boldsymbol{k}^{\prime}\right\rangle=
 2 \epsilon(\boldsymbol{k})(2 \pi)^{3} \delta\left(\boldsymbol{k}-\boldsymbol{k}^{\prime}\right)
 $$
+
+
+
 
 
 
@@ -216,6 +534,18 @@ $$
 $$
 T_{0}^{0} \mapsto k_{0}, \quad T_{0}^{\alpha} \mapsto \boldsymbol{k}
 $$
+
+Тензор энергии-импульса определяется как 
+\[ T^\mu_\nu=\parder{L}{\partial_\mu \varphi}\partial_\nu \varphi+
+\parder{L}{\partial_\mu \varphi^{*}}\partial_\nu \varphi^{*}-\delta_\nu^\mu L \]
+
+Поэтому в случае скалярного поля, когда $ L=\partial_\mu \partial^\mu \varphi^{*}-m^2\varphi \varphi^{*}$
+
+$ L=\frac{1}{2} (\partial_\nu \varphi_0)^2- \frac{m^2}{2}\varphi_0^2+\frac{1}{2}(\partial_\mu\varphi_1)^2-\frac{m^2}{2} $
+
+
+и дальше там мы подставляем и вытаксиваем компоненты ТЭИ.
+
 
 
 
