@@ -9,6 +9,9 @@
 \date{\today}
 
 
+
+\newcommand{\parder}[2]{\frac{\partial {#1}}{\partial {#2}}}
+
 \begin{document}
 \maketitle
 
@@ -53,11 +56,33 @@ $ N $ молекул идеального газа в объеме $ V $.
 \frac{np^k}{k!}e^{-np}\]
 
 Среднее значение $\overline{n}$ найдется с помощью
-\[ \overline{n}=\int_0^N n P(n) dn= \]
+\[ \overline{n}=\frac{v}{V}N=Np \]
 
-???
+Флуктуации найдутся, зная дисперсию $ D \hat{n}= E n^2 - (E n)^2 = N (p-p^2)=Npq $:
 
-а вот про флуктуации я хз.
+
+\[ \frac{\sqrt{D n}}{\overline{n}}=\frac{\sqrt{Npq}}{Np}=\sqrt{\frac{q}{Np}}. \]
+
+Пусть $ v\ll V, \overline{n}\gg 1 $
+
+$$
+P_{u}(v)=P(n, \lambda)=\frac{\lambda^{n} e^{\lambda}}{n !}
+$$
+Используя формулу Стирлинга, получаем:
+$$
+P_{n}(\sigma) \approx \frac{e^{-\lambda}}{\sqrt{2 \pi n}}\left(\frac{e \lambda}{n}\right)^{n}=\frac{1}{\sqrt{2 \pi n}} 
+\operatorname{exp}\left(-\lambda+n+n \ln \left(\frac{\lambda}{n}\right)\right)
+$$
+
+Просто преобразуем $ P(v)$, введя $ x\equiv \lambda -n$, тогда логарифм раскрывается так: $\ln \frac{\lambda}{n}=\ln \left(\frac{n+x}{n}\right)=\ln \left(1+\frac{x}{n}\right) \approx \frac{x}{n}-\frac{1}{2}\left(\frac{x}{n}\right)^{2}$
+%
+$$
+P_{4}(v)=\frac{1}{\sqrt{2 \pi n}} \operatorname{exp}\left(-x+x-\frac{1}{2} \frac{x^{2}}{n}\right)=
+P_{4}(v)=\frac{1}{\sqrt{2 \pi n}} \operatorname{exp}\left(\frac{(\lambda - n)^2}{2\lambda}\right)
+$$
+это распределение Гаусса
+
+
 
 \end{task}
 
@@ -133,19 +158,18 @@ C_{p}-C_{V}=
 \[ \left(\frac{\partial p}{\partial T}\right)_{V}=\frac{R}{V-b} \]
 \[ \left(\frac{\partial p}{\partial V}\right)_{T}=-\frac{RT}{(V-b)^2}+\frac{2a}{V^3} \]
 Таким образом, подставляем и получаем:
-\[ C_p-C_V=\frac{TR^2}{RT-\frac{a}{V}\left(1-\frac{b}{V}\right)} \]
+\[ C_p-C_V=\frac{TR}{T-\frac{2a}{V^3}\left(V-b\right)^2} \]
 
 
-Теперь применим эти формулы для фермии и бозе-газа 
+Теперь применим эти формулы для фермии и бозе-газа, для которых $ \frac{pV}{NT}=1\pm \alpha\left(\frac{T_0}{T}\right)^{3/2}.$ Подставим, посчитаем производные, придем к ответу:
+\[ C_p-C_V =\frac{N(\alpha T_0^{3/2}N \mp 2 T^{3/2} V)^2 }{\pm 8 \alpha T_0^{3/2} N T^{3/2}+4 T^3 V^2 } \] 
 
 
 
-???
-
-Теперь применим эти формулы для черного излучения.
 
 
-????
+Теперь применим эти формулы для черного излучения. Для такого: $ p=\frac{a}{3} T^4$. Поэтому для него $ C_p-C_V\rightarrow\infty $
+ 
 
 
 \end{task}
@@ -187,11 +211,15 @@ $$
 $$
 \begin{aligned}
 \Gamma(E) &=\left(\frac{V e}{N(2 \pi \hbar)^{3}}\right)^{N} J_{3 N}(E) \\
-J_{3 N}(E) &=\int \prod_{i=1}^{N} d^{3} p_{i} \theta\left(E-\sum_{i=1}^{N} \frac{p_{i}^{2}}{2 m}\right)
+J_{3 N}(E) &=\int \prod_{i=1}^{N} d^{3} p_{i} \theta\left(E-\sum_{i=1}^{N} \frac{p_{i}^{2}}{2 m}\right) - \text{объем 3n мерного шара радиусом p}
 \end{aligned}
 $$
+%
+\[ V_{3N}(p)= \frac{\pi^{3N/2}}{\Gamma (\frac{3N}{2}+1)}p^n \approx \left( \frac{2 e \pi p^2}{3N}\right)^{3N/2}  \]
+%
+Тогда:
+\[ \Gamma(E)= \left( \frac{Ve}{N (2\pi\hbar)^3}\right)^N \left(\frac{4e\pi m E^2}{3N}\right)^{3N/2}\]
 
-Вот такое вот число состояний, как видно нужно знать $ V, N,E, m$ и уметь считать такие интегралы, чтобы прийти к финальной цифре.
 
 
 \end{task}
@@ -241,7 +269,7 @@ E=\Delta E \sum_{i=1}^{N} n_{i}, \quad \Delta E=\hbar \omega
 $$
 где $n_{i}$ - номер возбуждения $i$ -того осциллятора. Это значение энергии может быть получено числом способов, которое следует из комбинаторики
 $$
-\frac{(N+M-1) !}{(N-1) ! M !} \approx \frac{\left.(N+M)^{N+M}\right)}{N^{N} M^{M}}
+\Gamma=\frac{(N+M-1) !}{(N-1) ! M !} \approx \frac{\left.(N+M)^{N+M}\right)}{N^{N} M^{M}}
 $$
 
 
@@ -256,6 +284,100 @@ $$
 
 
 
+Вероятность произвольного состояния:
+$$
+w_{\alpha}=w\left(т_{p_{1}}\right) \cdot w\left(u_{p_{2}}\right) w\left(u_{p_{3}}\right)\cdot ...
+$$
+
+
+$$
+S=-\sum_{x} w_{\alpha} ln w_{\alpha}=-\sum_{n_{p_1}}\sum_{n_{p_2}}\sum_{n_{p_3}}\ldots 
+(w\left(u_{p_{2}}\right) w\left(u_{p_{3}}\right)\cdot ...)
+(\ln w(n_{p_1})+\ln w(n_{p_2})+... )
+$$
+
+\[ S=-\sum_{n_{p_1}}
+w(n_{p_1}) \ln w(n_{p_1}) +\ldots \]
+
+
+
+Для ферми газа:$ n_p=\{ 0, 1\} $
+
+\[ -\sum_{n_p}w(n_{p}) \ln w(n_{p})=
+-w(n_{p_1}) \ln w(n_{p_1})+
+w(n_{p_0}) \ln w(n_{p_0})    \]
+
+
+среднее число частиц с импульсом $ p: \overline{n_p}=\sum_{n_p}w(n_p) n_p =w (1_p)$
+%
+\[ w(0_p)=1-\overline{n_p} \]
+%
+поэтому:
+\[ -\sum_{n_p}w(n_p)\ln w(n_p) = -(1-\overline{n_p})\ln (1-\overline{n_p}) - \overline{n_p} \ln \overline{n_p}\]
+
+
+В итоге энтропия для ферми газа равна:
+\[ S_F=-\sum_{p}\Big(
+(1-\overline{n_p}) \ln (1-\overline{n_p})+\overline{n_p} \ln \overline{n_p}\Big) \]
+
+
+
+Теперь то же для бозе-газа. Для него $ n_p\in \{0, ... \infty\} $
+
+
+Сумма $ \Big[-\sum_{n_p} w(n_p) \ln (n_p)\Big]$ принимает максимальное значение при заданном $ \overline{n_p}$ при условии на функцию Лагранжа:
+\[ L= -\sum_{n_p} w(n_p) \ln (n_p) -\lambda_1 \sum_n n w(n) - \lambda_2 \sum_n w(n)\]
+
+$$
+\frac{\partial L}{\partial w(n)}=-\ln w(n)-1 -\lambda_1 n - \lambda_2
+$$
+$$
+w(n)=\exp\left(-1-\lambda_{1} n-\lambda_{2}\right)
+$$
+
+$$
+\sum w_{n}=1 \Rightarrow \exp \left(-1-\lambda_{1} n-\lambda_{2}\right)=1
+$$
+$$\sum
+\exp \left(-1-\lambda_{2}\right) \sum_{n} \exp (-\lambda_1 n)=1
+$$
+
+$$
+\sum_{n} \operatorname{exp}\left(-\lambda_{1} n\right)=
+\frac{1}{1-e^{-\lambda_{1}}} \Rightarrow \operatorname{exp}\left(-1-\lambda_{2}\right)=1-e^{-\lambda_{1}}
+$$
+
+
+$$
+\bar{n}=\sum_{n} w(n) n=\exp \left(-1-\lambda_{2}\right) \sum_{n} n 
+\exp \left(-\lambda_{1} n\right)=\exp \left(-1-\lambda_{2}\right)
+$$
+\[ \left(-\frac{d}{d \lambda_1} \sum_{n} \exp \left(-\lambda_{1} n\right)\right)=-\exp \left(-1-\lambda_{2}\right) \frac{d}{d \lambda_{1}} \frac{1}{1-e^{-\lambda_{1}}} \]
+%
+\[ \bar{n}=\frac{1}{e^{\lambda_{1}}-1 } \]
+\[ e^{-\lambda_{1}}=\frac{\bar{n}}{\bar{n}+1} \]
+
+
+
+
+Поэтому после преобразований получаем:
+$$
+w(n)=\frac{1}{\bar{n}+1}
+\left(\frac{\bar{n}}{\bar{n}+1}\right)^{n}
+$$
+
+
+\begin{multline}
+S=-\sum_{n} w(n) \ln w(n)=\sum_{n} w(n)\left(\lambda_{1} n+\lambda_{2}+1\right) =\\
+= \sum_{n} w_{n}\left(\lambda_{2}+1\right)+\sum_{n} n w_{n} \lambda_{1}=\left(\lambda_{2}+1\right)+\bar{n} \lambda_{1}=\\
+=(\bar{n}+1) \ln (\bar{n}+1)-\bar{n} \ln \bar{n}
+\end{multline}
+
+В итоге:
+$$
+S=\sum_{p}\left[\left(1+\bar{n}_{p}\right) \ln \left(1+\bar{n}_{p}\right)-n_{p} \ln \overline{n_{p}}\right]
+$$
+
 
 
 \end{task}
@@ -265,8 +387,12 @@ $$
 
 Вычислить основные термодинамические величины ферми- и бозе-газов при $T=0$
 
+\[ \begin{array}{c}
+	N=\sum_{p}\left(N_{p}\right) \approx \frac{2 V}{(2 \pi \hbar)^{3}} \int_{0}^{p_{F}} n_{p} 4 \pi p^{2} d(p)=\frac{V}{3 \pi^{2} \hbar^{3}} p_{F}^{3} \\
+	E=\sum_{p}\left(E_{p} n_{p}\right) \approx \frac{2 V 4 \pi}{(2 \pi \hbar)^{3} 2 m} \int_{0}^{p_{F}} p^{4} d(p)=\frac{3}{5} N E_{F} 
+\end{array} \]
 
-
+\[ 	P=-\parder{E}{V}=-\frac{\partial}{\partial(V)}\left(\frac{3}{10}\left(3 \pi^{2}\right)^{\frac{2}{3}} \frac{\hbar^{2}}{m} \frac{N^{\frac{5}{3}}}{V^{\frac{2}{3}}}\right)=\frac{1}{5}\left(3 \pi^{2}\right)^{\frac{2}{3}} \frac{\hbar^{2}}{m} n^{\frac{5}{3}}=\frac{2}{5} n E_{F} \]
 
 
 
@@ -274,20 +400,56 @@ $$
 \end{task}
 
 
-\begin{task}
+\begin{task} \textbf{8}
 
-8
+
 
 Из функционала Гинзбурга–Ландау получить выражение для плотности тока в магнитном поле, получить уравнение Лондонов и квантование магнитного потока в сверхпроводящем кольце.
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \end{task}
 
 
-\begin{task}
 
-9
-Вычислить среднее от произведения четырех ферми-операторов  $\left\langle\hat{a}_{k}^{+} \hat{a}_{p}^{+} \hat{a}_{u} \hat{a}_{v}\right\rangle,$ где $\langle\cdots\rangle-$ усреднение по состоянию невзаимодействующих частиц с заданной температурой и химпотенциалом.
+
+
+\begin{task} \textbf{9}
+	
+	
+Вычислить среднее от произведения четырех ферми-операторов  
+$\left\langle\hat{a}_{k}^{+} \hat{a}_{p}^{+} \hat{a}_{u} \hat{a}_{v}\right\rangle,$ 
+где $\langle\cdots\rangle-$ усреднение по состоянию невзаимодействующих частиц с заданной температурой и химпотенциалом.
+
+
+
+
+
+
+
+
+
+
 
 \end{task}
 
@@ -297,6 +459,15 @@ $$
 10
 
 Записать оператор взаимодействия электронов с внешними электрическим и магнитным полями в представлении вторичного квантования.
+
+
+
+
+
+
+
+
+
 
 
 \end{task}
