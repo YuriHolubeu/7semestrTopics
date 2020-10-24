@@ -8,7 +8,8 @@
 \title{статистическая физика}
 \date{\today}
 
-
+\usepackage{graphicx} 
+\usepackage{float} 
 
 \newcommand{\parder}[2]{\frac{\partial {#1}}{\partial {#2}}}
 
@@ -24,8 +25,10 @@
 \section*{Предисловие}
 \addcontentsline{toc}{section}{Предисловие}
 
-Здесь следующие есть интересные вещи:
-...
+
+Задачи по статистической физике.
+
+
 
 
 
@@ -387,12 +390,19 @@ $$
 
 Вычислить основные термодинамические величины ферми- и бозе-газов при $T=0$
 
-\[ \begin{array}{c}
-	N=\sum_{p}\left(N_{p}\right) \approx \frac{2 V}{(2 \pi \hbar)^{3}} \int_{0}^{p_{F}} n_{p} 4 \pi p^{2} d(p)=\frac{V}{3 \pi^{2} \hbar^{3}} p_{F}^{3} \\
-	E=\sum_{p}\left(E_{p} n_{p}\right) \approx \frac{2 V 4 \pi}{(2 \pi \hbar)^{3} 2 m} \int_{0}^{p_{F}} p^{4} d(p)=\frac{3}{5} N E_{F} 
-\end{array} \]
 
-\[ 	P=-\parder{E}{V}=-\frac{\partial}{\partial(V)}\left(\frac{3}{10}\left(3 \pi^{2}\right)^{\frac{2}{3}} \frac{\hbar^{2}}{m} \frac{N^{\frac{5}{3}}}{V^{\frac{2}{3}}}\right)=\frac{1}{5}\left(3 \pi^{2}\right)^{\frac{2}{3}} \frac{\hbar^{2}}{m} n^{\frac{5}{3}}=\frac{2}{5} n E_{F} \]
+Для ферми газа:
+
+\[	N=\sum_{p}N_{p} \approx \frac{2 V}{(2 \pi \hbar)^{3}} \int_{0}^{p_{F}} n_{p} 4 \pi p^{2} dp=\frac{V}{3 \pi^{2} \hbar^{3}} p_{F}^{3} \]
+
+\[ 
+E=\sum_{p}\left(E_{p} n_{p}\right) \approx \frac{2 V 4 \pi}{(2 \pi \hbar)^{3} 2 m} \int_{0}^{p_{F}} p^{4} d(p)=\frac{3}{5} N E_{F}  \]
+
+Давление находится по известной формуле:
+\[ 	P=-\parder{E}{V}=
+-\frac{\partial}{\partial V}\left(\frac{3}{10}\left(3 \pi^{2}\right)^{\frac{2}{3}} \frac{\hbar^{2}}{m} \frac{N^{\frac{5}{3}}}{V^{\frac{2}{3}}}\right)=
+\frac{1}{5}\left(3 \pi^{2}\right)^{\frac{2}{3}} \frac{\hbar^{2}}{m} n^{\frac{5}{3}}=
+\frac{2}{5} n E_{F} \]
 
 
 
@@ -477,7 +487,17 @@ $\left\langle\hat{a}_{k}^{+} \hat{a}_{p}^{+} \hat{a}_{u} \hat{a}_{v}\right\rangl
 
 11
 
-Вычислить  $\langle\exp (-i q \hat{x})\rangle, \text { гДе } \hat{x}$ оператор смещения одномерного гармонического осциллятора.
+Вычислить  $\langle\exp (-i q \hat{x})\rangle$, где  $\hat{x}$ оператор смещения одномерного гармонического осциллятора.
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -493,6 +513,16 @@ $\left\langle\hat{a}_{k}^{+} \hat{a}_{p}^{+} \hat{a}_{u} \hat{a}_{v}\right\rangl
 
 
 
+
+
+
+
+
+
+
+
+
+
 \end{task}
 
 
@@ -501,6 +531,18 @@ $\left\langle\hat{a}_{k}^{+} \hat{a}_{p}^{+} \hat{a}_{u} \hat{a}_{v}\right\rangl
 13
 
 Используя результаты предыдущей задачи, вычислить среднее от произведения четырех операторов смещения, относяпихся к одной и той же ячейке: $\left\langle\hat{R}_{k} \hat{R}_{p} \hat{R}_{i} \hat{R}_{j}\right\rangle,$ где $\langle\cdots\rangle$ обозначают усреднение по состоянию невзаимодействуюших фононов с заданной температурой, $\hat{R}_{k}-$ смещение атома в $k$ -направлении $(k=x, y, z)$
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -515,6 +557,16 @@ $\left\langle\hat{a}_{k}^{+} \hat{a}_{p}^{+} \hat{a}_{u} \hat{a}_{v}\right\rangl
 
 
 
+
+
+
+
+
+
+
+
+
+
 \end{task}
 
 
@@ -523,6 +575,18 @@ $\left\langle\hat{a}_{k}^{+} \hat{a}_{p}^{+} \hat{a}_{u} \hat{a}_{v}\right\rangl
 15
 
 Вычисляя первую поправку термодинамической теории возмущений, найти вклад прямого и обменного взаимодействия для ферми- и бозе-частиц. Сравнить результаты
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \end{task}
@@ -535,7 +599,31 @@ $\left\langle\hat{a}_{k}^{+} \hat{a}_{p}^{+} \hat{a}_{u} \hat{a}_{v}\right\rangl
 В преобразовании Боголюбова для электронов получить при T  Tc связь операторов поглощения квазичастиц и поглощения голых электронов.
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 \end{task}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -604,9 +692,9 @@ $$
 $$
 
 
-????
-
-
+Пусть фаза 1 - пар, фаза 2 - жидкость, $ s_2 \ll s_1 $
+\[ \frac{d p}{d T}=\frac{s_1}{v_1}=\frac{pS_1}{T} \]
+Если $ s_1=const$, то $ p=AT^{s_1} $
 
 \end{ttask}
 
@@ -646,7 +734,10 @@ $$
 В данном случае это число равно $2^{N}$.
 
 
-Вроде бы итог этой задачи такой же, как и итоге задачи о двухуровневых частицах.
+Исследуем зависимость теплоемкости. Для этого ее по определению посчитаем:
+\[ c(T)=\frac{d E}{d T}=\Delta E_{N} \frac{d n}{d T}= \frac{\Delta E^{2} N \exp (\Delta E /T)}{T^{2}(1+\exp(\Delta E / T))^{2}} \]
+
+Видим, что теплоемкость спадает по закону $ c(\tau) \sim \operatorname{exp}\left(\frac{-\delta E}{T}\right), \quad T \rightarrow 0; c(r) \sim \frac{1}{T^{2}}, \quad T \rightarrow \infty$
 
 
 \end{ttask}
@@ -690,7 +781,44 @@ $$
 
 
 
+\[ \varepsilon_{n}=g \mu_{b} H_m, m \in\{-J, \ldots, J\} \]
 
+
+\[ 	\text { Полная энергия} \quad E_{n}=\sum_{i=1}^{N} g \mu_{b} M m_{i}, n=\left\{m_{1}, \ldots, m_{N}\right\} \]
+
+
+Статсумма для системы из $N$ частиц:
+
+\begin{multline}
+Z_N=\sum e^{-E_n/T} =\sum_{m_1, ..., m_N} \exp \left(-\frac{g\mu_b H (m_1+\ldots m_N)}{T} \right) =
+\\
+=\left(\sum_{m_1} e^{-g\mu_b Hm_1/T}\right) \left(\sum_{m_2} e^{-g\mu_b Hm_2/T}\right) \cdots \left(\sum_{m_N} e^{-g\mu_b Hm_N/T}\right)=
+\left(\sum_{m} e^{-g\mu_b Hm/T}\right)^N\equiv Z_1^N
+\end{multline}
+
+
+Также введем обозначение $ x:=g \mu_s H/T $, тогда перепишем:
+
+\begin{multline}
+Z_{1}=\sum_{m=-J}^{J} e^{-x m}=e^{x J}+e^{x(J-1) \cdots+e^{-x J}}=
+e^{-xJ}\left(1+e^{x} \ldots+e^{2 Jx}\right)=\\
+=e^{-xJ} \cdot \frac{e^{(2 J+1) x}-1}{e^{x}-1}= \frac{e^{\left(J+\frac{1}{2}\right) x}-e^{-\left(J+\frac{1}{2}\right)_{x}}}{e^{x / 2}-e^{-x / 2}}=
+\frac{\operatorname{sh}\left(J+\frac{1}{2}\right) x}{\operatorname{sh} \frac{x}{2}}
+\end{multline}
+
+
+дальше через свободную энергию $ F=-T\ln Z_N =-TN\ln Z_1$ считаем магнитный момент как производную ее по магнитному полю.
+
+
+\[ M=\left(-\frac{\partial F}{\partial H}\right)_{T, V, N}=\frac{T N}{z_{1}} \frac{\partial z_{1}}{\partial u}=\frac{T N}{z_{1}} \cdot \frac{\partial z_{1}}{\partial x} \frac{\partial x}{\partial H}=
+\frac{T N}{z_{1}} \cdot \frac{g \mu_{b}}{T} \cdot \frac{\partial z_{1}}{\partial x} \]
+
+дальше пару строк не успеваю вписать в латех, короче говоря, простая математика тут.
+
+
+\[ \chi=\left(\frac{\partial M}{\partial H}\right)= g \mu_b \left(\frac{\partial B(x)}{\partial H}\right) =\frac{(g\mu_b)^2}{T}B^{\prime}_y(x)\]
+
+При $ T\gg g \mu_b H \Rightarrow\chi \approx \dfrac{1}{T}$, что есть закон Кюри.
 
 
 
@@ -700,7 +828,29 @@ $$
 \begin{ttask}\textbf{6}
 
 Вычислить для парамагнитного газа изменение температуры при адиабатическом изменении магнитного поля $(\partial T / \partial H)_{S},$ 
-если его свободная энергия может быть представлена в виде: $F=F_{0}(T)-$ $-(1 / 2) \chi(T) H^{2}$
+если его свободная энергия может быть представлена в виде: $F=F_{0}(T)-(1 / 2) \chi(T) H^{2}$
+
+
+\[ dE=TdS-pdV+\mu dN-MdH \]
+
+\[ \left(\parder{T}{H}\right)_S=-\left(\parder{M}{S}\right)_H \]
+
+
+
+\[ \left(\parder{M}{S}\right)_H=
+\left(\parder{(M,H)}{(S,H)}\right)=
+\left(\parder{(M,H)}{(T,H)}\right)\left(\parder{(T,H)}{(S,H)}\right)=
+\left(\parder{M}{S}\right)_H \frac{1}{\left(\parder{S}{T}\right)_H}=\left(\parder{M}{S}\right)_H \frac{T}{C_H}
+\]
+
+
+\[ \left(\parder{T}{H}\right)_S=- \left(\parder{M}{T}\right)_H \frac{T}{C_H}\]
+
+При $ M=\chi H$ получаем закон Кюри:
+\[ \chi = \frac{A}{T} \]
+
+\[ \left(\parder{T}{H}\right)_S=\frac{AH}{C T}\]
+
 
 
 
@@ -814,7 +964,11 @@ $$
 Наконец,
 $$
 \begin{aligned}
-\langle\Delta p \Delta S\rangle=\langle[&\left.\left.\left(\frac{\partial p}{\partial V}\right)_{T} \Delta V+\left(\frac{\partial p}{\partial T}\right)_{V} \Delta T\right]\left[\left(\frac{\partial p}{\partial T}\right)_{V} \Delta V+\frac{C_{V}}{T} \Delta V\right]\right\rangle=\\
+\langle \Delta p \Delta S\rangle=&
+\left\langle 
+\left[\left(\frac{\partial p}{\partial V}\right)_{T} \Delta V+\left(\frac{\partial p}{\partial T}\right)_{V} \Delta T\right]
+\left[\left(\frac{\partial p}{\partial T}\right)_{V} \Delta V+\frac{C_{V}}{T} \Delta V\right]
+\right\rangle=\\
 &=\left(\frac{\partial p}{\partial V}\right)_{T}\left(\frac{\partial p}{\partial T}\right)_{V}\left\langle(\Delta V)^{2}\right\rangle+\frac{C_{V}}{T}\left(\frac{\partial p}{\partial T}\right)_{V}\left\langle(\Delta T)^{2}\right\rangle
 \end{aligned}
 $$
@@ -835,51 +989,27 @@ $$
 $ F, \mu, P, S, C$, $(\partial P)(\partial \rho)_{S}$
 
 
-
-
-\end{ttask}
-
-
-\begin{ttask}
-
-Найти теплоемкость идеального газа без внутренних степеней свободы, помещенного в однородное гравитационное поле в коническом сосуде высоты h (основание конуса расположено внизу, вверху). Рассмотреть случаи:
+a) одномерный газ
 
 
 
-\end{ttask}
+\[ Z_1=\frac{1}{(2\pi\hbar)^3}\int e^{-\frac{p^2}{2mT}}d^3 xd^3 p=\frac{V}{(2\pi\hbar)^3} \left(\int e^{-\frac{p^2}{2mT}}dp_x\right)^3=
+	\frac{V}{(2\pi\hbar)^3} (2\pi m T)^{3/2}\]
 
+\[ Z=\frac{e^{N} V^{N}}{N^{N}(2 \pi k)^{3 N}}(2 \pi m T)^{3 N / 2} \]
 
-\begin{ttask}
+\[ F=-T\ln Z =-NT\ln \left( \frac{eV}{(2\pi\hbar)^3 N}(2\pi m T)^{3/2} \right)\]
 
-10. Вычислить температурную зависимость теплоемкости двухатомного больцмановского газа, учесть диссоциацию молекул. 
-
-
-
-
-
-\end{ttask}
-
-
-\begin{ttask}
-
-11. Построить изохоры, изобары и изотермы для бозе-газа. 
+\[ E=\frac{3N}{2\beta}=\frac{3}{2}NT \]
 
 
 
-\end{ttask}
+\[ C=\parder{E}{T}=\frac{3}{2}N \]
 
 
-\begin{ttask}
+b) двумерный газ.
 
-12. Построить изохоры, изобары и изотермы для ферми-газа. 
-
-
-\end{ttask}
-
-
-\begin{ttask}
-
-13. Вычислить теплоемкость двумерного вырожденного идеального ферми-газа. 
+позже
 
 
 
@@ -888,9 +1018,266 @@ $ F, \mu, P, S, C$, $(\partial P)(\partial \rho)_{S}$
 \end{ttask}
 
 
-\begin{ttask}14. 
+\begin{ttask}\textbf{9}
+
+Найти теплоемкость идеального газа без внутренних степеней свободы, помещенного в однородное гравитационное поле в коническом сосуде высоты $ h $ (основание конуса расположено внизу, вверху). Рассмотреть случаи:
+$ m g h \ll T, m g h \gg T $
+
+
+a) случай основания снизу
+
+\[ E=\frac{p^{2}}{2 m}+\operatorname{mg} z \]
+
+
+\[ z=\frac{1}{N!} Z_{1}^{N}=
+\left(\frac{e Z_{1}}{v}\right)^{N} \]
+
+\begin{multline}
+ Z_1= \int \frac{d^3 p d^3 x}{(2\pi \hbar)^3}\exp \left(-\frac{p^2}{2mT}\right) \exp \left(-\frac{mgz}{T}\right)= \left(\frac{mT}{2\pi \hbar^2}\right)^{3/2}\int_{0}^{h} \pi ( tg z)^2\exp \left(\frac{mgz}{T}\right) dz=\\
+=\left(\frac{mT}{2\pi \hbar^2}\right)^{3/2} 
+\pi tg^2 \alpha \left(\frac{T}{mg}\right)^2
+\left[ \exp\left(\frac{m gh}{T}\right)
+\left(\frac{m g h}{T}-1 \right)+1\right]
+\end{multline}
+
+\[ E=-\frac{1}{Z} \frac{d Z}{d \beta}=N\left(\frac{9}{2} T- 
+m g h\frac{\exp\left( \frac{mgh}{T}\right)\left[\frac{mgh}{T}-1\right]}
+{\exp\left( \frac{mgh}{T}\right) \left[\frac{mgh}{T}-1\right]+1}-
+\frac{mgh}{\left[\frac{mgh}{T}-1\right]+1}\right) \]
+
+\[ E=N\left[\frac{9}{2}T -\frac{(mgh)^2}{T} \frac{\exp \left( \frac{mgh}{T}\right)\left[\frac{mgh}{T}-1\right] }{\left( \frac{mgh}{T}\right)\left[\frac{mgh}{T}-1\right]+1}\right] \]
+
+
+
+$m g h\ll T$ - тогда $E=\frac{9}{2} N T-N T=\frac{7}{2} N T \Rightarrow C=\frac{7}{2} N$
+
+
+$m g h\gg T$ - тогда $E=\frac{9}{2} N T-mghN=\frac{7}{2} N T \Rightarrow C=\frac{9}{2} N$
+
+
+
+
+b) случай основания сверху
+
+просто заменим $ h$ на $ -h $
+
+
+
+
+$m g h\ll T \ \Rightarrow \ C=\frac{7}{2} N$
+
+
+$m g h\gg T \ \Rightarrow \ C=\frac{9}{2} N$
+
+
+
+
+\end{ttask}
+
+
+\begin{ttask} \textbf{10.} 
+
+Вычислить температурную зависимость теплоемкости двухатомного больцмановского газа, учесть диссоциацию молекул. 
+
+\[ Z_{\text{дисс}}=\frac{V}{(2\pi\hbar)^6}(2\pi m T)^3=\alpha T^3 \]
+
+для двухатомного газа:
+\[ z_{1}=\frac{V}{(2 \pi \hbar)^{3} T_{c}}\left(2 \pi m\right)^{3 / 2} T^{5 / 2}=\beta T^{5 / 2} \]
+
+
+\[ Z= \sum_{n=0}^{N} \frac{1}{n!} \frac{1}{(N-n)!}(Z_{\text{дисс}})^n Z^{N-n}_1= \frac{1}{N!}(Z_{\text{дисс}}+Z_1)^N\approx\left(\frac{e}{N}(Z_{\text{дисс}}+Z_1)\right)^N \]
+
+\[ \ln Z \approx N \ln \left(Z_{\text{дисс}}+Z_{1}\right)+N \frac{e}{N} \]
+
+
+\[ E=-\frac{\partial}{\partial \beta} \ln z=
+N T^{2} \frac{\partial}{\partial T} \ln \left(Z_{\text{дисс}}+Z_{1}\right)=
+N T^{2} \frac{3 \alpha T^{2}+\frac{5}{2} \beta T^{3 / 2}}{\alpha T^{3}+\beta T^{5 / 2}} \]
+
+\[ C=\frac{dE}{dT}=
+N\left(
+\frac{12\alpha T^3 +\frac{35}{4}\beta T^{5/2}}{\alpha T^3+\beta T^{5/2}}-
+T^2 \left(\frac{3\alpha T^2 +\frac{5}{2}\beta T^{3/2}}{\alpha T^3+\beta T^{5/2}}\right)^2
+\right) \]
+
+
+
+\end{ttask}
+
+
+\begin{ttask} \textbf{11.} 
+
+Построить изохоры, изобары и изотермы для бозе-газа. 
+
+\[ P V=\frac{2}{3} A T^{5 / 2} J_{1 / 2}(y): \quad y=-\frac{\mu}{T} \]
+
+\[ J_{2}(y)=\int_{0}^{+\infty} \frac{x^{\alpha} d x}{e^{x+y}-1} \]
+
+\[ T_{c} \approx 6,6 \frac{\hbar^{2}}{2 m} n^{2 / 3} \]
+
+\[ T<T_{c} \Rightarrow p \simeq  \alpha T^{5 / 3} \]
+
+
+\[ T \gg T_{c}\Rightarrow \frac{P_{V}}{N T} \approx 1-\alpha\left(\frac{T_{0}}{T}\right)^{3 / 2} \]
+
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{bosegraphs}
+	\caption{}
+	\label{fig:fermigraphs}
+\end{figure}
+
+
+
+
+
+\end{ttask}
+
+
+\begin{ttask}\textbf{12.} 
+	
+Построить изохоры, изобары и изотермы для ферми-газа. 
+
+При $ T<<\varepsilon_{r}  p \approx \gamma\left(\frac{N}{v}\right)^{5 / 3} $
+
+
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{fermi_graphs}
+	\caption{}
+	\label{fig:fermigraphs}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+\end{ttask}
+
+
+\begin{ttask}\textbf{13.} 
+
+Вычислить теплоемкость двумерного вырожденного идеального ферми-газа. 
+
+
+
+
+\[ dN_p = g \bar{n}_p \frac{d p_x d p_y d V }{(2\pi \hbar)^2}=
+\frac{g V p dp}{2\pi \hbar^2 \left(\exp \left(\frac{\varepsilon-\mu }{T}\right)+1 \right) }
+ \]
+
+\[\varepsilon=\frac{p^2}{2m} \Rightarrow  p dp=m d \varepsilon\]
+
+\[ dN_\varepsilon= \left(\frac{g m }{2\pi \hbar^2}\right) V \frac{d \varepsilon }{e^{(\varepsilon-\mu)/T}+1}=
+\left(\frac{g m }{2\pi \hbar^2}\right) V T \frac{dx}{e^{x-y}+1}
+\]
+
+\[ E= \left(\frac{g m }{2\pi \hbar^2}\right) V T^2 \int_{0}^{\infty}\frac{x dx}{e^{x-y}+1}=
+\left(\frac{g m }{2\pi \hbar^2}\right) V T^2 \left(  \left(\frac{\mu^2}{2T^2}\right)+\frac{\pi^2}{6}\right)\]
+
+
+\[ C=\frac{1}{V}\frac{dE}{dT}=
+\left(  \frac{g m }{2\pi \hbar^2}\right)\frac{\pi^2}{3} \]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{ttask}
+
+
+\begin{ttask}\textbf{14}. 
 
 Вычислить теплоемкость черного излучения. 
+
+
+
+Химический потенциал
+фотонного газа равен нулю. 
+
+Распределение фотонов дается
+соотношением:
+\[ \bar{N_{n}}=\frac{1}{\operatorname{exp}\left(\frac{\hbar \omega_{k}}{T}\right)-1} \]
+
+Число состояний определяется соотношением
+$$
+2 \frac{V 4 \pi k^{2} d k}{(2 \pi)^{3}}=2 \frac{V 4 \pi \omega_{k}^{2} d \omega_{k}}{(2 \pi c)^{3}}
+$$
+
+Дополнительный фактор 2 возникает из-за двух поляризаций фотонов.
+
+Подставляя это число в $ \bar{N_{n}}$, получаем:
+$$
+d N_{\omega}=\frac{1}{\exp (\hbar \omega / T)-1} \frac{V \omega^{2} d \omega}{\pi^{2} c^{3}}
+$$
+Энергия излучения получается из $ d N_{\omega} $ умножением на энергию фотона
+$$
+d E_{\omega}=\frac{1}{\exp (\hbar \omega / T)-1} \frac{V \hbar \omega^{3} d \omega}{\pi^{2} c^{3}}
+$$
+Это - формула Планка. 
+
+Дальше считаем свободную энергию.
+$$
+	F=T \sum_{k} \ln \left[1-\exp \left(-\frac{\varepsilon_{k}}{T}\right)\right]
+	=T \frac{V}{\pi^{2} c^{3}} \int_{0}^{\infty} \omega^{2} \ln \left[1-\exp \left(-\frac{\hbar \omega}{T}\right)\right] d \omega
+$$
+Заменяя переменную интегрирования $\quad x=\hbar \omega / T \quad$ и интегрируя по
+частям, отсюда получим
+$$
+F=-\frac{V T^{4}}{3 \pi^{2} \hbar^{3} c^{3}} \int_{0}^{\infty} \frac{x^{2} d x}{\exp (x)-1}
+$$
+Безразмерный интеграл в этом соотношении равен $\pi^{4} / 15 .$ Итак, свободная энергия равна
+$$
+F=-\frac{\pi^{2} V T^{4}}{45 \hbar^{3} c^{3}}=-\frac{4 \sigma}{3 c} V T^{4}
+$$
+
+
+Коэффициент $\sigma$ называется постоянной Стефана-Больцмана:
+$$
+\sigma=\frac{\pi^{2} k^{4}}{60 \hbar^{3} c^{2}}=5.67 \cdot 10^{-5} \frac{\text{г}}{\text{сек}^{3}\text{град}^{4} }
+$$
+(если температура измеряется в градусах Кельвина). Зная свободную энергию, определяем обычную энергию (закон Больцмана)
+$$
+E=F-T\left(\frac{\partial F}{\partial T}\right)_{V}=\frac{4 \sigma}{c} V T^{4}
+$$
+Для теплоемкости излучения в полости с заданным объемом получаем
+$$
+C_{V}=\frac{16 \sigma}{c} V T^{3}
+$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -907,6 +1294,22 @@ $ F, \mu, P, S, C$, $(\partial P)(\partial \rho)_{S}$
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \end{ttask}
 
 
@@ -917,6 +1320,18 @@ $ F, \mu, P, S, C$, $(\partial P)(\partial \rho)_{S}$
 $\hat{x}=\left(\frac{\hbar}{2 m \omega}\right)^{1 / 2}\left(\hat{b}^{+}+\hat{b}\right),$ 
 получить формулу $\left\langle e^{i k \hat{x}}\right\rangle=$
 $=e^{-\frac{k^{2} \hbar}{4 m \omega}}$ при температуре $T=0$
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -937,12 +1352,44 @@ $=e^{-\frac{k^{2} \hbar}{4 m \omega}}$ при температуре $T=0$
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 \end{ttask}
 
 
 \begin{ttask}
 
 18. Сравнить низкотемпературные зависимости теплоемкости идеальных бозе- и ферми-газов, черного излучения и твердого тела, парамагнетика и ферромагнетика, неидеального бозе-газа и, наконец, сверхпроводника. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \end{ttask}
@@ -957,6 +1404,22 @@ $=e^{-\frac{k^{2} \hbar}{4 m \omega}}$ при температуре $T=0$
 19. Показать, что фазовая скорость элементарного возбуждения в бозе-конденсате равна гидродинамической скорости звука.
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \end{ttask}
 
 
@@ -966,6 +1429,22 @@ $=e^{-\frac{k^{2} \hbar}{4 m \omega}}$ при температуре $T=0$
 20
 
 . Найти распределение частиц по импульсам и полное число надконденсатных частиц в идеальном и неидеальном бозе-газах при T = 0 и низких температурах.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \end{ttask}
@@ -980,6 +1459,22 @@ $=e^{-\frac{k^{2} \hbar}{4 m \omega}}$ при температуре $T=0$
 
 $$\hat{H}=-J \sum_{k}^{N} \hat{\sigma}_{k}^{z} \hat{\sigma}_{k+1}^{z}, \quad \hat{\sigma}_{N+1}^{z}=\hat{\sigma}_{1}^{z}$$
 Вычислить теплоёмкость и объяснить причину отсутствия фазового перехода при $ X\ne 0 $
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \end{ttask}
 
 
@@ -988,13 +1483,51 @@ $$\hat{H}=-J \sum_{k}^{N} \hat{\sigma}_{k}^{z} \hat{\sigma}_{k+1}^{z}, \quad \ha
 
 22. Для ферромагнетика в модели Гейзенберга при T  Tc определить спектр возбуждений (магнонов) и найти температурную зависимость намагниченности и теплоемкости спиновых волн.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \end{ttask}
 
 
 
 \begin{ttask}
 
-23. Для ферромагнетика в модели Гейзенберга в приближении самосогласованного поля определить температуру Кюри Tc, температурную зависимость магнитной восприимчивости  и спонтанной намагниченности вблизи Tc. Сравнить с результатами теории Ландау.
+23. Для ферромагнетика в модели Гейзенберга в приближении самосогласованного поля определить температуру Кюри Tc, 
+температурную зависимость магнитной восприимчивости  и спонтанной намагниченности вблизи Tc. 
+Сравнить с результатами теории Ландау.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \end{ttask}
 
@@ -1003,6 +1536,24 @@ $$\hat{H}=-J \sum_{k}^{N} \hat{\sigma}_{k}^{z} \hat{\sigma}_{k+1}^{z}, \quad \ha
 \begin{ttask}
 
 Определить корреляционный радиус флуктуации параметра порядка в нулевом внешнем поле вблизи точки фазового перехода II рода. Найти флуктуационную поправку к теплоемкости при T = Tc в теории Гинзбурга–Ландау.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \end{ttask}
 
@@ -1014,6 +1565,22 @@ $$\hat{H}=-J \sum_{k}^{N} \hat{\sigma}_{k}^{z} \hat{\sigma}_{k+1}^{z}, \quad \ha
 
 25. Доказать, что плотность сверхтекучей компоненты электронного газа при T = 0 равна полной плотности числа частиц.  
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \end{ttask}
 
 
@@ -1021,11 +1588,37 @@ $$\hat{H}=-J \sum_{k}^{N} \hat{\sigma}_{k}^{z} \hat{\sigma}_{k+1}^{z}, \quad \ha
 
 26. В модели БКШ определить скачок теплоемкости.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \end{ttask}
 
 \begin{ttask}
 
 27. Диагонализуя гамильтониан для фотонов и экситонов с учетом гибридизации, получить спектр поляритонов. 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \end{ttask}
