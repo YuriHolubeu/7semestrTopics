@@ -40,17 +40,16 @@
 \begin{task}\textbf{1}
 
 $ N $ молекул идеального газа в объеме $ V $. 
-Определить вероятность того, что в объеме $v < V$ находится $ n $ молекул.
-
-Получить приближенное выражение, когда  $v \ll V $. 
+Определить вероятность того, что в объеме $v < V$ находится $ n $ молекул. Получить приближенное выражение, когда  $v \ll V $. 
 Найти среднее число частиц $\overline{n}$ в объеме $ v $, его среднюю абсолютную и относительную флуктуации.  
+
 
 Вероятность попадания ровно одной молекулы в объем $ V$ равна $ p=\frac{v}{V}$. 
 Поэтому вероятность попадания ровно $n$ молекул в объем $V$ равна 
 \[ p^n (1-p)^{N-n} \]
 В объем сосуда могут попасть разные молекулы, всего нужных нам комбинаций:
 \[ C_N^n =\frac{N!}{n!(N-n)!}\]
-Поэтому итоговая вероятность:
+Поэтому искомая вероятность:
 \[ P(n)=\frac{N!}{n!(N-n)!}p^n (1-p)^{N-n} \]
 
 Поищем предел $v \ll V$,  для него можно считать, что $ p\ll 1, n\gg 1$, также можно предположить, что $ np=\lambda$, которое конечно и не слишком мало, не слишком велико.
@@ -58,12 +57,23 @@ $ N $ молекул идеального газа в объеме $ V $.
 \[ P(n)=\frac{\lambda^k}{k!}e^{-\lambda}=
 \frac{np^k}{k!}e^{-np}\]
 
-Среднее значение $\overline{n}$ найдется с помощью
+Среднее значение $\overline{n}$ можно найти, зная, что вероятность попадания в данный объем линейно зависит от объема:
 \[ \overline{n}=\frac{v}{V}N=Np \]
 
-Флуктуации найдутся, зная дисперсию $ D \hat{n}= E n^2 - (E n)^2 = N (p-p^2)=Npq $:
+Или то же самое, если записать по определению среднего:
+$$
+\overline{n^{k}}=\sum_{n=0}^{\infty} C_{N}^{n} n^{k} p^{n} q^{N-n}=\left(p \frac{\partial}{\partial p}\right)^{k} \sum_{n=0}^{\infty} C_{N}^{n} p^{n} q^{N-n}=\left(p \frac{\partial}{\partial p}\right)^{k}(p+q)^{N}
+$$
+Тогда
+$$
+\bar{n}=\left(p \frac{\partial}{\partial p}\right)(p+q)^{N}=p N(p+q)^{N-1}=p N
+$$
+\[
+\overline{n^{2}}=\left(p \frac{\partial}{\partial p}\right)^{2}(p+q)^{N}=p N+p N p(N-1)=p N[1+p(N-1)] 
+\]
+и дисперсия  $\sigma_{n}^{2}=\overline{n^{2}}-\bar{n}^{2}=p N[1+p N-p-p N]=N p q$
 
-
+А относительная флуктуация равна:
 \[ \frac{\sqrt{D n}}{\overline{n}}=\frac{\sqrt{Npq}}{Np}=\sqrt{\frac{q}{Np}}. \]
 
 Пусть $ v\ll V, \overline{n}\gg 1 $
@@ -737,7 +747,7 @@ $$
 Исследуем зависимость теплоемкости. Для этого ее по определению посчитаем:
 \[ c(T)=\frac{d E}{d T}=\Delta E_{N} \frac{d n}{d T}= \frac{\Delta E^{2} N \exp (\Delta E /T)}{T^{2}(1+\exp(\Delta E / T))^{2}} \]
 
-Видим, что теплоемкость спадает по закону $ c(\tau) \sim \operatorname{exp}\left(\frac{-\delta E}{T}\right), \quad T \rightarrow 0; c(r) \sim \frac{1}{T^{2}}, \quad T \rightarrow \infty$
+Видим, что теплоемкость спадает по закону $ c(T) \sim \operatorname{exp}\left(\frac{-\delta E}{T}\right), \quad T \rightarrow 0;$ $c(T) \sim \frac{1}{T^{2}}, \quad T \rightarrow \infty$
 
 
 \end{ttask}
@@ -838,8 +848,8 @@ e^{-xJ}\left(1+e^{x} \ldots+e^{2 Jx}\right)=\\
 
 
 \[ \left(\parder{M}{S}\right)_H=
-\left(\parder{(M,H)}{(S,H)}\right)=
-\left(\parder{(M,H)}{(T,H)}\right)\left(\parder{(T,H)}{(S,H)}\right)=
+\parder{(M,H)}{(S,H)}=
+\parder{(M,H)}{(T,H)}\parder{(T,H)}{(S,H)}=
 \left(\parder{M}{S}\right)_H \frac{1}{\left(\parder{S}{T}\right)_H}=\left(\parder{M}{S}\right)_H \frac{T}{C_H}
 \]
 
@@ -849,7 +859,9 @@ e^{-xJ}\left(1+e^{x} \ldots+e^{2 Jx}\right)=\\
 При $ M=\chi H$ получаем закон Кюри:
 \[ \chi = \frac{A}{T} \]
 
-\[ \left(\parder{T}{H}\right)_S=\frac{AH}{C T}\]
+\[ \left(\parder{M}{T}\right)_H= H \parder{\chi }{T}= -\frac{HA}{T^2} \]
+
+\[ \left(\parder{T}{H}\right)_S=\frac{AH}{C_H T}\]
 
 
 
@@ -901,7 +913,7 @@ $$
 $$
 \langle\Delta T \Delta p\rangle=\left(\frac{\partial p}{\partial V}\right)_{T}\langle\Delta T \Delta V\rangle+\left(\frac{\partial p}{\partial T}\right)_{V}\left\langle(\Delta T)^{2}\right\rangle
 $$
-Подставляя сюда соотношения $\langle$ найдем
+Подставляя сюда соотношения выше, найдем
 $$
 \langle\Delta T \Delta p\rangle=\frac{k T^{2}}{C_{V}}\left(\frac{\partial p}{\partial T}\right)_{V}
 $$
@@ -986,7 +998,7 @@ $$
 \begin{ttask}\textbf{8}
 
 Вычислить для одноатомного и двухатомного больцмановских газов 
-$ F, \mu, P, S, C$, $(\partial P)(\partial \rho)_{S}$
+$ F, \mu, P, S, C$, $(\partial P/\partial \rho)_{S}$
 
 
 a) одномерный газ
@@ -1000,18 +1012,64 @@ a) одномерный газ
 
 \[ F=-T\ln Z =-NT\ln \left( \frac{eV}{(2\pi\hbar)^3 N}(2\pi m T)^{3/2} \right)\]
 
-\[ E=\frac{3N}{2\beta}=\frac{3}{2}NT \]
+\[ E=\frac{3N}{2\beta}=\frac{3}{2}NT; \quad
+C=\parder{E}{T}=\frac{3}{2}N; \quad 
+\mu=\parder{E}{N}=\frac{3}{2}T; \quad
+P=-\parder{F}{T}=\frac{NT}{V};\]
+
+\[ S=-\parder{E}{T}=N\left( \ln\left( \frac{eV}{(2\pi\hbar)^3 N}(2\pi m T)^{3/2} \right)+\frac{5}{2} \right) \]
 
 
+\[S = const  \Rightarrow
+VT^{3/2}= const; \quad V\sim \rho^{-1}, T\sim p/\rho \Rightarrow p \rho^{-5/3} = const  \Rightarrow \]
 
-\[ C=\parder{E}{T}=\frac{3}{2}N \]
+
+\[ \left( \parder{p}{\rho}\right)_S =\frac{5p}{3\rho} \]
+
+
 
 
 b) двумерный газ.
 
-позже
+\[ E= E_\text{пост}+E_\text{вращ}
+\Rightarrow  
+Z= Z_\text{пост}\cdot Z_\text{вращ}\]
 
 
+\[ 
+\hat{H}_\text{вращ}=
+\frac{\hbar^2}{2I} \hat{L}^2 \Rightarrow E_\text{вращ}= 
+\frac{\hbar^2}{2I} L(L+1)  
+\]
+
+\[ Z_\text{вращ} =\sum_{i=1}^{\infty}(2L+1)\exp \left(-\frac{2\hbar}{2I} \frac{L(L+1)}{T}  \right) \equiv
+\sum_{i=1}^{\infty}(2L+1)\exp \left(-\frac{T_c L(L+1)}{T}  \right)
+\]
+
+где $ T=\frac{\hbar^2}{2I}\approx 1\div 10 K $
+
+
+при $ T\gg T_c  Z_\text{вращ, 1}\approx \int_{0}^{\infty}(2L+1) e^{-T_c L(L+1)/T}dL\equiv \int_{0}^{\infty}e^{-T_c z/T} dz =\frac{T}{T_c}$
+
+т.о. $ Z_\text{вращ}= \left(\frac{T}{T_c}\right)^N$
+
+поэтому 
+\[ Z=\frac{e^{N} V^{N}}{N^{N}(2 \pi k)^{3 N}}(2 \pi m )^{3 N / 2} \frac{T^{5N/2}}{T_c^N}\]
+
+
+\[ F= -T\ln Z= -N T\ln \left[ \frac{e V}{N (2 \pi k)^{3 }}(2 \pi m )^{3 / 2} \frac{T^{5/2}}{T_c}  \right] \]
+
+\[ E= -\frac{1}{Z} \parder{Z}{\beta}=\frac{5}{2}NT \]
+
+\[ C=\parder{E}{T}=\frac{5}{2}N; \quad 
+\mu=\parder{E}{N}=\frac{5}{2}T; \quad
+P=-\parder{F}{T}=\frac{NT}{V};\]
+
+\[S = const  \Rightarrow
+VT^{5/2}= const \Rightarrow p \rho^{-7/5} = const  \Rightarrow \]
+
+
+\[ \left( \parder{p}{\rho}\right)_S =\frac{7p}{5\rho} \]
 
 
 
@@ -1026,10 +1084,10 @@ $ m g h \ll T, m g h \gg T $
 
 a) случай основания снизу
 
-\[ E=\frac{p^{2}}{2 m}+\operatorname{mg} z \]
+\[ E=\frac{p^{2}}{2 m}+mg z \]
 
 
-\[ z=\frac{1}{N!} Z_{1}^{N}=
+\[ Z=\frac{1}{N!} Z_{1}^{N} \approx
 \left(\frac{e Z_{1}}{v}\right)^{N} \]
 
 \begin{multline}
@@ -1049,7 +1107,7 @@ m g h\frac{\exp\left( \frac{mgh}{T}\right)\left[\frac{mgh}{T}-1\right]}
 
 
 
-$m g h\ll T$ - тогда $E=\frac{9}{2} N T-N T=\frac{7}{2} N T \Rightarrow C=\frac{7}{2} N$
+$m g h\ll T$ - тогда $E=\frac{9}{2} N T-N T=\frac{5}{2} N T \Rightarrow C=\frac{7}{2} N$
 
 
 $m g h\gg T$ - тогда $E=\frac{9}{2} N T-mghN=\frac{7}{2} N T \Rightarrow C=\frac{9}{2} N$
@@ -1082,15 +1140,16 @@ $m g h\gg T \ \Rightarrow \ C=\frac{9}{2} N$
 \[ Z_{\text{дисс}}=\frac{V}{(2\pi\hbar)^6}(2\pi m T)^3=\alpha T^3 \]
 
 для двухатомного газа:
-\[ z_{1}=\frac{V}{(2 \pi \hbar)^{3} T_{c}}\left(2 \pi m\right)^{3 / 2} T^{5 / 2}=\beta T^{5 / 2} \]
+\[ Z_{1}=\frac{V}{(2 \pi \hbar)^{3} T_{c}}\left(2 \pi m\right)^{3 / 2} T^{5 / 2}=\beta T^{5 / 2} \]
 
 
-\[ Z= \sum_{n=0}^{N} \frac{1}{n!} \frac{1}{(N-n)!}(Z_{\text{дисс}})^n Z^{N-n}_1= \frac{1}{N!}(Z_{\text{дисс}}+Z_1)^N\approx\left(\frac{e}{N}(Z_{\text{дисс}}+Z_1)\right)^N \]
+\[ Z= \sum_{n=0}^{N} \frac{1}{n!} \frac{1}{(N-n)!}(Z_{\text{дисс}})^n Z^{N-n}_1=
+\frac{1}{N!}(Z_{\text{дисс}}+Z_1)^N\approx\left(\frac{e}{N}(Z_{\text{дисс}}+Z_1)\right)^N \]
 
-\[ \ln Z \approx N \ln \left(Z_{\text{дисс}}+Z_{1}\right)+N \frac{e}{N} \]
+\[ \ln Z \approx N \ln \left(Z_{\text{дисс}}+Z_{1}\right)+N \ln \frac{e}{N} \]
 
 
-\[ E=-\frac{\partial}{\partial \beta} \ln z=
+\[ E=-\frac{\partial}{\partial \beta} \ln Z=
 N T^{2} \frac{\partial}{\partial T} \ln \left(Z_{\text{дисс}}+Z_{1}\right)=
 N T^{2} \frac{3 \alpha T^{2}+\frac{5}{2} \beta T^{3 / 2}}{\alpha T^{3}+\beta T^{5 / 2}} \]
 
@@ -1111,7 +1170,7 @@ T^2 \left(\frac{3\alpha T^2 +\frac{5}{2}\beta T^{3/2}}{\alpha T^3+\beta T^{5/2}}
 
 \[ P V=\frac{2}{3} A T^{5 / 2} J_{1 / 2}(y): \quad y=-\frac{\mu}{T} \]
 
-\[ J_{2}(y)=\int_{0}^{+\infty} \frac{x^{\alpha} d x}{e^{x+y}-1} \]
+\[ J_{\alpha}(y)=\int_{0}^{+\infty} \frac{x^{\alpha-1} d x}{e^{x+y}-1} \]
 
 \[ T_{c} \approx 6,6 \frac{\hbar^{2}}{2 m} n^{2 / 3} \]
 
@@ -1140,7 +1199,7 @@ T^2 \left(\frac{3\alpha T^2 +\frac{5}{2}\beta T^{3/2}}{\alpha T^3+\beta T^{5/2}}
 	
 Построить изохоры, изобары и изотермы для ферми-газа. 
 
-При $ T<<\varepsilon_{r}  p \approx \gamma\left(\frac{N}{v}\right)^{5 / 3} $
+При $ T<<\varepsilon_{r} \quad p \approx \gamma\left(\frac{N}{v}\right)^{5 / 3} $
 
 
 
@@ -1183,12 +1242,12 @@ T^2 \left(\frac{3\alpha T^2 +\frac{5}{2}\beta T^{3/2}}{\alpha T^3+\beta T^{5/2}}
 \left(\frac{g m }{2\pi \hbar^2}\right) V T \frac{dx}{e^{x-y}+1}
 \]
 
-\[ E= \left(\frac{g m }{2\pi \hbar^2}\right) V T^2 \int_{0}^{\infty}\frac{x dx}{e^{x-y}+1}=
+\[ E= \left(\frac{g m }{2\pi \hbar^2}\right) V T^2 \int_{0}^{\infty}\frac{x dx}{e^{x-y}+1} \approx
 \left(\frac{g m }{2\pi \hbar^2}\right) V T^2 \left(  \left(\frac{\mu^2}{2T^2}\right)+\frac{\pi^2}{6}\right)\]
 
 
 \[ C=\frac{1}{V}\frac{dE}{dT}=
-\left(  \frac{g m }{2\pi \hbar^2}\right)\frac{\pi^2}{3} \]
+\left(  \frac{g m }{2\pi \hbar^2}\right)\frac{\pi^2}{3} T\]
 
 
 
@@ -1217,7 +1276,7 @@ T^2 \left(\frac{3\alpha T^2 +\frac{5}{2}\beta T^{3/2}}{\alpha T^3+\beta T^{5/2}}
 
 Распределение фотонов дается
 соотношением:
-\[ \bar{N_{n}}=\frac{1}{\operatorname{exp}\left(\frac{\hbar \omega_{k}}{T}\right)-1} \]
+\[ \bar{n}=\frac{1}{\operatorname{exp}\left(\frac{\hbar \omega_{k}}{T}\right)-1} \]
 
 Число состояний определяется соотношением
 $$
@@ -1231,10 +1290,11 @@ $$
 d N_{\omega}=\frac{1}{\exp (\hbar \omega / T)-1} \frac{V \omega^{2} d \omega}{\pi^{2} c^{3}}
 $$
 Энергия излучения получается из $ d N_{\omega} $ умножением на энергию фотона
-$$
-d E_{\omega}=\frac{1}{\exp (\hbar \omega / T)-1} \frac{V \hbar \omega^{3} d \omega}{\pi^{2} c^{3}}
-$$
-Это - формула Планка. 
+\begin{equation}\label{plank}
+d E_{\omega}=
+\frac{1}{\exp (\hbar \omega / T)-1} \frac{V \hbar \omega^{3} d \omega}{\pi^{2} c^{3}}
+\end{equation}
+Формула \ref{plank} - называется формулой Планка. 
 
 Дальше считаем свободную энергию.
 $$
@@ -1367,41 +1427,13 @@ $=e^{-\frac{k^{2} \hbar}{4 m \omega}}$ при температуре $T=0$
 \end{ttask}
 
 
-\begin{ttask}
+\begin{ttask}\textbf{18. }
 
-18. Сравнить низкотемпературные зависимости теплоемкости идеальных бозе- и ферми-газов, черного излучения и твердого тела, парамагнетика и ферромагнетика, неидеального бозе-газа и, наконец, сверхпроводника. 
-
-
+Сравнить низкотемпературные зависимости теплоемкости идеальных бозе- и ферми-газов, черного излучения и твердого тела, парамагнетика и ферромагнетика, неидеального бозе-газа и, наконец, сверхпроводника. 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\end{ttask}
-
-
-
-
-
-
-\begin{ttask}
-
-19. Показать, что фазовая скорость элементарного возбуждения в бозе-конденсате равна гидродинамической скорости звука.
 
 
 
@@ -1424,11 +1456,12 @@ $=e^{-\frac{k^{2} \hbar}{4 m \omega}}$ при температуре $T=0$
 
 
 
-\begin{ttask}
 
-20
 
-. Найти распределение частиц по импульсам и полное число надконденсатных частиц в идеальном и неидеальном бозе-газах при T = 0 и низких температурах.
+
+\begin{ttask} \textbf{19.}
+	 
+Показать, что фазовая скорость элементарного возбуждения в бозе-конденсате равна гидродинамической скорости звука.
 
 
 
@@ -1451,9 +1484,32 @@ $=e^{-\frac{k^{2} \hbar}{4 m \omega}}$ при температуре $T=0$
 
 
 
-\begin{ttask}
+\begin{ttask} \textbf{20}
 
-21
+Найти распределение частиц по импульсам и полное число надконденсатных частиц в идеальном и неидеальном бозе-газах при T = 0 и низких температурах.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{ttask}
+
+
+
+\begin{ttask} \textbf{21}
 
 Определить свободную энергию одномерной цепочки спинов 1/2 с гамильтонианом
 
