@@ -399,7 +399,7 @@ P(\overline{A_i})=\frac{C_{52-13-13-13}^6}{C_{52}^6};
 \centering
 \includegraphics[width=0.5\linewidth]{t12}
 \caption{для задачи Т12. 
-	Здесь короткая линия под наклоном - линия движения автобусе. длинные наклонные линии - линии движения человека. заштрихованная область - область всех возможных линий, где мировая линия человека не пересечет мировую линию автобуса. 
+Здесь короткая линия под наклоном - линия движения автобусе. длинные наклонные линии - линии движения человека. заштрихованная область - область всех возможных линий, где мировая линия человека не пересечет мировую линию автобуса. 
 (я рисовал рисунок, решая обратную задачу, поэтому там написано $\frac{12}{25}$)}
 \label{fig:t12}
 \end{figure}
@@ -704,7 +704,7 @@ $ P(\xi = 0) \le \frac{1}{2}, P(\eta = 0) \le \frac{1}{2}$, поэтому $P(\x
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|c|c|c|}
-	\hline
+\hline
 $ \xi$\textdownarrow; $\eta  $ \textrightarrow	&-1  & 0 & 1   \\ \hline
 -1	& 0 & 1/4 & 0   \\ \hline
 0   & 1/4 & 1/2 & 1/4 \\ \hline
@@ -717,12 +717,12 @@ $ \xi$\textdownarrow; $\eta  $ \textrightarrow	&-1  & 0 & 1   \\ \hline
 \begin{table}[h!]
 \centering
 \begin{tabular}{|c|c|c|c|c|}
-	\hline
-	& $\xi<-1$ & $\xi\in[-1;0)$ & $\xi\in [0,1)$ & $\xi\le 1$ \\ \hline
-	$\eta <-1$       & 0        & 0              & 0              & 0          \\ \hline
-	$\eta \in[-1;0)$ & 0        & 0              & 1/4            & 1/4        \\ \hline
-	$\eta \in [0,1)$ & 0        & 1/4            & 1/2+1/4=3/4    & 1          \\ \hline
-	$\eta \le 1$     & 0        & 1/4            & 1              & 1          \\ \hline
+\hline
+& $\xi<-1$ & $\xi\in[-1;0)$ & $\xi\in [0,1)$ & $\xi\le 1$ \\ \hline
+$\eta <-1$       & 0        & 0              & 0              & 0          \\ \hline
+$\eta \in[-1;0)$ & 0        & 0              & 1/4            & 1/4        \\ \hline
+$\eta \in [0,1)$ & 0        & 1/4            & 1/2+1/4=3/4    & 1          \\ \hline
+$\eta \le 1$     & 0        & 1/4            & 1              & 1          \\ \hline
 \end{tabular}
 \caption{T22}
 \end{table}
@@ -776,16 +776,16 @@ P(\eta+\xi\le x|\eta =1) P(\eta=1) +\\
 
 \[ F_{\xi_i}(x)=P(\xi_1 \le x) = 
 \begin{cases} 
-	0, & \text{если х<0} \\ 
-	x, &\text{если }  x\in[0,1) \\
-	 1 &\text{если }  x\in[1,+\infty)   
+0, & \text{если х<0} \\ 
+x, &\text{если }  x\in[0,1) \\
+1 &\text{если }  x\in[1,+\infty)   
 \end{cases}  \]
 
 
 \[ \rho_{\xi_i}= 
 \begin{cases} 
-	x, &\text{если }  x\in[0,1) \\
-	1, &\text{иначе } 
+x, &\text{если }  x\in[0,1) \\
+1, &\text{иначе } 
 \end{cases}  \]
 
 
@@ -797,10 +797,10 @@ $ \xi_1,\xi_2$ - независимые случайные величины.
 где $S$ - площадь, которую пересекает заштрихованная часть на рисунке с единичным квадратом
 
 \begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.7\linewidth]{t24}
-	\caption{T24}
-	\label{fig:t24}
+\centering
+\includegraphics[width=0.7\linewidth]{t24}
+\caption{T24}
+\label{fig:t24}
 \end{figure}
 
 При $x<0$  $ \rho(\xi_1+\xi_2\le x)=0$.
@@ -818,20 +818,20 @@ $ \xi_1,\xi_2$ - независимые случайные величины.
 В итоге функция распределения имеет вид:
 \[ F_{\xi_1+\xi_2}(x)=P(\xi_1 \le x) = 
 \begin{cases} 
-	0,   & \text{если х<0} \\ 
-	\frac{x^2}{2},  &\text{если }  x\in[0,1) \\
-	2x-\frac{x^2}{2}-1, &\text{если }  x\in[0,1) \\
-	1   &\text{если }  x\in[2,+\infty)   
+0,   & \text{если х<0} \\ 
+\frac{x^2}{2},  &\text{если }  x\in[0,1) \\
+2x-\frac{x^2}{2}-1, &\text{если }  x\in[0,1) \\
+1   &\text{если }  x\in[2,+\infty)   
 \end{cases}  \]
 
 
 Найдем плотность распределения:
 \[ F_{\xi_1+\xi_2}(x)=P(\xi_1 \le x) = 
 \begin{cases} 
-	0,   & \text{если х<0} \\ 
-	x^2,  &\text{если }  x\in[0,1) \\
-	2-x, &\text{если }  x\in[0,1) \\
-	0  &\text{если }  x\in[2,+\infty)   
+0,   & \text{если х<0} \\ 
+x^2,  &\text{если }  x\in[0,1) \\
+2-x, &\text{если }  x\in[0,1) \\
+0  &\text{если }  x\in[2,+\infty)   
 \end{cases}  \]
 
 
@@ -876,9 +876,9 @@ F_\xi(F^{-1}_\xi (x))=x \]
 В итоге
 \[ F_\eta(x)=
 \begin{cases} 
-	0,   & \text{если х<0} \\ 
-	x,  & \text{если }  x\in[0,1] \\
-	1, & x\in[1,+\infty)   
+0,   & \text{если х<0} \\ 
+x,  & \text{если }  x\in[0,1] \\
+1, & x\in[1,+\infty)   
 \end{cases}  \]
 
 
@@ -950,9 +950,9 @@ $$
 Обозначим координаты каждого человека $ x,y,z$. Нужное нам событие $A$ состоит в следующем:
 \[  A=
 \begin{cases} 
-	y-x \ge \frac{1}{4} \\ 
-	z-y \ge \frac{1}{4} \\ 
-	\frac{1}{4}\le y \le \frac{3}{4}
+y-x \ge \frac{1}{4} \\ 
+z-y \ge \frac{1}{4} \\ 
+\frac{1}{4}\le y \le \frac{3}{4}
 \end{cases}  \]
 
 \[ P(A)=\int_{\frac{1}{4}}^{\frac{3}{4}} dy \int_{0}^{y-\frac{1}{4}} dx \int_{y+\frac{1}{4}}^{1}dz= 
@@ -1031,7 +1031,7 @@ E(\xi-E\xi) (\eta- E\eta)= E(\xi\eta)-E\xi E\eta\]
 
 
 \[ D\xi =\sum_{i=1}^{n} D \mathbbm{1}_{A_i} = \sum_{i=1}^{n}(E \mathbbm{1}_{A_i}^2- (E\mathbbm{1}_{A_i})^2 ) =
- n\left(\frac{1}{6}-\frac{1}{6}\frac{1}{6}\right) = \frac{5}{36}n\]
+n\left(\frac{1}{6}-\frac{1}{6}\frac{1}{6}\right) = \frac{5}{36}n\]
 \[ D \eta =\frac{5n}{36} \]
 
 \[ \operatorname{cov}(\xi,\eta)=\dfrac{-\frac{n}{36}}{\frac{5n}{36}}=-\frac{1}{5} \]
@@ -1077,7 +1077,7 @@ $ \xi\in \{a_1, a_2\}; \eta \in \{b_1, b_2\}$,
 \[ \operatorname{cov}(\xi,\eta)= E\xi\eta -E\xi E\eta=0 \]
 \[ E\xi\eta =\sum_{i,k=1}^{2}a_ib_k E(\mathbbm{1}_{A_i} \mathbbm{1}_{B_k})=
 \sum_{i,k=1}^{2} a_ib_k P(A_i, B_k)
- \]
+\]
 \[ E\xi E\eta = (
 \sum_{i=1}^{2} a_i P(A_i))
 (\sum_{k=1}^{2} b_k P( B_k))=
@@ -1130,7 +1130,19 @@ $ \xi\in \{a_1, a_2\}; \eta \in \{b_1, b_2\}$,
 \part{Второе задание}
 
 
+
+
+
+
 \section{Неравенства Чебышева и Маркова. Законы больших чисел}
+
+
+
+
+
+
+
+
 
 
 \begin{example}\textbf{T 1}
@@ -1139,19 +1151,64 @@ $ \xi\in \{a_1, a_2\}; \eta \in \{b_1, b_2\}$,
 
 (a) Оценить вероятность того, что число посетителей в конкретный день превысит 75
 
+
+так как
+
+$$
+\mathbf{P}\{|\xi| \geqslant x\} \leqslant \frac{\mathbf{M}|\xi|}{x}
+$$
+
+то
+
+
+$$
+P(\xi \geq 75) \leq \frac{50}{75}=\frac{2}{3}
+$$
+
+
+
 (b) При условии, что дисперсия числа посетителей в день равна $25,$ 
 оценить вероятность того, что в конкретный день их число будет между 40 и $60 .$
 
 
+$$
+P(|\xi-50| \geq 10) \leq \frac{25}{100}=\frac{1}{4} 
+$$
+
+поэтому
+
+\[  
+P(|\xi-50|<10)=1-P(|\xi-50| \geq 10) \geq \frac{3}{4} 
+\]
+
+
 
 
 \end{example}
 
 
 
-\begin{example}
+\begin{example} T. 2. 
 
-T. 2. $\mathrm{C}$ помошью неравенства Чебышева оценить вероятность того, что при 1000 бросаниях монеты число выпадений герба окажется в промежутке [450,550]
+
+$\mathrm{C}$ помошью неравенства Чебышева оценить вероятность того, что при 1000 бросаниях монеты число выпадений герба окажется в промежутке [450,550]
+
+
+
+
+
+Дисперсия в таком эксперименте
+$$
+D(\xi)=\sqrt{1000 \frac{1}{2} \frac{1}{2}}=\frac{1}{2} 10 \sqrt{10}=5 \sqrt{10}
+$$
+
+
+Неравенство Чебышева даст:
+$$
+P(|\xi-500| \geq 50) \leq \frac{5 \sqrt{10}}{2500}=\frac{\sqrt{10}}{500} \rightarrow P(|\xi-500|<50)=1-P(|\xi-500| \geq 50) \geq 1-\frac{\sqrt{10}}{500}
+$$
+
+
 
 
 
@@ -1160,9 +1217,9 @@ T. 2. $\mathrm{C}$ помошью неравенства Чебышева оце
 
 
 
-\begin{example}
+\begin{example} T.3. 
 
-T.3. 
+
 Вероятность того, что изделие качественное, равна $0,9 .$ 
 Каков должен быть объем партии изделий, чтобы с вероятностью $\geq 0,95$ можно было утверждать, что отклонение (по абсолютной величине) доли качествен-
 ных изделий от 0,9 не превысит $0,01 ?$
@@ -1170,23 +1227,53 @@ T.3.
 
 
 
+\[ P(|\xi-0,9|<0,01)=1-P(|\xi-0,9| \geq 0,01) \geq 0,95 \rightarrow P(|\xi-0,9| \geq 0,01) \leq 0,05=\frac{\sigma(\xi)^{2}}{10^{-4}}  \]
+
+
+но также 
+$  \sigma(\xi)=\sqrt{D(\xi)}=\frac{1}{n} \sqrt{n \cdot 0,9 \cdot 0,1}=\frac{0,3}{\sqrt{n}},$
+поэтому:
+
+\[ 
+0,05=\frac{0,3^{2}}{n \cdot 10^{-4}} \rightarrow n=\frac{0,3^{2}}{0,05 \cdot 10^{-4}}=18000
+\]
+
+
+
+
+
+
+
+
 \end{example}
 
 
 
 
 
-\begin{example}
+\begin{example} T.4. (Одностороннее неравенство Чебышева.) 
 
 
-T.4. (Одностороннее неравенство Чебышева.) Пусть случайная величина $\xi$ имеет нулевое среднее и дисперсию $\sigma^{2} .$ Показать, что для $\varepsilon>0$ выпол-
-няется неравенство
+Пусть случайная величина $\xi$ имеет нулевое среднее и дисперсию $\sigma^{2}$. 
+Показать, что для $\varepsilon>0$ выполняется неравенство
 $$
 P(\xi \geq \varepsilon) \leq \frac{\sigma^{2}}{\sigma^{2}+\varepsilon^{2}}
 $$
 
 
 
+Очевидно, что для $b>0$
+$$
+P(\xi \geq \epsilon) \leq P\left((\xi+b)^{2} \geq(\epsilon+b)^{2}\right) \leq \frac{\mathbb{E}\left((\xi+b)^{2}\right)}{(\epsilon+b)^{2}}=\frac{\mathbb{E}\left(\xi^{2}+2 \xi b+b^{2}\right)}{(\epsilon+b)^{2}}=\frac{\mathbb{E}\left(\xi^{2}\right)+b^{2}}{(\epsilon+b)^{2}}
+$$
+Правая часть имеет минимум при $b=\frac{\sigma^{2}}{\epsilon} .$ Подставляя это значение, приходим к нужному неравенству.
+
+
+
+
+
+
+
 \end{example}
 
 
@@ -1195,16 +1282,33 @@ $$
 
 
 
-\begin{example}
+\begin{example} T. 5. $($ Неравенство Иенсена. $)$ 
 
-
-T. 5. $($ Неравенство Иенсена. $)$ Пусть $\varphi:(a, b) \rightarrow \mathbb{R}-$ дважды непрерывно дифференцируемая функция и $\varphi^{\prime \prime}(x) \geq 0$ для всех $x \in(a, b)$ (т. е. $\varphi$ Выпуклая функция, и допускается $a=-\infty$ и $b=\infty$ ). Допустим также, что $\xi-$ слу чайная величина, которая принимает значения из $(a, b)$ и $\mathrm{E} \xi=m, \mathrm{E} \varphi(\xi)$ конеч ны. Показать, что тогда
+Пусть $\varphi:(a, b) \rightarrow \mathbb{R}-$ дважды непрерывно дифференцируемая функция и $\varphi^{\prime \prime}(x) \geq 0$ для всех $x \in(a, b)$ (т. е. $\varphi$ Выпуклая функция, и допускается $a=-\infty$ и $b=\infty$ ). 
+Допустим также, что $\xi-$ случайная величина, которая принимает значения из $(a, b)$ и $\mathrm{E} \xi=m, \mathrm{E} \varphi(\xi)$ конечны. Показать, что тогда
 $$
 \mathrm{E} \varphi(\xi) \geq \varphi(\mathrm{E} \xi)=\varphi(m)
 $$
 
 
 
+$$
+\phi(x) \geq \lambda\left(x_{0}\right)\left(x-x_{0}\right)+\phi\left(x_{0}\right)
+$$
+Пусть
+$$
+\phi(\xi) \geq \lambda(\mathbb{E}(\xi))(\xi-\mathbb{E}(\xi))+\phi(\mathbb{E}(\xi))
+$$
+Берём матожидание ои обеих частей.
+$$
+\mathbb{E}(\phi(\xi)) \geq \lambda(\mathbb{E}(\xi))(\mathbb{E}(\xi)-\mathbb{E}(\xi))+\mathbb{E}(\phi(\mathbb{E}(\xi)))=\phi(\mathbb{E}(\xi))
+$$
+
+
+
+
+
+
 \end{example}
 
 
@@ -1213,12 +1317,40 @@ $$
 
 
 
-T.6. Пусть $\xi-$ слу чайная вел ичина, имеющая нормал ьное распределение с параметрами $\left(a, \sigma^{2}\right) .$ Показать, что для $\varepsilon>0$ выполняется неравенство
+T.6. 
+
+
+Пусть $\xi-$ слу чайная величина, имеющая нормальное распределение с параметрами $\left(a, \sigma^{2}\right) .$ Показать, что для $\varepsilon>0$ выполняется неравенство
+
 $$
 \mathrm{P}(|\xi-a| \geq \varepsilon \sigma) \leq \frac{1}{\varepsilon} \sqrt{\frac{2}{\pi}} e^{-\varepsilon^{2} / 2}
 $$
 
-$$\int_{\varepsilon}^{\infty} e^{-x^{2} / 2} d x \leq \frac{1}{\varepsilon} e^{-\varepsilon^{2} / 2}, \quad \varepsilon>0$$
+
+
+\[ \begin{aligned}
+P(|\xi| \geq \epsilon \sigma)
+=
+\left(\int_{\epsilon \sigma}^{+\infty}
++
+\int_{-\infty}^{-\epsilon \sigma}\right) 
+\frac{1}{\sqrt{2 \pi} \sigma} 
+\exp \left(-\frac{x^{2}}{2 \sigma^{2}}\right) d(x) 
+&=
+\int_{\epsilon \sigma}^{+\infty} \frac{\sqrt{2}}{\sqrt{\pi} \sigma} \exp \left(-\frac{x^{2}}{2 \sigma^{2}}\right) d(x)
+=
+\\
+=& \sqrt{\frac{2}{\pi}} \int_{\epsilon}^{+\infty} 
+\exp \left(-\frac{x^{2}}{2}\right) d(x) 
+\leq 
+\sqrt{\frac{2}{\pi}} \frac{1}{\epsilon} 
+\exp \left(-\frac{\epsilon^{2}}{2}\right)
+\end{aligned} \]
+
+
+
+
+
 
 \end{example}
 
@@ -1236,32 +1368,75 @@ $$
 
 
 
+
+
+
+
+
+
+
+
+
 \end{example}
 
 
 
 
 
-\begin{example}
+\begin{example} T.8. 
 
+Пусть $\left\{\xi_{n}\right\}-$ последовательность неотрицательных случайных величин с конечными математическими ожиданиями и $\xi_{n} \stackrel{\text { п.н. }}{\rightarrow} \xi, \mathrm{E} \xi<\infty$ $\mathrm{E} \xi_{n} \rightarrow \mathrm{E} \xi$ при $n \rightarrow \infty .$ 
 
-T.8. Пусть $\left\{\xi_{n}\right\}-$ последовательность неотрицательных случайных величин с конечными математическими ожиданиями и $\xi_{n} \stackrel{\text { п.н. }}{\rightarrow} \xi, \mathrm{E} \xi<\infty$ $\mathrm{E} \xi_{n} \rightarrow \mathrm{E} \xi$ при $n \rightarrow \infty .$ Покажите, что тогда $\mathrm{E}\left|\xi_{n}-\xi\right| \rightarrow 0$ при $n \rightarrow \infty$
+Покажите, что тогда $\mathrm{E}\left|\xi_{n}-\xi\right| \rightarrow 0$ при $n \rightarrow \infty$
 T. e. $\xi n \stackrel{L}{\rightarrow} \xi$
 
 
 
+
+$\forall n \in \mathbb{N}:$
+$$
+\left|\mathbb{E}\left(\xi_{n}\right)\right|<+\infty,|\mathbb{E}(\xi)|<+\infty \rightarrow \mathbb{E}\left|\xi_{n}-\xi\right|<+\infty
+$$
+$\forall \epsilon>0:$
+$$
+\begin{array}{l}
+\mathbb{E}\left|\xi_{n}-\xi\right|=\mathbb{E}\left|\left(\xi_{n}-\xi\right)\left(I\left(\sup _{k \geq n}\left(\left|\xi_{k}-\xi\right|>\epsilon\right)\right)+I\left(\sup _{k \geq n}\left(\left|\xi_{k}-\xi\right| \leq \epsilon\right)\right)\right)\right|= 
+\\
+=\mathbb{E}\left|\left(\xi_{n}-\xi\right) I\left(\sup _{k \geq n}\left(\left|\xi_{k}-\xi\right|>\epsilon\right)\right)\right|+\mathbb{E}\left|\left(\xi_{n}-\xi\right) I\left(\sup _{k \geq n}\left(\left|\xi_{k}-\xi\right| \leq \epsilon\right)\right)\right|
+\end{array}
+$$
+Первый индикатор в пределе принимает значение 1 только на множестве меры 0. Второй индикатор в пределе принимает значение 1 почти всюду. Но тогда под вторым математическим ожиданием стоит выражение $\left|\xi_{k}-\xi\right| \leq \epsilon$. $\Rightarrow \mathbb{E}\left|\xi_{k}-\xi\right| \leq \mathbb{E}(\epsilon)=\epsilon$
+
+
+
+
+
+
+
+
+
 \end{example}
 
 
 
-\section{Meтод характеристических функций. Центральная предельная теорема}
 
 
 
-\begin{example}
 
 
-Т.9. Найти характеристическую функцию распределения Лапласа, которое определяется плотностью
+
+
+
+
+
+
+\section{ Метод характеристических функций. Центральная предельная теорема}
+
+
+
+\begin{example} Т.9. 
+
+Найти характеристическую функцию распределения Лапласа, которое определяется плотностью
 $$
 f_{\xi}(x)=\frac{1}{2} e^{-|x|}
 $$
@@ -1270,13 +1445,64 @@ $$
 
 
 
+\[ 	\phi_{\xi}(t)=\int_{-\infty}^{+\infty} \exp (i t x) f_{\xi}(x) d(x)=\frac{1}{2} \int_{-\infty}^{+\infty} \exp (i t x-|x|) d(x) \]
+
+
+
+$ x<0$
+
+
+\[ \int_{-\infty}^{0} \exp (i t x-|x|) d(x)=\int_{-\infty}^{0} \exp (i t x+x) d(x)=\frac{i}{i-t} \]
+
+
+$ x \geq 0 $
+
+
+
+\[ \int_{0}^{+\infty} \exp (i t x-|x|) d(x)=\int_{0}^{+\infty} \exp (i t x-x) d(x)=\frac{i}{i+t} \]
+
+
+
+\[ \phi_{\xi}(t)=\frac{-1}{\left(-1-t^{2}\right)}=\frac{1}{1+t^{2}} \]
+
+
+
+
+
+
+
+
+
+
 \end{example}
 
 
 
-\begin{example}
+\begin{example} T.10. 
 
-T.10. Найти характеристи ческую функцию нормального распределения с параметрами $\left(a, \sigma^{2}\right)$
+
+Найти характеристическую функцию нормального распределения с параметрами $\left(a, \sigma^{2}\right)$
+
+
+
+
+
+\begin{equation}
+\begin{array}{l}
+\phi_{\xi}(t)=\int_{-\infty}^{+\infty} \exp (i t x) \frac{1}{\sqrt{2 \pi \sigma^{2}}} \exp \left(-\frac{(x-a)^{2}}{2 \sigma^{2}}\right) d(x)=\frac{1}{\sqrt{2 \pi \sigma^{2}}} \int_{-\infty}^{+\infty} \exp \left(i t x-\frac{(x-a)^{2}}{2 \sigma^{2}}\right) d(x)= \\
+\begin{array}{c}
+1 \\
+=\frac{1}{\sqrt{2 \pi \sigma^{2}}} \exp \left(i t a+\left(\frac{i t \sqrt{2} \sigma}{2}\right)^{2}\right) \int_{-\infty}^{+\infty} \exp \left(-\frac{(x-a)^{2}}{2 \sigma^{2}}+2 \frac{i t \sqrt{2} \sigma}{2} \frac{(x-a)}{\sqrt{2} \sigma}-\left(\frac{i t \sqrt{2} \sigma}{2}\right)^{2}\right) d(x)= \\
+\frac{1}{\sqrt{2 \pi \sigma^{2}}} \exp \left(i t a+\left(\frac{i t \sqrt{2} \sigma}{2}\right)^{2}\right) \int_{-\infty}^{+\infty} \exp \left(-\left(\frac{x-a}{\sqrt{2} \sigma}-\frac{i t \sqrt{2} \sigma}{2}\right)^{2}\right) d(x)= \\
+=\frac{1}{\sqrt{2 \pi \sigma^{2}}} \exp \left(i t a+\left(\frac{i t \sqrt{2} \sigma}{2}\right)^{2}\right) \int_{-\infty}^{+\infty} \exp \left(-\left(\frac{x-a-i t \sigma^{2}}{\sqrt{2} \sigma}\right)^{2}\right) d(x)=\frac{1}{\sqrt{2 \sigma^{2}}} \exp \left(i t a-\frac{t^{2} \sigma^{2}}{2}\right)
+\end{array}
+\end{array}
+\end{equation}
+
+
+
+
+
 
 
 
@@ -1289,22 +1515,58 @@ T.10. Найти характеристи ческую функцию норма
 
 Т.11. Найти распределения, которым соответствуют следуюшие характеристические функции:
 $$
-h_{1}(t)=\cos t ; \quad h_{2}(t)=\frac{1}{2}+\frac{\cos t}{2}+i \frac{\sin t}{6} ; \quad h_{3}(t)=\frac{1}{2-e^{-i t}}
+h_{1}(t)=\cos t ; 
+\quad 
+h_{2}(t)=\frac{1}{2}+\frac{\cos t}{2}+i \frac{\sin t}{6} ; 
+\quad 
+h_{3}(t)=\frac{1}{2-e^{-i t}}
+$$
+
+
+для первой:
+
+
+\begin{equation}
+h_{1}(t)=\cos (t)=\frac{\exp (i t)+\exp (-i t)}{2} \rightarrow f_{1}(x)=\frac{1}{2} I(x=1)+\frac{1}{2} I(x=-1)
+\end{equation}
+
+
+
+
+
+Для второй:
+
+$$
+h_{2}(t)=\frac{1}{2}+\frac{\cos (t)}{2}+i \frac{\sin (t)}{6}=
+$$
+
+
+$$
+\frac{1}{2} \exp (i t \cdot 0)+\frac{\exp (i t)+\exp (-i t)}{4}+i \frac{\exp (i t)-\exp (-i t)}{12}
+$$
+
+
+$$
+\int \frac{1}{2} \exp (i t \cdot 0)+\frac{\exp (i t)+\exp (-i t)}{4}+i \frac{\exp (i t)-\exp (-i t)}{12}
+$$
+
+
+$$
+f_{2}(x)=\frac{1}{2} \delta(x)+\frac{1}{4} \delta(x-1)+\frac{1}{4} \delta(x+1)+i \frac{1}{12} \delta(x-1)-i \frac{1}{12} \delta(x+1)
+$$
+
+
+
+для третьей:
+
+
+$$
+h_{3}(t)=\frac{1}{2-\exp (-i t)}=\frac{\frac{1}{2}}{1-\frac{\exp (-i t)}{2}}=\sum_{n=0}^{+\infty}\left(\frac{\exp (i t n)}{2^{n+1}}\right) \rightarrow f_{3}(x)=\sum_{n=0}^{+\infty}\left(\frac{1}{2^{n+1}} I(x=n)\right)
 $$
 
 
 
 
-\end{example}
-
-
-
-
-
-\begin{example}
-
-
-T.12. Найти распределение, которому соответствует характеристическая фу нкция $h(t)=e^{-t^{2}} \cos t$
 
 
 
@@ -1314,11 +1576,60 @@ T.12. Найти распределение, которому соответст
 
 
 
+\begin{example} T.12. 
+
+Найти распределение, которому соответствует характеристическая функция $h(t)=e^{-t^{2}} \cos t$
 
 
-\begin{example}
 
-Т. $13 .$ Является ли функция $h(t)=\cos t^{2}$ характеристической?
+$$
+h(t)=\exp \left(-t^{2}\right) \cos (t) \rightarrow f(x)=\int_{-\infty}^{+\infty} \exp \left(-t^{2}\right) \cos (t) \exp (-i t x) d(t)=
+$$
+
+
+$$
+=\int_{-\infty}^{+\infty} \frac{\exp \left(-t^{2}-i t x+i t\right)+\exp \left(-t^{2}-i t x-i t\right)}{2} d(t)
+=
+$$
+
+
+\[ \int_{-\infty}^{+\infty} \frac{\exp \left(-t^{2}-i t(x-1)\right)+\exp \left(-t^{2}-i t(x+1)\right)}{2} d(t)=
+\]
+
+
+
+$$
+=\int_{-\infty}^{+\infty}
+\frac{ 
+	\exp \left(-t^{2}-2 t \frac{x-1}{2} i-\left(\frac{x-1}{2} i\right)^{2}
+	+\left(\frac{x-1}{2} i\right)^{2}\right)
+	+
+	\exp \left(-t^{2}-2 t \frac{x+1}{2} i-\left(\frac{x+1}{2} i\right)^{2}+\left(\frac{x+1}{2} i\right)^{2}\right)
+}{2} d(t)=
+$$
+
+
+$$
+=\int_{-\infty}^{+\infty} \frac{\exp \left(-\left(t+\frac{x-1}{2} i\right)^{2}+\left(\frac{x-1}{2} i\right)^{2}\right)+\exp \left(-\left(t+\frac{x+1}{2} i\right)^{2}+\left(\frac{x+1}{2} i\right)^{2}\right)}{2} d(t)=
+$$
+
+
+
+
+$$
+=\int_{-\infty}^{+\infty} \frac{\exp \left(-\left(t+\frac{x-1}{2} i\right)^{2}\right) \exp \left(\left(\frac{x-1}{2} i\right)^{2}\right)+\exp \left(-\left(t+\frac{x+1}{2} i\right)^{2}\right) \exp \left(\left(\frac{x+1}{2} i\right)^{2}\right)}{2} d(t)=
+$$
+
+
+
+
+$$
+=\sqrt{\pi} \frac{\exp \left(-\left(\frac{x-1}{2}\right)^{2}\right)+\exp \left(-\left(\frac{x+1}{2}\right)^{2}\right)}{2}
+$$
+
+
+
+Вот такому распределению.
 
 
 
@@ -1327,29 +1638,177 @@ T.12. Найти распределение, которому соответст
 
 
 
-\begin{example}
 
-Т.14. Случайная величина $\xi_{\lambda}$ распределена по закону Пуассона с параметром $\lambda .$ Найти
+
+
+
+\begin{example} \textbf{Т.13 }
+
+Является ли функция $h(t)=\cos t^{2}$ характеристической?
+
+
+
+$\cos \left(t^{2}\right)$ не является равномерно непрерывной на $\mathbb{R}$, а следовательно, и не может быть характеристической функцией.
+
+Докажем это.
+
+
+Нужно доказать, что
+
+
+\[ \exists \epsilon>0: \forall \delta>0 
+\exists t_{1}, t_{2}\left|t_{2}-t_{1}\right|<\delta 
+\Rightarrow\left|\cos \left(t_{2}^{2}\right)-\cos \left(t_{1}^{2}\right)\right| \geq \epsilon \]
+
+
+
+Найлём решения уравнения $\cos \left(t^{2}\right)=1:$
+$$
+t^{2}=2 \pi n, n \in \mathbb{N} \cup\{0\}
+$$
+Найдём решения уравнения $\cos \left(t^{2}\right)=-1:$
+
+\[ t^{2}=2 \pi n-\pi, n \in \mathbb{N} \]
+
+
+$$
+\text { Пусть } t_{1}=\sqrt{2 \pi n}, t_{2}=\sqrt{2 \pi n-\pi .} \text { Тогда }\left|\cos \left(t_{2}^{2}\right)-\cos \left(t_{1}^{2}\right)\right|=2=\epsilon
+$$
+
+
+\[ \left|t_{2}-t_{1}\right|
+=
+|\sqrt{2 \pi n}-\sqrt{2 \pi n-\pi}|
+=
+\frac{\pi}{\sqrt{2 \pi n}+\sqrt{2 \pi n-\pi}}
+<
+\sqrt{\frac{\pi}{n}} 
+\Rightarrow 
+n>\frac{\pi}{\delta^{2}} \Rightarrow \]
+
+
+
+\[ \exists \epsilon=2: \forall \delta>0 \exists t_{1}=\sqrt{2 \pi n}, t_{2}
+=
+\sqrt{2 \pi n-\pi}, n>\frac{\pi}{\delta^{2}},\left|t_{2}-t_{1}\right|
+<
+\delta 
+\Rightarrow
+\left|\cos \left(t_{2}^{2}\right)-\cos \left(t_{1}^{2}\right)\right| 
+\geq \epsilon \]
+
+
+Доказали.
+
+
+
+
+\end{example}
+
+
+
+\begin{example} Т.14. 
+
+Случайная величина $\xi_{\lambda}$ распределена по закону Пуассона с параметром $\lambda .$ Найти
 $$
 \lim _{\lambda \rightarrow \infty} \mathrm{P}\left(\frac{\xi_{\lambda}-\lambda}{\sqrt{\lambda}} \leqslant x\right)
 $$
 
 
 
+$$
+\text { Рассмотрим, к чему стремится характеристическая функция случайной величины } \eta=\frac{\xi_{\lambda}-\lambda}{\sqrt{\lambda}}
+$$
+
+
+$$
+\phi_{\eta}(t)=\mathbb{E}\left(\exp \left(i t \frac{\xi_{\lambda}-\lambda}{\sqrt{\lambda}}\right)\right)=\exp (-i t \sqrt{\lambda}) \mathbb{E}\left(\exp \left(i t \frac{\xi_{\lambda}}{\sqrt{\lambda}}\right)\right)=
+$$
+
+
+$$
+=\exp (-i t \sqrt{\lambda}) \exp \left(\lambda\left(\exp \left(\frac{i t}{\sqrt{\lambda}}\right)-1\right)\right)=\exp \left(-i t \sqrt{\lambda}+\lambda\left(\exp \left(\frac{i t}{\sqrt{\lambda}}\right)-1\right)\right)
+$$
+
+
+$$
+\lim _{\lambda \rightarrow+\infty}\left(\phi_{\eta}(t)\right)=\lim _{\lambda \rightarrow+\infty}\left(\exp \left(-i t \sqrt{\lambda}+\lambda\left(\exp \left(\frac{i t}{\sqrt{\lambda}}\right)-1\right)\right)\right)=
+$$
+
+
+$$
+=\lim _{\lambda \rightarrow+\infty}\left(\exp \left(-i t \sqrt{\lambda}+\lambda\left(1+\frac{i t}{\sqrt{\lambda}}+\frac{1}{2}\left(\frac{i t}{\sqrt{\lambda}}\right)^{2}+o\left(\left(\frac{t}{\sqrt{\lambda}}\right)^{2}\right)-1\right)\right)\right)=
+$$
+
+
+$$
+=\lim _{\lambda \rightarrow+\infty}\left(\exp \left(-i t \sqrt{\lambda}+\lambda\left(\frac{i t}{\sqrt{\lambda}}-\frac{1}{2} \frac{1}{\lambda} t^{2}+o\left(\left(\frac{t}{\sqrt{\lambda}}\right)^{2}\right)\right)\right)\right)
+$$
+
+
+
+$$
+=\lim _{\lambda \rightarrow+\infty}\left(\exp \left(-\frac{1}{2} t^{2}+o\left(\left(\frac{t}{\sqrt{\lambda}}\right)^{2}\right)\right)\right)=\exp \left(-\frac{1}{2} t^{2}\right)
+$$
+
+
+$$
+\lim _{\lambda \rightarrow+\infty}\left(P\left(\frac{\xi_{\lambda}-\lambda}{\sqrt{\lambda}} \leq x\right)\right)=\int_{-\infty}^{x} \exp \left(-\frac{1}{2} t^{2}\right) d(t)=\Phi(x)
+$$
+
+
+
+
+
+
+
 
 \end{example}
 
 
 
-\begin{example}
+\begin{example} T. 15. 
 
-T. 15. Используя резул Бтат предыдушей задачи, найти предел
+Используя результат предыдущей задачи, найти предел
 $$
 \lim _{n \rightarrow \infty} e^{-n} \sum_{k=n}^{n} \frac{n^{k}}{k !}
 $$
 
 
 
+Так как
+$$
+\Phi(x)=\lim _{\lambda \rightarrow+\infty}\left(P\left(\frac{\xi_{\lambda}-\lambda}{\sqrt{\lambda}} \leq x\right)\right)=\lim _{\lambda \rightarrow+\infty}\left(P\left(\xi_{\lambda} \leq \sqrt{\lambda} x+\lambda\right)\right)=
+$$
+
+
+
+\[ =\lim _{\lambda \rightarrow+\infty}\left(\exp (-\lambda) \sum_{k=1}^{\lfloor\sqrt{\lambda} x+\lambda\rfloor}\left(\frac{\lambda^{k}}{(k) !}\right)\right)=\lim _{\lambda \rightarrow+\infty}\left(\exp (-\lambda)\left(\sum_{k=1}^{\lfloor\lambda\rfloor}\left(\frac{\lambda^{k}}{(k) !}\right)+\sum_{k=\lfloor\lambda\rfloor+1}^{\lfloor\sqrt{\lambda} x+\lambda\rfloor}\left(\frac{\lambda^{k}}{(k) !}\right)\right)\right) \]
+
+
+
+Теперь рассмотрим случай $\lambda \in \mathbb{N}$ :
+$$
+\begin{array}{l}
+\Phi(x)=\lim _{n \rightarrow+\infty}\left(\exp (-n)\left(\sum_{k=1}^{n}\left(\frac{n^{k}}{(k) !}\right)+\sum_{k=n+1}^{\lfloor\sqrt{n} x+n\rfloor}\left(\frac{n^{k}}{(k) !}\right)\right)\right) \rightarrow \\
+\rightarrow \Phi(x)=\lim _{n \rightarrow+\infty}\left(\exp (-n) \sum_{k=n+1}^{\lfloor\sqrt{n} x+n\rfloor}\left(\frac{n^{k}}{(k) !}\right)\right)+\lim _{n \rightarrow+\infty}\left(\exp (-n) \sum_{k=1}^{n}\left(\frac{n^{k}}{(k) !}\right)\right)
+\end{array}
+$$
+
+
+
+Возьмём теперь предел $x \rightarrow+\infty$ :
+$$
+\Phi(+\infty)=1=\lim _{n \rightarrow+\infty}\left(\exp (-n) \sum_{k=1}^{n}\left(\frac{n^{k}}{(k) !}\right)\right)
+$$
+
+
+
+
+
+
+
+
 
 \end{example}
 
@@ -1357,14 +1816,63 @@ $$
 
 
 
-\begin{example}
+\begin{example} \textbf{Т.16.} 
 
-Т.16. Пусть положительные независимые случайные величины $\xi_{m, n}$ $m=1,2, \ldots, n$ одинаково распределены с плотностью $\alpha_{n} e^{-\alpha_{n} x}, x>0,$ где $\alpha_{n}=\lambda n$ и $\lambda>0 .$ Найти предельное при $n \rightarrow \infty$ распределение случайной величины $\xi_{n}=\sum_{m=1}^{n} \xi_{m, n}$
+Пусть положительные независимые случайные величины $\xi_{m, n}$ $m=1,2, \ldots, n$ одинаково распределены с плотностью $\alpha_{n} e^{-\alpha_{n} x}, x>0,$ где $\alpha_{n}=\lambda n$ и $\lambda>0 .$ Найти предельное при $n \rightarrow \infty$ распределение случайной величины $\xi_{n}=\sum_{m=1}^{n} \xi_{m, n}$
+
+
+
+$$
+f(x)=\alpha_{n} \exp \left(-\alpha_{n} x\right)=\lambda n \exp (-\lambda n x)
+$$
+Найдём характеристическую функцию случайной величины $\xi_{m, n}:$
+$$
+\phi_{\xi_{m, n}}(t)=\mathbb{E}(\exp (i t x))=\int_{\mathbb{R}^{+}} \lambda n \exp (-\lambda n x) \exp (i t x) d(x)=\lambda n \int_{\mathbb{R}^{+}} \exp (-\lambda n x) \exp (i t x) d(x)=
+$$
+
+
+
+\[ \int_{\mathbb{R}^{+}} \lambda n \exp (-\lambda n x) \exp (i t x) d(x)=-\int_{\mathbb{R}^{+}} \frac{\partial}{\partial(x)}(\exp (-\lambda n x)) \exp (i t x) d(x)= \]
+
+
+\[ =i t \int_{\mathbb{R}^{+}} \exp (-\lambda n x) \exp (i t x) d(x)-\left.(\exp (-\lambda n x) \exp (i t x))\right|_{x=0} ^{x \rightarrow+\infty}=i t \int_{\mathbb{R}^{+}} \exp (-\lambda n x) \exp (i t x) d(x)+1 \rightarrow \]
+
+
+
+\[ \rightarrow \phi_{\xi_{m, n}}(t)=\int_{\mathbb{R}^{+}} \lambda n \exp (-\lambda n x) \exp (i t x) d(x)=\frac{\lambda n}{\lambda n-i t}=1-\frac{i t}{i t-\lambda n} \]
+
+
+
+Найдём предел характеристических функций:
+$$
+\phi(t)=\lim _{n \rightarrow+\infty}\left(\phi_{\sum_{m=1}^{n}\left(\xi_{m, n}\right)}(t)\right)=\lim _{n \rightarrow+\infty}\left(\left(1-\frac{1}{1-\frac{\lambda n}{i t}}\right)^{n}\right)=\lim _{n \rightarrow+\infty}\left(\exp \left(n \ln \left(1-\frac{1}{1-\frac{\lambda n}{i t}}\right)\right)\right)
+$$
+
+
+
+\[ =\lim _{n \rightarrow+\infty}\left(\exp \left(-\frac{1}{\frac{1}{n}-\frac{\lambda}{i t}}\right)\right)=\exp \left(\frac{i t}{\lambda}\right) \rightarrow f(x)=I\left(x=\frac{1}{\lambda}\right) \]
+
 
 
 
 
 \end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \section{Элементы теории случайных процессов и математической статистики}
@@ -1372,13 +1880,241 @@ $$
 
 
 
-\begin{example}
+\begin{example} T. $17 .$ 
 
-
-T. $17 .$ Население региона делится по некоторому социально-экономическому признаку на три подгруппы. Следующее поколение с вероятностями 0,$4 ; 0,6$ и $0,2,$ соответственно, остается в своей подгруппе, а если не
+Население региона делится по некоторому социально-экономическому признаку на три подгруппы. Следующее поколение с вероятностями 0,$4 ; 0,6$ и $0,2,$ соответственно, остается в своей подгруппе, а если не
 Остается, то с равным и вероятностями переходит в Любую из остальных подгрупп. Найти:
-a) pacпpeделение населения по данному социально-экономическому признаку в следуюшем поколении, если в настоящем поколении в 1 -ой подгруппе было $20 \%$ населения, во 2 -ой подгруппе $-30 \%,$ и в 3 -ей подгру ппе $-50 \%$
-б) предельное распределение по данному признаку, которое не меняется при смене поколений.
+
+a) распределение населения по данному социально-экономическому 
+признаку в следующем поколении, если в настоящем поколении в 1 -ой подгруппе было $20 \%$ населения, во 2 -ой подгруппе $-30 \%,$ и в 3 -ей подгруппе $-50 \%$
+
+
+
+
+Данный процесс описывается марковской цепью с матрицей
+$$
+\left(\begin{array}{lll}
+0,4 & 0,3 & 0,3 \\
+0,2 & 0,6 & 0,2 \\
+0,4 & 0,4 & 0,2
+\end{array}\right)
+$$
+По условию начальное распределение было $(0,2 \quad 0,3 \quad 0,5)$. Тогда распределение в следуюшем поколении
+$$
+\left(\begin{array}{lllll}
+x & y & z
+\end{array}\right)=\left(\begin{array}{lll}
+0,2 & 0,3 & 0,5
+\end{array}\right)\left(\begin{array}{lll}
+0,4 & 0,3 & 0,3 \\
+0,2 & 0,6 & 0,2 \\
+0,4 & 0,4 & 0,2
+\end{array}\right)=\left(\begin{array}{lll}
+0,34 & 0,44 & 0,22
+\end{array}\right)
+$$
+
+
+
+Найти б) предельное распределение по данному признаку, которое не меняется при смене поколений.
+
+
+
+
+
+$$
+\left(\begin{array}{ccc}
+0,4-\lambda & 0,3 & 0,3 \\
+0,2 & 0,6-\lambda & 0,2 \\
+0,4 & 0,4 & 0,2-\lambda
+\end{array}\right)\left(\begin{array}{l}
+x \\
+y \\
+z
+\end{array}\right)=\left(\begin{array}{l}
+0 \\
+0 \\
+0
+\end{array}\right) \rightarrow \lambda^{3}-1,2 \lambda^{2}+0,18 \lambda+0,02=0
+$$
+
+
+
+$$
+\lambda_{1}=1, \lambda_{2}=\frac{1+\sqrt{3}}{10}, \lambda_{3}=\frac{1-\sqrt{3}}{10}
+$$
+
+
+
+$$
+\left(\begin{array}{ccc}
+0,4-\lambda_{1} & 0,3 & 0,3 \\
+0,2 & 0,6-\lambda_{1} & 0,2 \\
+0,4 & 0,4 & 0,2-\lambda_{1}
+\end{array}\right)\left(\begin{array}{l}
+x_{1} \\
+y_{1} \\
+z_{1}
+\end{array}\right)=\left(\begin{array}{l}
+0 \\
+0 \\
+0
+\end{array}\right) \rightarrow\left(\begin{array}{ccc}
+-2 x_{1} & y_{1} & z_{1} \\
+x_{1} & -2 y_{1} & z_{1} \\
+x_{1} & y_{1} & -2 z_{1}
+\end{array}\right)=\left(\begin{array}{l}
+0 \\
+0 \\
+0
+\end{array}\right) \rightarrow\left(\begin{array}{l}
+x_{1} \\
+y_{1} \\
+z_{1}
+\end{array}\right)=\left(\begin{array}{l}
+1 \\
+1 \\
+1
+\end{array}\right)
+$$
+
+
+
+$$
+\left(\begin{array}{l}
+x_{2} \\
+y_{2} \\
+z_{2}
+\end{array}\right)=\left(\begin{array}{c}
+\frac{3}{4}(1+\sqrt{3}) \\
+\frac{1}{2}(-2-\sqrt{3}) \\
+1
+\end{array}\right)
+$$
+
+$$
+\left(\begin{array}{l}
+x_{3} \\
+y_{3} \\
+z_{3}
+\end{array}\right)=\left(\begin{array}{c}
+\frac{3}{4}(1-\sqrt{3}) \\
+\frac{1}{2}(-2+\sqrt{3}) \\
+1
+\end{array}\right)
+$$
+
+
+
+Тогда диагонализованная матрица $$\left(\begin{array}{ccc}1 & 0 & 0 \\ 0 & \frac{1+\sqrt{3}}{10} & 0 \\ 0 & 0 & \frac{1-\sqrt{3}}{10}\end{array}\right)$$
+
+и
+
+$$
+  \resizebox{\hsize}{!}{%
+	$
+	\left(\begin{array}{ccc}0,4 & 0,3 & 0,3 \\ 0,2 & 0,6 & 0,2 \\ 0,4 & 0,4 & 0,2\end{array}\right)^{n}
+=
+\left(\begin{array}{ccc}
+	1 & \frac{3}{4}(1+\sqrt{3}) & \frac{3}{4}(1-\sqrt{3}) \\ 
+	1 & \frac{1}{2}(-2-\sqrt{3}) & \frac{1}{2}(-2+\sqrt{3}) \\ 
+	1 & 1 & 1
+\end{array}\right)
+\left(\begin{array}{ccc}
+	1 & 0 & 0 \\ 
+	0 & \frac{1+\sqrt{3}}{10} & 0 \\ 
+	0 & 0 & 
+	\frac{1-\sqrt{3}}{10}
+\end{array}\right)^{n}
+\left(\begin{array}{ccc}
+1 & \frac{3}{4}(1+\sqrt{3}) & \frac{3}{4}(1-\sqrt{3}) \\ 
+1 & \frac{1}{2}(-2-\sqrt{3}) & \frac{1}{2}(-2+\sqrt{3}) \\ 
+1 & 1 & 1
+\end{array}\right)^{-1}=
+$}
+$$
+
+
+
+\[ 
+=\left(\begin{array}{ccc}
+1 & \frac{3}{4}(1+\sqrt{3}) & \frac{3}{4}(1-\sqrt{3}) \\
+1 & \frac{1}{2}(-2-\sqrt{3}) & \frac{1}{2}(-2+\sqrt{3}) \\
+1 & 1 & 1
+\end{array}\right)
+\left(\begin{array}{ccc}
+1 & 0 & 0 \\
+0 & \left(\frac{1+\sqrt{3}}{10}\right)^{n} & 0 \\
+0 & 0 & \left(\frac{1-\sqrt{3}}{10}\right)^n
+\end{array}\right)
+\left(\begin{array}{ccc}
+1 & \frac{3}{4}(1+\sqrt{3}) & \frac{3}{4}(1-\sqrt{3}) \\
+1 & \frac{1}{2}(-2-\sqrt{3}) & \frac{1}{2}(-2+\sqrt{3}) \\
+1 & 1 & 1
+\end{array}\right)^{-1}= 
+\]
+
+
+
+\[ 
+   \resizebox{\hsize}{!}{%
+	$=\left(\begin{array}{ccc}
+	1 & \frac{3}{4}(1+\sqrt{3}) & \frac{3}{4}(1-\sqrt{3}) \\
+	1 & \frac{1}{2}(-2-\sqrt{3}) & \frac{1}{2}(-2+\sqrt{3}) \\
+	1 & 1 & 1
+\end{array}\right) 
+\left(\begin{array}{ccc}
+	1 & 0 &  0 \\
+	0 & \left(\frac{1+\sqrt{3}}{10}\right)^{n} &  0 \\
+	0 & 0 &  \left(\frac{1-\sqrt{3}}{10}\right)^{n}
+\end{array}\right)
+\left(\begin{array}{ccc}
+	\frac{4}{13} & \frac{6}{13} & \frac{3}{13} \\
+	-\frac{4\left(-2+\frac{\sqrt{3}}{2}\right)}{13 \sqrt{3}} & -\frac{4\left(\frac{1}{4}+\frac{3 \sqrt{3}}{4}\right)}{13 \sqrt{3}} & -\frac{4\left(\frac{7}{4}-\frac{5 \sqrt{3}}{4}\right)}{13 \sqrt{3}} \\
+	-\frac{4\left(2+\frac{\sqrt{3}}{2}\right)}{13 \sqrt{3}} & -\frac{4\left(-\frac{1}{4}+\frac{3 \sqrt{3}}{4}\right)}{13 \sqrt{3}} & -\frac{4\left(-\frac{7}{4}-\frac{5 \sqrt{3}}{4}\right)}{13 \sqrt{3}}
+\end{array}\right)
+$}
+\]
+
+
+
+
+
+\[ \lim _{n \rightarrow+\infty}\left(\left(\begin{array}{ccc}
+0,4 & 0,3 & 0,3 \\
+0,2 & 0,6 & 0,2 \\
+0,4 & 0,4 & 0,2
+\end{array}\right)^{n}\right)= \]
+
+
+
+\[ =\left(\begin{array}{ccc}
+1 & \frac{3}{4}(1+\sqrt{3}) & \frac{3}{4}(1-\sqrt{3}) \\
+1 & \frac{1}{2}(-2-\sqrt{3}) & \frac{1}{2}(-2+\sqrt{3}) \\
+1 & 1 & 1
+\end{array}\right)
+\left(\begin{array}{lll}
+	1 & 0 & 0 \\
+	0 & 0 & 0 \\
+	0 & 0 & 0
+\end{array}\right)
+\left(\begin{array}{ccc}
+	\frac{4}{13} & \frac{6}{13} & \frac{3}{13} \\
+	-\frac{4\left(-2+\frac{\sqrt{3}}{2}\right)}{13 \sqrt{3}} & -\frac{4\left(\frac{1}{4}+\frac{3 \sqrt{3}}{4}\right)}{13 \sqrt{3}} & -\frac{4\left(\frac{7}{4}-\frac{5 \sqrt{3}}{4}\right)}{13 \sqrt{3}} \\
+	-\frac{4\left(2+\frac{\sqrt{3}}{2}\right)}{13 \sqrt{3}} & -\frac{4\left(-\frac{1}{4}+\frac{3 \sqrt{3}}{4}\right)}{13 \sqrt{3}} & -\frac{4\left(-\frac{7}{4}-\frac{5 \sqrt{3}}{4}\right)}{13 \sqrt{3}}
+\end{array}\right)
+\]
+
+
+
+\[ =\left(\begin{array}{ccc}
+\frac{4}{13} & \frac{6}{13} & \frac{3}{13} \\
+\frac{4}{13} & \frac{6}{13} & \frac{3}{13} \\
+\frac{4}{13} & \frac{6}{13} & \frac{3}{13}
+\end{array}\right) \]
+
+
+
 
 
 
@@ -1386,10 +2122,9 @@ a) pacпpeделение населения по данному социальн
 
 
 
-\begin{example}
+\begin{example} T.18. 
 
-T.18. Пусть матрица вероятностей перехода за один шаг цепи Маркова с
-ДВумя состоя ния м и и меет вид
+Пусть матрица вероятностей перехода за один шаг цепи Маркова с двумя состоя ния м и имеет вид
 $$
 \left(\begin{array}{cc}
 1-\alpha & \alpha \\
@@ -1400,20 +2135,246 @@ $$
 
 
 
+$$
+\left(\begin{array}{cc}
+1-\alpha & \alpha \\
+\beta & 1-\beta
+\end{array}\right)
+\left(\begin{array}{l}
+x_{\pm} \\
+y_{\pm}
+\end{array}\right)
+=
+\lambda_{\pm}
+\left(\begin{array}{l}
+x_{\pm} \\
+y_{\pm}
+\end{array}\right) \rightarrow(1-\alpha-\lambda)(1-\beta-\lambda)-\alpha \beta=0 
+\Rightarrow 
+$$
+
+
+\[ \lambda^{2}-\lambda(2-\alpha-\beta)+(1-\alpha)(1-\beta)-\alpha \beta=0  \]
+
+$$
+\begin{aligned}
+\lambda_{\pm} &=\frac{2-\alpha-\beta \pm \sqrt{(2-\alpha-\beta)^{2}-4((1-\alpha)(1-\beta)-\alpha \beta)}}{2}=\\
+=&\frac{2-\alpha-\beta \pm \sqrt{(1-\alpha)^{2}-2(1-\alpha)(1-\beta)+(1-\beta)^{2}+4 \alpha \beta}}{2}=\\
+&=\frac{2-\alpha-\beta \pm \sqrt{(\alpha-\beta)^{2}+4 \alpha \beta}}{2}=\frac{2-\alpha-\beta \pm \sqrt{\alpha^{2}+2 \alpha \beta+\beta^{2}}}{2}=\frac{2-\alpha-\beta \pm(\alpha+\beta)}{2} \Rightarrow \\
+&\left\{\begin{array}{l}
+	\lambda_{+}=1 \\
+	\lambda_{-}=1-(\alpha+\beta)
+\end{array}\right.
+\end{aligned}
+$$
+
+
+$$
+\left(\begin{array}{cc}
+1-\alpha-\lambda_{\pm} & \alpha \\
+\beta & 1-\beta-\lambda_{\pm}
+\end{array}\right)\left(\begin{array}{l}
+x_{\pm} \\
+y_{\pm}
+\end{array}\right)=\left(\begin{array}{l}
+0 \\
+0
+\end{array}\right) \rightarrow\left(\begin{array}{l}
+\left(1-\alpha-\lambda_{\pm}\right) x_{\pm}+\alpha y_{\pm} \\
+\beta x_{\pm}+\left(1-\beta-\lambda_{\pm}\right) y_{\pm}
+\end{array}\right)=\left(\begin{array}{l}
+0 \\
+0
+\end{array}\right) \rightarrow
+$$
+
+$$
+\left(\begin{array}{l}
+x_{\pm} \\
+y_{\pm}
+\end{array}\right)=\left(\begin{array}{c}
+\alpha \\
+-1+\alpha+\lambda_{\pm}
+\end{array}\right)
+$$
+
+
+
+При $\alpha=\beta=0$ тривиальный случай.
+$$
+\begin{array}{c}
+\left(\begin{array}{cc}
+	1-\alpha & \alpha \\
+	\beta & 1-\beta
+\end{array}\right)=\left(\begin{array}{cc}
+	1 & 0 \\
+	0 & 1
+\end{array}\right) 
+\\
+\lim_{n \rightarrow+\infty}\left(\begin{array}{cc}
+	1-\alpha & \alpha \\
+	\beta & 1-\beta
+\end{array}\right)^{n}
+=
+\left(
+\begin{array}{cc}
+	1 & 0 \\
+	0 & 1
+\end{array}\right)
+\end{array}
+$$
+При $\alpha, \beta \in(0,1]$ вырождения нет. Тогда диагонализованная матрица
+$$
+\left(\begin{array}{cc}
+1 & 0 \\
+0 & 1-(\alpha+\beta)
+\end{array}\right)
+$$
+
+\[ \begin{aligned}
+&\text { и }\\
+&\left(\begin{array}{cc}
+	1-\alpha & \alpha \\
+	\beta & 1-\beta
+\end{array}\right)^{n}=\left(\begin{array}{cc}
+	\alpha & \alpha \\
+	\alpha & -\beta
+\end{array}\right)\left(\begin{array}{cc}
+	1 & 0 \\
+	0 & 1-(\alpha+\beta)
+\end{array}\right)^{n}\left(\begin{array}{cc}
+	\alpha & \alpha \\
+	\alpha & -\beta
+\end{array}\right)^{-1}=
+\end{aligned} \]
+
+
+
+
+$$
+=\frac{1}{\alpha(\alpha+\beta)}\left(\begin{array}{cc}
+\alpha & \alpha \\
+\alpha & -\beta
+\end{array}\right)\left(\begin{array}{cc}
+1 & 0 \\
+0 & (1-(\alpha+\beta))^{n}
+\end{array}\right)\left(\begin{array}{cc}
+\beta & \alpha \\
+\alpha & -\alpha
+\end{array}\right)=
+$$
+
+
+$$
+=\frac{1}{\alpha+\beta}\left(\begin{array}{cc}
+\alpha(1-(\alpha+\beta))^{n}+\beta & \alpha\left(1-(1-(\alpha+\beta))^{n}\right) \\
+\beta\left(1-(1-(\alpha+\beta))^{n}\right) & \alpha+\beta(1-(\alpha+\beta))^{n}
+\end{array}\right)
+$$
+
+
+
+
+$$
+\text { При } \alpha = 1, \beta = 1
+$$
+
+
+
+$$
+\left(\begin{array}{cc}
+1-\alpha & \alpha \\
+\beta & 1-\beta
+\end{array}\right)^{n}=
+\left(\begin{array}{cc}
+0 & 1 \\
+1 & 0
+\end{array}\right)
+$$
+
+
+
+
+$$
+\text { При } \alpha \neq 1, \beta \neq 1
+$$
+
+$$
+\lim _{n \rightarrow+\infty}\left(\left(\begin{array}{cc}
+1-\alpha & \alpha \\
+\beta & 1-\beta
+\end{array}\right)^{n}\right)=\frac{1}{\alpha+\beta}\left(\begin{array}{cc}
+\beta & \alpha \\
+\beta & \alpha
+\end{array}\right)
+$$
+
+
 
 \end{example}
 
 
 
-\begin{example}
 
-Т.19. Производящая функция процесса Гальтона-Ватсона имеет вид
+
+
+
+\begin{example} Т.19. 
+
+
+Производящая функция процесса Гальтона-Ватсона имеет вид
 $$
 f(z)=\frac{1}{m+1-m z}, \quad m>0
 $$
-Выяснить при каких значениях параметра $m$ процесс является: докритическим, крити ческим, надкритическим. 
+Выяснить при каких значениях параметра $m$ процесс является: докритическим, критическим, надкритическим. 
+
+
+
+
+
+Найдём математическое ожидание $ z $:
+$$
+\mathbb{E}(\xi)=\left.\frac{d(f)}{d(z)}\right|_{z=1}=-\left.\frac{-m}{(m+1-m z)^{2}}\right|_{z=1}=m
+$$
+
+В итоге:
+
+$m<1$ -процесс докритический, 
+
+$m=1$ -процесс критический, 
+
+$m>1-$ процесс надкритический.
+
+
+
+
+
+
+
+
 Найти вероятность вырождения процесса в надкритическом случае. 
-Показать, что $n$ -тая итерация производяшей функции может быть представлена в виде
+
+
+
+
+\[ \begin{array}{c}
+s=f(s)=\frac{1}{m+1-m s} \rightarrow s(m+1-m s)=m s+s-m s^{2}=1 \rightarrow m s^{2}-s(m+1)+1=0 \rightarrow \\
+\rightarrow m s(s-1)-(s-1)=0 \rightarrow(s-1)(m s-1)=0 \rightarrow\left\{\begin{array}{l}
+s=1 \\
+s=\frac{1}{m}
+\end{array}\right.
+\end{array} \]
+
+
+
+
+
+
+
+
+
+
+Показать, что $n$ -тая итерация производящей функции может быть представлена в виде
 \begin{equation}
 \begin{array}{l}
 \qquad f^{n}(z)=\frac{m^{n}-1-m\left(m^{n-1}-1\right) z}{m^{n+1}-1-m\left(m^{n}-1\right) z} \\
@@ -1421,6 +2382,110 @@ $$
 \qquad f^{n}(z)=\frac{n-(n-1) z}{n+1-n z}
 \end{array}
 \end{equation}
+
+
+Докажем утверждение по индукции.
+
+
+База индукции следующая:
+
+\[ f^{2}(z)=f(f(z))=
+f\left(\frac{1}{m+1-m z}\right)
+=
+\frac{1}{m+1-m \frac{1}{m+1-m z}}
+=
+\frac{m+1-m z}{(m+1)(m+1-m z)-m} \]
+
+\[= \frac{m+1-m z}{(m+1)^{2}-(m+1) m z-m} \]
+
+
+
+при $ m\ne 1 $ (иначе случай будет ниже)
+
+
+\[ f^{2}(z)
+=
+\frac{(m-1)(m+1-m z)}{(m-1)\left((m+1)^{2}-(m+1) m z-m\right)}
+=
+\frac{m^{2}-1-m(m-1) z}{m^{3}+1-m\left(m^{2}-1\right) z} \]
+
+
+
+
+Шаг индукции:
+
+
+$$
+f^{n+1}(z)=f\left(f^{n}(z)\right)=f\left(\frac{m^{n}-1-m\left(m^{n-1}-1\right) z}{m^{n+1}-1-m\left(m^{n}-1\right) z}\right)=
+$$
+
+
+
+$$
+=\frac{1}{m+1-m \frac{m^{n}-1-m\left(m^{n-1}-1\right) z}{m^{n+1}-1-m\left(m^{n}-1\right) z}}=
+$$
+
+
+
+$$
+=\frac{m^{n+1}-1-m\left(m^{n}-1\right) z}{(m+1)\left(m^{n+1}-1-m\left(m^{n}-1\right) z\right)-m\left(m^{n}-1-m\left(m^{n-1}-1\right) z\right)}=
+$$
+
+
+
+$$
+=\frac{m^{n+1}-1-m\left(m^{n}-1\right) z}{(m+1)\left(m^{n+1}-1\right)-m\left(m^{n}-1\right)-m(m+1)\left(m^{n}-1\right) z+m^{2}\left(m^{n-1}-1\right) z}=
+$$
+
+
+$$
+=\frac{m^{n+1}-1-m\left(m^{n}-1\right) z}{m^{n+2}-1-m\left(m^{n+1}-1\right) z}
+$$
+
+
+
+
+
+
+
+
+
+теперь при $ m=1 $ база индукции:
+
+
+\[ f^{2}(z)=\frac{m+1-m z}{(m+1)^{2}-(m+1) m z-m}=\frac{(m+1)-(m) z}{m(m+1)+1-(m+1) z}=\frac{2-(2-1) z}{2+1-2 z} \]
+
+
+
+и шаг индукции:
+
+
+$$
+f^{n+1}(z)=f\left(f^{n}(z)\right)=f\left(\frac{n-(n-1) z}{n+1-n z}\right)=
+$$
+
+
+
+$$
+=\frac{1}{2-\frac{n-(n-1) z}{n+1-n z}}=
+$$
+
+
+$$
+=\frac{n+1-n z}{2(n+1-n z)-n+(n-1) z}=
+$$
+
+
+
+$$
+=\frac{n+1-n z}{n+2-(n+1) z}
+$$
+
+
+
+
+
+
 
 
 \end{example}
@@ -1441,6 +2506,55 @@ $$
 
 
 
+Пусть наш процесс впервые пересёк уровень $u$ в точке $\tau_{u}$. 
+
+Тогда траекторию, исходящую из точки $\left(\tau_{u}, u\right)$ можно рассматривать, как самостоятельный винеровский процесс. 
+
+
+Следовательно, вероятность того, что в точке $t$ будет выполнено $W_{t} \geq u$ равна $\frac{1}{2}$ в силу симметрии. 
+
+
+Заметим с другой стороны, что
+
+
+
+
+$$
+P\left(W_{t} \geq u \mid \tau_{u} \leq t\right)
+=
+\frac{P\left(W_{t} \geq u\right)}{P\left(\tau_{u} \leq t\right)}=\frac{1}{2}
+$$
+
+
+
+$$
+P\left(\tau_{u} \leq t\right)=2 P\left(W_{t} \geq u\right)
+=
+2 \int_{u}^{+\infty} \frac{1}{\sigma \sqrt{2 \pi t}} \exp \left(-\frac{x^{2}}{2 \sigma^{2} t}\right) d(x)
+=
+\frac{2}{\sqrt{2 \pi}} \int_{\frac{u}{\sqrt{\tau} \sigma}}^{+\infty} \exp \left(-\frac{x^{2}}{2}\right) d(x)
+$$
+
+
+
+$$
+\frac{\partial}{\partial(t)}\left(P\left(\tau_{u} \leq t\right)\right)
+=
+\frac{\partial}{\partial(t)}\left(\frac{2}{\sqrt{2 \pi}} \int_{\frac{u}{\sqrt{t} \sigma}}^{+\infty} \exp \left(-\frac{x^{2}}{2}\right) d(x)\right)
+=
+\frac{1}{\sqrt{2 \pi}} \exp \left(-\frac{u^{2}}{2 \sigma^{2} t}\right) \frac{u}{t^{\frac{3}{2}} \sigma}
+$$
+
+
+
+
+
+
+
+
+
+
+
 \end{example}
 
 
@@ -1448,12 +2562,41 @@ $$
 
 
 
-\begin{example}
-
+\begin{example} \textbf{T21}
+Пусть
 $$
 M_{t}=\max _{0 \leq s \leq t} W_{s}, \quad t>0
 $$
-где $\left(W_{t}, t \geq 0\right)-$ винеровский процесс. Найти плотность распределения случайной величины $M_{t}$
+
+где $\left(W_{t}, t \geq 0\right)-$ винеровский процесс. 
+
+Найти плотность распределения случайной величины $M_{t}$
+
+
+
+
+$$
+P\left(M_{t} \geq x\right)=P\left(\tau_{x} \leq t\right)=2 \int_{x}^{+\infty} \frac{1}{\sigma \sqrt{2 \pi t}} \exp \left(-\frac{y^{2}}{2 \sigma^{2} t}\right) dy
+$$
+
+
+
+$$
+P\left(M_{t}<x\right)=1-P\left(M_{t} \geq x\right)=1-2 \int_{x}^{+\infty} \frac{1}{\sigma \sqrt{2 \pi t}} \exp \left(-\frac{y^{2}}{2 \sigma^{2} t}\right) dy
+$$
+
+
+$$
+1-\sqrt{\frac{2}{\pi}} \int_{\frac{x}{\sigma \sqrt{t}}}^{+\infty} \exp \left(-\frac{y^{2}}{2}\right) dy
+=\sqrt{\frac{2}{\pi}} \int_{0}^{\frac{x}{\sigma \sqrt{t}}} \exp \left(-\frac{y^{2}}{2}\right) dy
+$$
+
+В итоге:
+
+$$
+\frac{\partial}{\partial(x)}\left(P\left(M_{t}<x\right)\right)=\frac{\partial}{\partial(x)}\left(\sqrt{\frac{2}{\pi}} \int_{0}^{\frac{x}{\sigma \sqrt{t}}} \exp \left(-\frac{y^{2}}{2}\right) d(y)\right)=\sqrt{\frac{2}{\pi}} \frac{1}{\sigma \sqrt{t}} \exp \left(-\frac{x^{2}}{2 \sigma^{2} t}\right)
+$$
+
 
 
 
@@ -1462,27 +2605,166 @@ $$
 
 
 
-\begin{example}
 
-T.22. Пусть $\mathbb{X}=\left(X_{1}, \ldots, X_{n}\right)-$ выборка из пуассоновского распределения
-с параметром $\lambda .$ Найти оценку наибольшего правдоподобия параметра
+
+\begin{example} \textbf{T.22.} 
+
+Пусть $\mathbb{X}=\left(X_{1}, \ldots, X_{n}\right)-$ выборка из пуассоновского распределения
+с параметром $\lambda .$ 
+
+Найти оценку наибольшего правдоподобия параметра
 $\lambda$
 
 
 
+Функция правдоподобия
+$$
+\begin{array}{c}
+f(\lambda)=\prod_{i=1}^{n}\left(P_{\lambda}\left(X_{i}=k_{i}\right)\right)
+=
+\prod_{i=1}^{n}\left(\frac{\lambda^{k_{i}}}{\left(k_{i}\right) !} \exp (-\lambda)\right)
+=
+\prod_{i=1}^{n}\left(\frac{1}{\left(k_{i}\right) !}\right) \lambda \sum_{i=1}^{n}\left(k_{i}\right) \exp (-n \lambda) 
+\\
+\ln (f(\lambda))=-\sum_{i=1}^{n} \ln \left(\left(k_{i}\right) !\right)+\sum_{i=1}^{n}\left(k_{i}\right) \ln (\lambda)-n \lambda
+\end{array}
+$$
+
+
+
+Найдём максимум этой функции.
+$$
+\frac{\partial}{\partial(\lambda)}(\ln (f(\lambda)))=\sum_{i=1}^{n}\left(k_{i}\right) \frac{1}{\lambda}-n=0 \rightarrow \lambda=\frac{1}{n} \sum_{i=1}^{n}\left(k_{i}\right)
+$$
+
+
+убедимся в максимуме с помощью второй производной:
+
+
+$$
+\frac{\partial^{2}}{\partial(\lambda)^{2}}(\ln (f(\lambda)))=-\sum_{i=1}^{n}\left(k_{i}\right) \frac{1}{\lambda^{2}}=-\sum_{i=1}^{n}\left(k_{i}\right)\left(\frac{1}{n} \sum_{i=1}^{n}\left(k_{i}\right)\right)^{-2}=-n^{2}\left(\sum_{i=1}^{n}\left(k_{i}\right)\right)^{-1}<0
+$$
+
+
+
+
+
+
+
+
+
+
 
 \end{example}
 
 
 
-\begin{example}
+\begin{example} \textbf{T.23.} 
 
-T.23. Пусть $\mathbb{X}=\left(X_{1}, \ldots, X_{n}\right)-$ выборка из нормального распределения $N\left(a, \sigma^{2}\right) .$ Найти оцен ки наибольшего правдоподобия параметров $a$ и $\sigma^{2}$
+
+Пусть $\mathbb{X}=\left(X_{1}, \ldots, X_{n}\right)-$ выборка из нормального распределения $N\left(a, \sigma^{2}\right) .$ 
+
+Найти оценки наибольшего правдоподобия параметров $a$ и $\sigma^{2}$
+
+
+
+
+
+Функция правдоподобия:
+
+$$\begin{aligned} f(a, \sigma)
+=
+\prod_{i=1}^{n}\left(P_{a, \sigma}\left(X_{i}\right)\right) 
+&=
+\prod_{i=1}^{n}\left(
+\left(\frac{1}{\sqrt{2 \pi} \sigma}\right) 
+\exp \left(-\frac{\left(X_{i}-a\right)^{2}}{2 \sigma^{2}} \right)
+\right)=
+\\
+=&
+\left(\frac{1}{\sqrt{2 \pi} \sigma}\right)^{n} \exp \left(-\frac{1}{2 \sigma^{2}} \sum_{i=1}^{n}\left(\left(X_{i}-a\right)^{2}\right)\right)-
+\\ 
+& \ln (f(a, \sigma))
+=
+-n(\ln (\sqrt{2 \pi})+\ln (\sigma))-\frac{1}{2 \sigma^{2}} \sum_{i=1}^{n}\left(\left(X_{i}-a\right)^{2}\right) \end{aligned}$$
+
+
+
+$$
+\ln (f(a, \sigma))
+=
+-n(\ln (\sqrt{2 \pi})+\ln (\sigma))-\frac{1}{2 \sigma^{2}} \sum_{i=1}^{n}\left(\left(X_{i}-a\right)^{2}\right)
+$$
+
+Максимум этой функции:
+
+
+
+
+$$
+\frac{\partial}{\partial(\sigma)}(\ln (f(a, \sigma)))=-\frac{n}{\sigma}+\frac{1}{\sigma^{3}} \sum_{i=1}^{n}\left(\left(X_{i}-a\right)^{2}\right)=0
+$$
+
+
+$$
+\sigma^{2}=\frac{1}{n} \sum_{i=1}^{n}\left(\left(X_{i}-a\right)^{2}\right)
+$$
+
+
+
+$$
+\frac{\partial}{\partial(a)}(\ln (f(a, \sigma)))=\frac{1}{\sigma^{2}} \sum_{i=1}^{n}\left(X_{i}-a\right)=0
+$$
+
+
+$$
+a=\frac{1}{n} \sum_{i=1}^{n}\left(X_{i}\right)
+$$
+
+
+$$
+\frac{\partial^{2}}{\partial(\sigma)^{2}}(\ln (f(a, \sigma)))=\frac{n}{\sigma^{2}}-\frac{3}{\sigma^{4}} \sum_{i=1}^{n}\left(\left(X_{i}-a\right)^{2}\right)
+$$
+
+
+$$
+\frac{\partial^{2}}{\partial(a)^{2}}(\ln (f(a, \sigma)))=-\frac{n}{\sigma^{2}}
+$$
+
+
+
+$$
+\frac{\partial^{2}}{\partial(a) \partial(\sigma)}(\ln (f(a, \sigma)))=-\frac{2}{\sigma^{3}} \sum_{i=1}^{n}\left(X_{i}-a\right)
+$$
+
+
+$$
+\begin{aligned}
+&\text { Матрица вторых производных в данной точке }\\
+&\left(\begin{array}{cc}
+	-\frac{2 n}{\sigma^{2}} & 0 \\
+	0 & -\frac{n}{\sigma^{2}}
+\end{array}\right)=-\frac{n}{\sigma^{2}}\left(\begin{array}{cc}
+	2 & 0 \\
+	0 & 1
+\end{array}\right)<0 \rightarrow \text { это точка строгого максимума }
+\end{aligned}
+$$
+
+
 
 
 
 
 \end{example}
+
+
+
+
+
+
+
+
 
 
 
