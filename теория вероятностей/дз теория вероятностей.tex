@@ -1199,16 +1199,22 @@ $\mathrm{C}$ помошью неравенства Чебышева оценит
 
 Дисперсия в таком эксперименте
 $$
-D(\xi)=\sqrt{1000 \frac{1}{2} \frac{1}{2}}=\frac{1}{2} 10 \sqrt{10}=5 \sqrt{10}
+E\xi^2)=E(\sum_{i}^{n}1_{A_i})+E(\sum_{i\ne j}^{n})=500+(1000^2-100)/4=
 $$
 
+
+
+\[ D(\xi)=E(\xi^2)-(E(\xi))^2=250 \]
 
 Неравенство Чебышева даст:
 $$
-P(|\xi-500| \geq 50) \leq \frac{5 \sqrt{10}}{2500}=\frac{\sqrt{10}}{500} \rightarrow P(|\xi-500|<50)=1-P(|\xi-500| \geq 50) \geq 1-\frac{\sqrt{10}}{500}
-$$
+P(|\xi-500| \geq 50) \leq \frac{250}{500}  $$
 
 
+
+\[ P(|\xi-500|<50)=1-P(|\xi-500| \geq 50) \geq
+0.9
+ \]
 
 
 
@@ -1293,15 +1299,16 @@ $$
 
 
 $$
-\phi(x) \geq \lambda\left(x_{0}\right)\left(x-x_{0}\right)+\phi\left(x_{0}\right)
+\varphi(x) \geq \varphi^\prime \left(x_{0}\right)\left(x-x_{0}\right)+\varphi\left(x_{0}\right)
 $$
 Пусть
 $$
-\phi(\xi) \geq \lambda(\mathbb{E}(\xi))(\xi-\mathbb{E}(\xi))+\phi(\mathbb{E}(\xi))
+\varphi(\xi) \geq \lambda(\mathbb{E}(\xi))(\xi-\mathbb{E}(\xi))+\varphi(\mathbb{E}(\xi))
 $$
 Берём матожидание ои обеих частей.
 $$
-\mathbb{E}(\phi(\xi)) \geq \lambda(\mathbb{E}(\xi))(\mathbb{E}(\xi)-\mathbb{E}(\xi))+\mathbb{E}(\phi(\mathbb{E}(\xi)))=\phi(\mathbb{E}(\xi))
+\mathbb{E}(\varphi(\xi)) \geq \lambda(\mathbb{E}(\xi))(\mathbb{E}(\xi)-\mathbb{E}(\xi))+\mathbb{E}(\varphi(\mathbb{E}(\xi)))=
+\varphi(\mathbb{E}(\xi))
 $$
 
 
@@ -1542,14 +1549,18 @@ $$
 
 
 $$
+=
+\frac{1}{2} \exp (i t \cdot 0)+\frac{\exp (i t)+\exp (-i t)}{4}+i \frac{\exp (i t)-\exp (-i t)}{12}
+=
+$$
+
+
+$$
+=
 \frac{1}{2} \exp (i t \cdot 0)+\frac{\exp (i t)+\exp (-i t)}{4}+i \frac{\exp (i t)-\exp (-i t)}{12}
 $$
 
-
-$$
-\int \frac{1}{2} \exp (i t \cdot 0)+\frac{\exp (i t)+\exp (-i t)}{4}+i \frac{\exp (i t)-\exp (-i t)}{12}
-$$
-
+поэтому
 
 $$
 f_{2}(x)=\frac{1}{2} \delta(x)+\frac{1}{4} \delta(x-1)+\frac{1}{4} \delta(x+1)+i \frac{1}{12} \delta(x-1)-i \frac{1}{12} \delta(x+1)
@@ -1561,9 +1572,12 @@ $$
 
 
 $$
-h_{3}(t)=\frac{1}{2-\exp (-i t)}=\frac{\frac{1}{2}}{1-\frac{\exp (-i t)}{2}}=\sum_{n=0}^{+\infty}\left(\frac{\exp (i t n)}{2^{n+1}}\right) \rightarrow f_{3}(x)=\sum_{n=0}^{+\infty}\left(\frac{1}{2^{n+1}} I(x=n)\right)
+h_{3}(t)=\frac{1}{2-\exp (-i t)}=\frac{\frac{1}{2}}{1-\frac{\exp (-i t)}{2}}=\sum_{n=0}^{+\infty}\left(\frac{\exp (i t n)}{2^{n+1}}\right)
 $$
 
+
+\[ f_{3}(x)=\sum_{n=0}^{+\infty}\left(\frac{1}{2^{n+1}} I(x=n)\right)
+ \]
 
 
 
@@ -1732,23 +1746,29 @@ $$
 
 
 $$
-\lim _{\lambda \rightarrow+\infty}\left(\phi_{\eta}(t)\right)=\lim _{\lambda \rightarrow+\infty}\left(\exp \left(-i t \sqrt{\lambda}+\lambda\left(\exp \left(\frac{i t}{\sqrt{\lambda}}\right)-1\right)\right)\right)=
+\lim _{\lambda \rightarrow+\infty}\phi_{\eta}(t)
+=
+\lim _{\lambda \rightarrow+\infty}
+\exp \left(-i t \sqrt{\lambda}+\lambda\left(\exp \left(\frac{i t}{\sqrt{\lambda}}\right)-1\right)\right)=
 $$
 
 
 $$
-=\lim _{\lambda \rightarrow+\infty}\left(\exp \left(-i t \sqrt{\lambda}+\lambda\left(1+\frac{i t}{\sqrt{\lambda}}+\frac{1}{2}\left(\frac{i t}{\sqrt{\lambda}}\right)^{2}+o\left(\left(\frac{t}{\sqrt{\lambda}}\right)^{2}\right)-1\right)\right)\right)=
+=\lim _{\lambda \rightarrow+\infty}\exp \left(-i t \sqrt{\lambda}+\lambda\left(1+\frac{i t}{\sqrt{\lambda}}+\frac{1}{2}\left(\frac{i t}{\sqrt{\lambda}}\right)^{2}+o\left(\left(\frac{t}{\sqrt{\lambda}}\right)^{2}\right)-1\right)\right)=
 $$
 
 
 $$
-=\lim _{\lambda \rightarrow+\infty}\left(\exp \left(-i t \sqrt{\lambda}+\lambda\left(\frac{i t}{\sqrt{\lambda}}-\frac{1}{2} \frac{1}{\lambda} t^{2}+o\left(\left(\frac{t}{\sqrt{\lambda}}\right)^{2}\right)\right)\right)\right)
+=\lim _{\lambda \rightarrow+\infty}\exp \left(-i t \sqrt{\lambda}+\lambda\left(\frac{i t}{\sqrt{\lambda}}-\frac{1}{2} \frac{1}{\lambda} t^{2}+o\left(\left(\frac{t}{\sqrt{\lambda}}\right)^{2}\right)\right)\right)
 $$
 
 
 
 $$
-=\lim _{\lambda \rightarrow+\infty}\left(\exp \left(-\frac{1}{2} t^{2}+o\left(\left(\frac{t}{\sqrt{\lambda}}\right)^{2}\right)\right)\right)=\exp \left(-\frac{1}{2} t^{2}\right)
+=\lim _{\lambda \rightarrow+\infty}
+\exp \left(-\frac{1}{2} t^{2}+o\left(\left(\frac{t}{\sqrt{\lambda}}\right)^{2}\right)\right)
+=
+\exp \left(-\frac{1}{2} t^{2}\right)
 $$
 
 
@@ -1778,28 +1798,53 @@ $$
 
 Так как
 $$
-\Phi(x)=\lim _{\lambda \rightarrow+\infty}\left(P\left(\frac{\xi_{\lambda}-\lambda}{\sqrt{\lambda}} \leq x\right)\right)=\lim _{\lambda \rightarrow+\infty}\left(P\left(\xi_{\lambda} \leq \sqrt{\lambda} x+\lambda\right)\right)=
+\Phi(x)=\lim _{\lambda \rightarrow+\infty}
+P\left(\frac{\xi_{\lambda}-\lambda}{\sqrt{\lambda}} \leq x\right)
+=
+\lim _{\lambda \rightarrow+\infty}
+P\left(\xi_{\lambda} \leq \sqrt{\lambda} x+\lambda\right)=
 $$
 
 
 
-\[ =\lim _{\lambda \rightarrow+\infty}\left(\exp (-\lambda) \sum_{k=1}^{\lfloor\sqrt{\lambda} x+\lambda\rfloor}\left(\frac{\lambda^{k}}{(k) !}\right)\right)=\lim _{\lambda \rightarrow+\infty}\left(\exp (-\lambda)\left(\sum_{k=1}^{\lfloor\lambda\rfloor}\left(\frac{\lambda^{k}}{(k) !}\right)+\sum_{k=\lfloor\lambda\rfloor+1}^{\lfloor\sqrt{\lambda} x+\lambda\rfloor}\left(\frac{\lambda^{k}}{(k) !}\right)\right)\right) \]
+\[ =\lim _{\lambda \rightarrow+\infty}\left[\exp (-\lambda) \sum_{k=1}^{\lfloor\sqrt{\lambda} x+\lambda\rfloor}\left(\frac{\lambda^{k}}{(k) !}\right)\right]
+=
+\lim _{\lambda \rightarrow+\infty}
+\left[
+\exp (-\lambda)\left(
+\sum_{k=1}^{\lfloor\lambda\rfloor}
+\frac{\lambda^{k}}{(k) !}
++
+\sum_{k=\lfloor\lambda\rfloor+1}^{\lfloor\sqrt{\lambda} x+\lambda\rfloor}
+\frac{\lambda^{k}}{(k) !}
+\right)\right] \]
 
 
 
 Теперь рассмотрим случай $\lambda \in \mathbb{N}$ :
+
 $$
-\begin{array}{l}
-\Phi(x)=\lim _{n \rightarrow+\infty}\left(\exp (-n)\left(\sum_{k=1}^{n}\left(\frac{n^{k}}{(k) !}\right)+\sum_{k=n+1}^{\lfloor\sqrt{n} x+n\rfloor}\left(\frac{n^{k}}{(k) !}\right)\right)\right) \rightarrow \\
-\rightarrow \Phi(x)=\lim _{n \rightarrow+\infty}\left(\exp (-n) \sum_{k=n+1}^{\lfloor\sqrt{n} x+n\rfloor}\left(\frac{n^{k}}{(k) !}\right)\right)+\lim _{n \rightarrow+\infty}\left(\exp (-n) \sum_{k=1}^{n}\left(\frac{n^{k}}{(k) !}\right)\right)
-\end{array}
+\Phi(x)=\lim_{n \rightarrow+\infty}\left(
+e^{-n}\left(\sum_{k=1}^{n}\left(\frac{n^{k}}{(k) !}\right)
++
+\sum_{k=n+1}^{\lfloor\sqrt{n} x+n\rfloor}\frac{n^{k}}{(k) !}\right)
+\right) 
 $$
+
+
+\[ 
+\Phi(x)=
+\lim _{n \rightarrow+\infty}\left[\exp (-n) \sum_{k=n+1}^{\lfloor\sqrt{n} x+n\rfloor}\left(\frac{n^{k}}{(k) !}\right)\right]
++
+\lim _{n \rightarrow+\infty}\left[
+\exp (-n) \sum_{k=1}^{n}\left(\frac{n^{k}}{(k) !}\right)
+\right] \]
 
 
 
 Возьмём теперь предел $x \rightarrow+\infty$ :
 $$
-\Phi(+\infty)=1=\lim _{n \rightarrow+\infty}\left(\exp (-n) \sum_{k=1}^{n}\left(\frac{n^{k}}{(k) !}\right)\right)
+\Phi(+\infty)=1=\lim_{n \rightarrow+\infty}\left(\exp (-n) \sum_{k=1}^{n}\left(\frac{n^{k}}{(k) !}\right)\right)
 $$
 
 
@@ -1850,8 +1895,11 @@ $$
 
 
 
-\[ =\lim _{n \rightarrow+\infty}\left(\exp \left(-\frac{1}{\frac{1}{n}-\frac{\lambda}{i t}}\right)\right)=\exp \left(\frac{i t}{\lambda}\right) \rightarrow f(x)=I\left(x=\frac{1}{\lambda}\right) \]
+\[ =\lim _{n \rightarrow+\infty}\left(\exp \left(-\frac{1}{\frac{1}{n}-\frac{\lambda}{i t}}\right)\right)=\exp \left(\frac{i t}{\lambda}\right)  \]
 
+
+
+\[ f(x)=I\left(x=\frac{1}{\lambda}\right) \]
 
 
 
@@ -1899,7 +1947,7 @@ $$
 0,4 & 0,4 & 0,2
 \end{array}\right)
 $$
-По условию начальное распределение было $(0,2 \quad 0,3 \quad 0,5)$. Тогда распределение в следуюшем поколении
+По условию начальное распределение было $(0,2 \quad 0,3 \quad 0,5)$. Тогда распределение в следующем поколении
 $$
 \left(\begin{array}{lllll}
 x & y & z
@@ -1959,26 +2007,39 @@ z_{1}
 0 \\
 0 \\
 0
-\end{array}\right) \rightarrow\left(\begin{array}{ccc}
--2 x_{1} & y_{1} & z_{1} \\
-x_{1} & -2 y_{1} & z_{1} \\
-x_{1} & y_{1} & -2 z_{1}
-\end{array}\right)=\left(\begin{array}{l}
-0 \\
-0 \\
-0
-\end{array}\right) \rightarrow\left(\begin{array}{l}
-x_{1} \\
-y_{1} \\
-z_{1}
-\end{array}\right)=\left(\begin{array}{l}
-1 \\
-1 \\
-1
-\end{array}\right)
+\end{array}\right) 
 $$
 
 
+\[ 
+\left(\begin{array}{ccc}
+	-2 x_{1} & y_{1} & z_{1} \\
+	x_{1} & -2 y_{1} & z_{1} \\
+	x_{1} & y_{1} & -2 z_{1}
+\end{array}\right)=\left(\begin{array}{l}
+	0 \\
+	0 \\
+	0
+\end{array}\right)  
+\]
+
+
+\[ 
+\left(\begin{array}{l}
+	x_{1} \\
+	y_{1} \\
+	z_{1}
+\end{array}\right)
+=
+\left(\begin{array}{l}
+	1 \\
+	1 \\
+	1
+\end{array}\right) 
+\]
+
+
+Аналогично получаем:
 
 $$
 \left(\begin{array}{l}
