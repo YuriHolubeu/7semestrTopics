@@ -417,6 +417,30 @@ E=\sum_{p}\left(E_{p} n_{p}\right) \approx \frac{2 V 4 \pi}{(2 \pi \hbar)^{3} 2 
 
 
 
+
+
+
+Теперь рассмотрим бозе-газ.
+
+
+для него:
+$$
+\begin{array}{c}
+	E=0, \Omega=0, P=0, \mu=0, S=0 \\
+	\frac{h^{2}}{2 m}\left(\frac{N}{V}\right)^{\frac{2}{y}} \approx T_{C}
+\end{array}
+$$
+
+
+
+
+
+
+
+
+
+
+
 \end{task}
 
 
@@ -837,6 +861,30 @@ $\left\langle\hat{a}_{k}^{+} \hat{a}_{p}^{+} \hat{a}_{u} \hat{a}_{v}\right\rangl
 
 
 
+но я ее решу :)
+
+
+
+
+$$
+\begin{array}{l}
+	\left\langle\hat{a}_{k}^{+} \hat{a}_{\rho}^{+} \hat{a}_{u} \hat{a}_{v}\right\rangle=\delta_{k u} \delta_{\rho v}\left\langle\hat{a}_{k}^{+} \hat{a}_{p}^{+} \hat{a}_{p} \hat{a}_{k}\right\rangle+\delta_{k v} \delta_{p u}\left\langle\hat{a}_{k}^{+} \hat{a}_{\rho}^{+} \hat{a}_{p} \hat{a}_{k}\right\rangle= \\
+	=\left(1-\delta_{p k}\right)\left[-\delta_{k u} \delta_{p v}\left\langle\hat{a}_{k}^{+} \hat{a}_{k} \hat{a}_{p}^{+} \hat{a}_{p}\right\rangle+\delta_{k v} \delta_{\rho u} n_{k} n_{p}\right]= \\
+	=n_{k} n_{p}\left(\delta_{k v} \delta_{p u}-\delta_{k u} \delta_{p v}\right)
+\end{array}
+$$
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -855,7 +903,60 @@ $\left\langle\hat{a}_{k}^{+} \hat{a}_{p}^{+} \hat{a}_{u} \hat{a}_{v}\right\rangl
 
 
 
-???
+Гамильтониан такого взаимодействия имеет вид:
+
+
+
+$$
+\hat{H}=\frac{1}{2 m}\left(\hat{p}-\frac{e}{c} \boldsymbol{A}\right)^{2}+e \phi-\frac{e \hbar g}{2 m c}(\widehat{s}, \boldsymbol{H})
+$$
+
+
+
+
+$$
+\text { В калибровке } \operatorname{div}(A)=0:
+$$
+
+
+
+
+
+$$
+\begin{array}{c}
+	\widehat{H}=\sum_{\boldsymbol{p}, \sigma}\left(\left(\frac{\boldsymbol{p}^{2}}{2 m}-\mu\right) \hat{a}_{\boldsymbol{p} \sigma}^{\dagger} \hat{a}_{\boldsymbol{p}, \sigma}\right)-\frac{e}{m c} \sum_{\boldsymbol{p}^{\prime}, \boldsymbol{p}, \sigma}\left(\boldsymbol{A}_{\boldsymbol{p}^{\prime}, \boldsymbol{p}} \boldsymbol{p} \hat{a}_{\boldsymbol{p}^{\prime}, \sigma}^{\dagger} \hat{a}_{\boldsymbol{p}, \sigma}^{\dagger}\right)
+	+
+	\frac{e^{2}}{2 m c^{2}} \sum_{\boldsymbol{p}^{\prime}, \boldsymbol{p}, \sigma}
+	\left(A^{2}\right)_{\boldsymbol{p}^{\prime}, \boldsymbol{p}} 
+	\hat{a}_{\boldsymbol{p}^{\prime}, \sigma}^{\dagger} 
+	\hat{a}_{\boldsymbol{p}, \sigma}^{\dagger}
+	+\\
+	+e \sum_{\boldsymbol{p}^{\prime}, \boldsymbol{p}, \sigma}
+	\phi_{\boldsymbol{p}^{\prime}, \boldsymbol{p}} 
+	\hat{a}_{\boldsymbol{p}^{\prime}, \sigma}^{\dagger} 
+	\hat{a}_{\boldsymbol{p}, \sigma}^{\dagger}
+	+
+	\mu_{B} \sum_{\boldsymbol{p}, \sigma}
+	\sigma 
+	H 
+	\hat{a}_{\boldsymbol{p}, \sigma}^{\dagger} 
+	\hat{a}_{\boldsymbol{p}, \sigma}^{\dagger}
+\end{array}
+$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -874,12 +975,15 @@ $\left\langle\hat{a}_{k}^{+} \hat{a}_{p}^{+} \hat{a}_{u} \hat{a}_{v}\right\rangl
 
 
 
-???
+
+Эта задача решена в задаче 16.
 
 
 
 
-
+$$
+\langle\exp (-i k \widehat{x})\rangle=\exp \left(-\frac{k^{2} \hbar}{4 m \omega} \operatorname{coth}\left(\frac{\hbar \omega \tau}{2}\right)\right)
+$$
 
 
 
@@ -893,7 +997,187 @@ $\left\langle\hat{a}_{k}^{+} \hat{a}_{p}^{+} \hat{a}_{u} \hat{a}_{v}\right\rangl
 \textbf{12}
 
 Определить температурную зависимость среднеквадратичного смещения атомов от положения равновесия $ \langle R_k R_p \rangle$, 
-где $ \langle ... \rangle$ обозначают усреднение по состоянию невзаимодействующих фононов с заданной температурой,  Rk – смещение атома в k-направлении. Объяснить происхождение нулевых колебаний.
+где $ \langle ... \rangle$ обозначают усреднение по состоянию невзаимодействующих фононов с заданной температурой,  
+$R_k$ – смещение атома в $k$-направлении. 
+Объяснить происхождение нулевых колебаний.
+
+
+
+
+
+
+$$
+\widehat{u}^{\alpha}\left(R_{j}\right)=\sum_{k s}\left(\sqrt{\frac{\hbar}{2 N_{0} M \omega_{k s}}} \exp \left(i k R_{j}\right) e_{k s}^{\alpha}\left(\widehat{b}_{k s}+\hat{b}_{-k s}^{\dagger}\right)\right)
+$$
+
+
+
+
+
+$$
+\widehat{u}^{\alpha}\left(\boldsymbol{R}_{i}\right) \hat{u}^{\beta}\left(\boldsymbol{R}_{j}\right)=
+$$
+
+
+$$
+\delta_{i j} \sum_{\boldsymbol{k} s}\left(\sqrt{\frac{\hbar}{2 N_{0} M \omega_{\boldsymbol{k} s}}} \exp \left(i \boldsymbol{k} \boldsymbol{R}_{i}\right) e_{\boldsymbol{k} s}^{\alpha}\left(\widehat{b}_{\boldsymbol{k} s}+\widehat{b}_{-\boldsymbol{k} s}^{\dagger}\right)\right) \sum_{\boldsymbol{k}_{1} s_{1}}\left(\sqrt{\frac{\hbar}{2 N_{0} M \omega_{\boldsymbol{k}_{1} s_{1}}}} \exp \left(i \boldsymbol{k}_{1} \boldsymbol{R}_{j}\right) e_{\boldsymbol{k}_{1} s_{1}}^{\beta}\left(\widehat{b}_{\boldsymbol{k}_{1} s_{1}}+\widehat{b}_{-\boldsymbol{k}_{1} s_{1}}^{\dagger}\right)\right)
+$$
+
+
+
+$$
+=\delta_{i j} \frac{\hbar}{2 N_{0} M} \sum_{\boldsymbol{k} s}\left(\sum_{\boldsymbol{k}_{1} s_{1}}\left(\sqrt{\frac{1}{\omega_{\boldsymbol{k} s} \omega_{\boldsymbol{k}_{1} s_{1}}}} \exp \left(i\left(\boldsymbol{k}+\boldsymbol{k}_{1}\right) \boldsymbol{R}_{i}\right) e_{\boldsymbol{k} s}^{\alpha} e_{\boldsymbol{k}_{1} s_{1}}^{\beta}\left(\widehat{b}_{\boldsymbol{k} s}+\widehat{b}_{-\boldsymbol{k} s}^{\dagger}\right)\left(\widehat{b}_{\boldsymbol{k}_{1} s_{1}}+\widehat{b}_{-\boldsymbol{k}_{1} s_{1}}^{\dagger}\right)\right)\right)
+$$
+
+
+
+Произведем усреднение:
+
+
+
+$$
+\left\langle\widehat{u}^{\alpha}\left(\boldsymbol{R}_{i}\right) 
+\hat{u}^{\beta}\left(\boldsymbol{R}_{j}\right)\right\rangle
+$$
+
+из формулы выше усреднение занесется в множитель
+
+
+$$
+\left\langle\left(\hat{b}_{\boldsymbol{k} s}+\hat{b}_{-\boldsymbol{k s}}^{\dagger}\right)\left(\hat{b}_{\boldsymbol{k}_{1} s_{1}}+\hat{b}_{-\boldsymbol{k}_{1} s_{1}}^{\dagger}\right)\right\rangle
+$$
+
+
+
+
+так что рассмотрим его отдельно.
+
+он равен:
+
+
+
+
+$$
+\left\langle\hat{b}_{\boldsymbol{k} s} \hat{b}_{\boldsymbol{k}_{1} s_{1}}+\hat{b}_{-\boldsymbol{k} s}^{\dagger} \hat{b}_{\boldsymbol{k}_{1} s_{1}}+\hat{b}_{\boldsymbol{k} s} \hat{b}_{-\boldsymbol{k}_{1} s_{1}}^{\dagger}+\hat{b}_{-\boldsymbol{k s}}^{\dagger} \hat{b}_{-\boldsymbol{k}_{1} s_{1}}^{\dagger}\right\rangle
+$$
+
+
+$$
+\left\langle\widehat{b}_{-\boldsymbol{k s}}^{\dagger} \hat{b}_{\boldsymbol{k}_{1} s_{1}}+\widehat{b}_{\boldsymbol{k} s} \hat{b}_{-\boldsymbol{k}_{1} s_{1}}^{\dagger}\right\rangle
+$$
+
+
+
+$$
+\delta_{\boldsymbol{k},-\boldsymbol{k}_{1}} \delta_{s s_{1}}\left\langle\hat{b}_{-\boldsymbol{k} s}^{\dagger} \hat{b}_{-\boldsymbol{k} s}+\widehat{b}_{\boldsymbol{k} s} \hat{b}_{\boldsymbol{k} s}^{\dagger}\right\rangle
+$$
+
+
+$$
+\delta_{-\boldsymbol{k}, \boldsymbol{k}_{1}} \delta_{s s_{1}}\left(\left\langle n_{-\boldsymbol{k} s}\right\rangle+1+\left\langle n_{\boldsymbol{k} s}\right\rangle\right)
+$$
+
+$$
+\delta_{-\boldsymbol{k}, \boldsymbol{k}_{1}} \delta_{s s_{1}}\left(2\left\langle n_{\boldsymbol{k} s}\right\rangle+1\right)
+$$
+
+
+
+В итоге
+
+
+$$
+\left\langle\widehat{u}^{\alpha}\left(\boldsymbol{R}_{i}\right) 
+\hat{u}^{\beta}\left(\boldsymbol{R}_{j}\right)\right\rangle =
+$$
+
+
+$$
+=\delta_{i j} \frac{\hbar}{2 N_{0} M} \sum_{\boldsymbol{k} s}\left(\frac{1}{\omega_{\boldsymbol{k} s}} e_{\boldsymbol{k} s}^{\alpha} e_{\boldsymbol{k} s}^{\beta}\left(2\left\langle n_{\boldsymbol{k} s}\right\rangle+1\right)\right)
+$$
+
+
+так как $/ \omega_{k s}$ и $\left\langle n_{k s}\right\rangle$ не зависят от $s /$
+
+
+
+$$
+\delta_{i j} \frac{\hbar}{2 N_{0} M} \sum_{\boldsymbol{k} s}\left(\frac{1}{\omega_{\boldsymbol{k}}} e_{\boldsymbol{k} s}^{\boldsymbol{\alpha}} e_{\boldsymbol{k} s}^{\beta}\left(2\left\langle n_{\boldsymbol{k} s}\right\rangle+1\right)\right)
+$$
+
+
+
+$$
+=\delta_{i j} \delta_{\alpha \beta} \frac{\hbar}{2 N_{0} M} \sum_{\boldsymbol{k}}\left(\frac{1}{\omega_{\boldsymbol{k}}}\left(2\left\langle n_{\boldsymbol{k}}\right\rangle+1\right)\right)
+$$
+
+
+
+$$
+=\delta_{i j} \delta_{\alpha \beta} \frac{\hbar}{2 N_{0} M} \sum_{\boldsymbol{k}}\left(\frac{1}{\omega_{\boldsymbol{k}}}\left(\frac{2}{\exp \left(\frac{\hbar \omega_{h}}{\theta}\right)-1}+1\right)\right)
+$$
+
+
+
+
+
+
+
+
+
+$$
+\text { Случай } \theta \gg \theta_{D}:
+$$
+
+
+
+
+$$
+\underset{\theta \gg \theta_{D}}{\approx} \delta_{i j} \delta_{\alpha \beta} \frac{\hbar}{2 N_{0} M} \sum_{\boldsymbol{k}}\left(\frac{1}{\omega_{\boldsymbol{k}}}\left(\frac{2}{1+\frac{\hbar \omega_{\boldsymbol{k}}}{\theta}-1}+1\right)\right)=
+$$
+
+
+$$
+=\delta_{i j} \delta_{\alpha \beta} \frac{\hbar}{2 N_{0} M} \sum_{\boldsymbol{k}}\left(\frac{1}{\omega_{\boldsymbol{k}}}\left(\frac{2 \theta}{\hbar \omega_{\boldsymbol{k}}}+1\right)\right)=A+B \theta
+$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$$
+\text { Случай } \theta \ll \theta_{D}:
+$$
+
+
+
+
+$$
+\underset{\theta \ll \theta_{D}}{\approx} \delta_{i j} \delta_{\alpha \beta} \frac{\hbar}{2 N_{0} M} \sum_{\boldsymbol{k}}\left(\frac{1}{\omega_{\boldsymbol{k}}}\left(2 \exp \left(-\frac{\hbar \omega_{\boldsymbol{k}}}{\theta}\right)+1\right)\right) \approx \text {const.}
+$$
+
+
+
+
+
+
+
+
 
 
 
@@ -963,7 +1247,9 @@ $\left\langle\hat{a}_{k}^{+} \hat{a}_{p}^{+} \hat{a}_{u} \hat{a}_{v}\right\rangl
 
 15
 
-Вычисляя первую поправку термодинамической теории возмущений, найти вклад прямого и обменного взаимодействия для ферми- и бозе-частиц. Сравнить результаты
+Вычисляя первую поправку термодинамической теории возмущений, 
+найти вклад прямого и обменного взаимодействия для ферми- и бозе-частиц. 
+Сравнить результаты.
 
 
 
@@ -1835,6 +2121,243 @@ $=e^{-\frac{k^{2} \hbar}{4 m \omega}}$ при температуре $T=0$
 
 
 
+Вспомним упражнение 11:
+
+
+
+
+$$
+\langle\exp (i k \hat{x})\rangle=\left\langle\exp \left(i k \sqrt{\frac{\hbar}{2 m \omega}}\left(\hat{a}_{\vec{p}}^{\dagger}+\hat{a}_{\vec{p}}\right)\right)\right\rangle =
+$$
+
+
+а так как
+$$
+\left[\hat{a}_{\vec{p}}, \hat{a}_{\vec{p}}^{\dagger}\right]=1
+$$
+
+то
+
+
+
+$$
+=\left\langle\exp \left(i k \sqrt{\frac{\hbar}{2 m \omega}} \hat{a}_{\vec{p}}^{\dagger}\right) \exp \left(i k \sqrt{\frac{\hbar}{2 m \omega}} \hat{a}_{\vec{p}}\right) \exp \left(\frac{1}{2} k^{2} \frac{\hbar}{2 m \omega}\left[\hat{a}_{\vec{p}}^{\dagger}, \hat{a}_{\vec{p}}\right]\right)\right\rangle=
+$$
+
+дальше экспоненты запишем через суммы и воспользуемся
+$\left\langle\left(\hat{a}_{\vec{p}}^{\dagger}\right)^{n}\left(\hat{a}_{\vec{p}}\right)^{m}\right\rangle
+=
+\delta_{m n}
+\left\langle\left(\hat{a}_{\vec{p}}^{\dagger}\right)^{n}\left(\hat{a}_{\vec{p}}\right)^{n}\right\rangle$
+
+
+имеем:
+
+
+
+$$
+=\left\langle\sum_{n=0}^{+\infty}\left(\frac{1}{(n) !}\left(i k \sqrt{\frac{\hbar}{2 m \omega}} \hat{a}_{\vec{p}}^{\dagger}\right)^{n}\right) \sum_{m=0}^{+\infty}\left(\frac{1}{(m) !}\left(i k \sqrt{\frac{\hbar}{2 m \omega}} \hat{a}_{\vec{p}}\right)^{m}\right) \exp \left(-\frac{1}{2} \frac{k^{2} \hbar}{2 m \omega}\right)\right\rangle=
+$$
+
+
+$$
+=\sum_{n=0}^{+\infty}\left(\left(\frac{1}{n !}\right)^{2}\left(-k^{2} \frac{\hbar}{2 m \omega}\right)^{n}\left\langle\left(\hat{a}_{\vec{p}}^{\dagger}\right)^{n}\left(\hat{a}_{\vec{p}}\right)^{n}\right\rangle\right) 
+\exp \left(-\frac{1}{2} \frac{k^{2} \hbar}{2 m \omega}\right)
+$$
+
+
+Что ж, нужно посчитать среднее:
+
+
+$$
+\left\langle\left(\hat{a}_{\vec{p}}^{\dagger}\right)^{n}\left(\hat{a}_{\vec{p}}\right)^{n}\right\rangle=\frac{\operatorname{tr}\left(\exp (-\tau \hat{H})\left(\hat{a}_{\vec{p}}^{\dagger}\right)^{n}\left(\hat{a}_{\vec{p}}\right)^{n}\right)}{\operatorname{tr}(\exp (-\tau \hat{H}))}
+$$
+
+$$
+\frac{t r\left(\exp (-\tau \hat{H})\left(\hat{a}_{\vec{p}}^{\dagger}\right)^{n}\left(\hat{a}_{\vec{p}}\right)^{n-1} \hat{a}_{\vec{p}}\right)}{t r(\exp (-\tau \hat{H}))}
+$$
+
+
+
+
+$$
+\frac{t r\left(\exp (-\tau \hat{H})\left(\hat{a}_{\vec{p}}^{\dagger}\right)^{n}\left(\hat{a}_{\vec{p}}\right)^{n-1} \exp (-\tau \hat{H}) \exp (\tau \hat{H}) \hat{a}_{\vec{p}} \exp (-\tau \hat{H}) \exp (\tau \hat{H})\right)}{t r(\exp (-\tau \hat{H}))}
+$$
+
+
+
+$$
+\frac{\operatorname{tr}\left(\exp (-\tau \hat{H})\left(\hat{a}_{\vec{p}}^{\dagger}\right)^{n}\left(\hat{a}_{\vec{p}}\right)^{n-1} \exp (-\tau \hat{H}) \hat{a}_{\vec{p}}^{(M)}(\tau) \exp (\tau \hat{H})\right)}{\operatorname{tr}(\exp (-\tau \hat{H}))}=
+$$
+
+
+
+
+$$
+=\frac{\operatorname{tr}\left(\exp (-\tau \hat{H})\left(\hat{a}_{\vec{p}}^{\dagger}\right)^{n}\left(\hat{a}_{\vec{p}}\right)^{n-1} \exp (-\tau \hat{H}) \exp (-\epsilon \tau) \hat{a}_{\vec{p}} \exp (\tau \hat{H})\right)}{\operatorname{tr}(\exp (-\tau \hat{H}))}
+$$
+
+
+
+
+$$
+\frac{\operatorname{tr}\left(\left(\hat{a}_{\vec{p}}^{\dagger}\right)^{n}\left(\hat{a}_{\vec{p}}\right)^{n-1} \exp (-\tau \hat{H}) \hat{a}_{\vec{p}}\right)}{t r(\exp (-\tau \hat{H}))} \exp (-\epsilon \tau)=
+$$
+
+
+$$
+=\frac{\operatorname{tr}\left(\exp (-\tau \hat{H}) \hat{a}_{\vec{p}}\left(\hat{a}_{\vec{p}}^{\dagger}\right)^{n}\left(\hat{a}_{\vec{p}}\right)^{n-1}\right)}{\operatorname{tr}(\exp (-\tau \hat{H}))} \exp (-\epsilon \tau)=
+$$
+
+
+$$
+=\left\langle\hat{a}_{\vec{p}}\left(\hat{a}_{\vec{p}}^{\dagger}\right)^{n}\left(\hat{a}_{\vec{p}}\right)^{n-1}\right\rangle \exp (-\epsilon \tau)=
+$$
+
+
+
+и так как
+
+
+$$
+\left[\hat{a}_{\vec{p}},\left(\hat{a}_{\vec{p}}^{\dagger}\right)^{n}\right]=n\left(\hat{a}_{\vec{p}}^{\dagger}\right)^{n-1}
+$$
+
+
+то
+
+
+$$
+=\left\langle\left(\left(\hat{a}_{\vec{p}}^{\dagger}\right)^{n} \hat{a}_{\vec{p}}+n\left(\hat{a}_{\vec{p}}^{\dagger}\right)^{n-1}\right)\left(\hat{a}_{\vec{p}}\right)^{n-1}\right\rangle \exp (-\epsilon \tau)
+$$
+
+
+$$
+\left(\left\langle\left(\hat{a}_{\vec{p}}^{\dagger}\right)^{n}\left(\hat{a}_{\vec{p}}\right)^{n}\right\rangle+n\left\langle\left(\hat{a}_{\vec{p}}^{\dagger}\right)^{n-1}\left(\hat{a}_{\vec{p}}\right)^{n-1}\right\rangle\right) \exp (-\epsilon \tau)
+$$
+
+
+
+В итоге
+
+
+
+$$
+\left\langle\left(\hat{a}_{\vec{p}}^{\dagger}\right)^{n}\left(\hat{a}_{\vec{p}}\right)^{n}\right\rangle=\frac{n}{1-\exp (-\epsilon \tau)} \exp (-\epsilon \tau)\left\langle\left(\hat{a}_{\vec{p}}^{\dagger}\right)^{n-1}\left(\hat{a}_{\vec{p}}\right)^{n-1}\right\rangle=
+$$
+
+
+
+$$
+=\frac{n \cdot(n-1) \cdot \ldots \cdot 2}{(1-\exp (-\epsilon \tau))^{n-1}} \exp (-(n-1) \epsilon \tau)\left\langle\hat{a}_{\vec{p}}^{\dagger} \hat{a}_{\vec{p}}\right\rangle=
+$$
+
+
+$$
+\frac{(n) !}{(1-\exp (-\epsilon \tau))^{n-1}} \exp (-(n-1) \epsilon \tau) \frac{1}{\exp (\epsilon \tau)-1}
+$$
+
+
+$$
+=\frac{(n) !}{(1-\exp (-\epsilon \tau))^{n-1}} \exp (-(n-1) \epsilon \tau) \frac{\exp (-\epsilon \tau)}{1-\exp (-\epsilon \tau)}=
+$$
+
+
+$$
+=\frac{(n) !}{(1-\exp (-\epsilon \tau))^{n}} \exp (-n \epsilon \tau)
+$$
+
+Теперь осталось подставить.
+
+
+
+
+
+
+$$
+\langle\exp (i k \hat{x})\rangle=
+$$
+
+
+$$
+=\sum_{n=0}^{+\infty}\left(\frac{1}{(n) !}\left(-k^{2} \frac{\hbar}{2 m \omega}\right)^{n} \frac{\exp (-n \epsilon \tau)}{(1-\exp (-\epsilon \tau))^{n}}\right) \exp \left(-\frac{1}{2} \frac{k^{2} \hbar}{2 m \omega}\right)
+$$
+
+
+$$
+=
+\\sum_{n=0}^{+\infty}\left(\frac{1}{(n) !}\left(-k^{2} \frac{\hbar}{2 m \omega}\right)^{n}\left(\frac{\exp (-\hbar \omega \tau)}{1-\exp (-\hbar \omega \tau)}\right)^{n}\right) \exp \left(-\frac{1}{2} \frac{k^{2} \hbar}{2 m \omega}\right)
+$$
+
+
+$$
+=\exp \left(-\frac{k^{2} \hbar}{2 m \omega}\left(\frac{\exp (-\hbar \omega \tau)}{1-\exp (-\hbar \omega \tau)}+\frac{1}{2}\right)\right)
+$$
+
+
+
+$$
+=\exp \left(-\frac{k^{2} \hbar}{4 m \omega} \frac{1+\exp (-\hbar \omega \tau)}{1-\exp (-\hbar \omega \tau)}\right)
+$$
+
+
+
+$$
+=\exp \left(-\frac{k^{2} \hbar}{4 m \omega} \operatorname{coth}\left(\frac{\hbar \omega \tau}{2}\right)\right)
+$$
+
+
+
+
+Ответ:
+
+
+
+$$
+\langle\exp (i k \hat{x})\rangle=\exp \left(-\frac{k^{2} \hbar}{4 m \omega} \operatorname{coth}\left(\frac{\hbar \omega \tau}{2}\right)\right)
+$$
+
+
+
+
+
+решение задачи получается, если 
+доказать, что для бозевских операторов рождения и уничтожения $\hat{b}_{i}^{+}, \hat{b}_{i}$ имеет место тождество
+$$
+e^{\tau\left(\hat{b}^{+}+\hat{b}\right)}=e^{\tau \hat{b}^{+}} e^{\tau \hat{b}} \exp \left(\tau^{2} / 2\right)
+$$
+
+
+Обозначим 
+$ \hat{S}=e^{-\tau \hat{b}^{+}} e^{\tau\left(\hat{b}^{+}+\hat{b}\right)} $ 
+и теперь
+
+\[ \begin{array}{l}
+	\frac{d \hat{S}}{d \tau}=e^{-\tau b^{+}}\left(-\hat{b}^{+}+\left(\hat{b}^{+}+\hat{b}\right)\right) e^{\tau\left(\hat{b}^{+}+\hat{b}\right)}=\left(e^{-\tau \hat{b}^{+}} \hat{b} e^{\tau \hat{b}^{+}}\right) e^{-\tau \hat{b}^{+}} e^{\tau\left(\hat{b}^{+}+\hat{b}\right)}= \\
+	=\hat{b}(\tau) \hat{S}, \frac{d \hat{b}(\tau)}{d \tau}=e^{-\tau \hat{b}^{+}}\left(-\hat{b}^{+} \hat{b}+\hat{b} \hat{b}^{+}\right) e^{\tau \hat{b}^{+}}=1, \hat{b}(\tau)=\tau+\hat{b}
+\end{array} \]
+
+
+\[ \begin{array}{l}
+	\text { поэтому } \frac{d \hat{S}}{d \tau}=(\tau+\hat{b}) \hat{S}, \hat{S}=\exp \left(\tau^{2} / 2\right), \tau^{\tau}, \text { следовательно, } \\
+	e^{\tau\left(\dot{b}^{+}+\hat{b}\right)}=e^{-\hat{b}^{+}} e^{t \hat{b}} \exp \left(\tau^{2} / 2\right)
+\end{array} \]
+
+
+
+
+
+
+Теперь формула из условий очевидно, просто выносятся бозеевские операторы, а в экспоненте оказывается то, что нужно.
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1880,7 +2403,7 @@ $$
 	\mu_{B} \operatorname{th} x
 \end{array}
 $$
-Полученная формула (8.6) имеет ясный физический смысл. 
+Полученная формула  имеет ясный физический смысл. 
 В нулевом поле температура «размешивает» моменты электронов по направлениям, 
 и магнитный момент газа отсутствует. 
 При небольших полях $\mu_{B} \mathcal{B} \ll T$ наведённый магнитный момент линеен по полю, и удобно ввести
@@ -2189,7 +2712,341 @@ $$
 
 
 
+Рассмотрим бозе-конденсат.
 
+
+
+
+
+рассмотрим неидеальный бозе-газ в ловушке $V(\vec{r})$, которая создается внешним магнитным полем. 
+
+Для простоты ограничимся температурой, близкой к нулю, 
+когда тепловых возбуждений очень мало 
+$T \ll T_{c} \simeq\left(\hbar^{2} / m\right) n^{2 / 3}$. 
+
+Полный гамильтониан системы имеет вид
+$$
+\hat{H}_{t o t}
+=
+\int d^{3} r\left[
+\hat{\Psi}^{+}(t, \vec{r})
+\left(\frac{\hat{p}^{2}}{2 m}+V(\vec{r})-\mu_{0}\right) 
+\hat{\Psi}(t, \vec{r})
++
+\frac{1}{2} U_{0} 
+\hat{\Psi}^{+}(t, \vec{r}) \hat{\Psi}^{+}(t, \vec{r}) 
+\hat{\Psi}(t, \vec{r}) \hat{\Psi}(t, \vec{r})
+\right]
+$$
+
+
+Величина постоянной $\mu_{0}$ произвольна и, фактически, фиксирует начало отсчета энергии. 
+
+Ниже ее значение будет выбрано так, чтобы функция основного состояния не зависела от времени. 
+
+Имея ввиду описание явлений, слабо меняющихся на масштабах парного взаимодействия атомов, 
+потенциальная энергия взаимодействия записана в локальной форме. 
+
+
+Параметр $U_{0}$ имеет размерность энергия $\times$ объем и записывается в виде
+$$
+U_{0}=\frac{4 \pi \hbar^{2} a}{m}
+$$
+Величина $a$ называется длиной рассеяния. 
+
+
+
+Производная по времени от гайзенберговских операторов равна
+$$
+i \hbar \frac{\partial}{\partial t} \hat{\Psi}(t, \vec{r})=[\hat{\Psi}(t, \vec{r}), \hat{H}]
+$$
+Приходим к нелинейному "уравнению Шредингера"
+$$
+i \hbar \frac{\partial}{\partial t} 
+\hat{\Psi}(t, \vec{r})
+=
+\left(\frac{\hat{p}^{2}}{2 m}+V(\vec{r})-\mu_{0}\right) 
+\hat{\Psi}(t, \vec{r})
++
+U_{0} 
+\hat{\Psi}^{+}(t, \vec{r}) 
+\hat{\Psi}(t, \vec{r}) \hat{\Psi}(t, \vec{r})
+$$
+
+
+
+Разложим функцию бозе-поля $\hat{\Psi}$ 
+по собственным функциям одночастичной задачи
+
+
+\[ 
+\begin{array}{c}
+	\left(\frac{\hat{p}^{2}}{2 m}+V(\vec{r})-\mu_{0}\right) \varphi_{k}(\vec{r})=\xi_{k} \varphi_{k}(\vec{r}) \\
+	\hat{\Psi}=\sum_{k} \hat{a}_{k}(t) \varphi_{k}(\vec{r})
+\end{array} 
+\]
+
+
+
+Рассмотрим газ в отсутствии потенциала ловушки, 
+когда функции $\varphi_{k}(\vec{r})=V^{-1 / 2} \exp (i \vec{k} \vec{r})$ 
+суть плоские волны в ящике $V=L^{3}$ с периодическими граничными условиями 
+$\varphi_{k}(\vec{r})=\varphi_{k}(\vec{r}+\vec{L})$. 
+
+
+
+В основном состоянии (при нулевой температуре) все частицы идеального бозе-газа находятся в конденсате, 
+т.е. имеют нулевой импульс. 
+
+В неидеальном газе при $T=0$ большинство частиц $N_{0}$ остаются в конденсате, 
+но из-за отталкивания небольшая доля частиц имеют ненулевые импульсы. 
+Поэтому выделим оператор с нулевым импульсом: 
+$\left\langle\hat{\Psi}_{1}\right\rangle=0 $
+$$
+\begin{aligned}
+	\hat{\Psi} &=\varphi_{0}(\vec{r}) \hat{a}_{0}+\hat{\Psi}_{1},
+	\\
+	\hat{\Psi}_{1} &=\sum_{k \neq 0} \hat{a}_{k}(t) \varphi_{k}(\vec{r})
+\end{aligned}
+$$
+
+
+
+Все наблюдаемые величины при низких температурах являются средними по состоянию конденсата. 
+
+Поэтому, $ \hat{\Psi} $ первый член заменить на классическую функцию конденсата
+$$
+\hat{\Psi}=\Psi+\hat{\Psi}_{1}
+$$
+
+
+
+Амплитуда плотности конденсата $\Psi$ в слабо неравновесном случае есть классическое бозе-поле $\Psi(t, \vec{r})$,
+аналогичное скалярному потенциалу классического электрического поля. 
+
+
+Чтобы найти эволюцию конденсата, следует подставить
+$\Psi(t, \vec{r})$ в уравнение его динамики 
+и пренебречь операторной частью поля, 
+описывающей надконденсатные частицы $\hat{\Psi}_{1}$. 
+Имеем
+$$
+i \hbar \frac{\partial}{\partial t} \Psi(t, \vec{r})=\frac{\hat{p}^{2}}{2 m} \Psi(t, \vec{r})+U_{0} \Psi^{*}(t, \vec{r}) \Psi(t, \vec{r}) \Psi(t, \vec{r})-\mu_{0} \Psi(t, \vec{r})
+$$
+
+
+В физике сверхтекучего бозе-газа это уравнение называется уравнением Гросса-Питаевского (1961), 
+которые первые обосновали возможность описания движения конденсата уравнением. 
+
+
+
+Основное состояние этого уравнения однородно и не зависит от времени
+$$
+\Psi(t, \vec{r})=\Psi
+$$
+если введенная выше константа равна
+$$
+\mu_{0}=U_{0} \Psi^{2}
+$$
+
+
+
+Число частиц и энергия однородного конденсата связаны с амплитудой конденсата $\Psi$ формулами
+$$
+N_{0}
+=
+\int d^{3} r \Psi^{+} \Psi
+=
+\Psi^{2} V, 
+\quad
+E_{00}
+=
+\frac{1}{2} U_{0} \int d^{3} r \Psi^{+} \Psi^{+} \Psi \Psi
+=
+\frac{U_{0} N_{0}^{2}}{2 V}
+$$
+
+
+Дифференцируя энергию по числу частиц, находим химический потенциал
+$$
+\mu
+=
+\frac{\partial E_{00}}{\partial N_{0}}
+=
+\frac{U_{0} N_{0}}{V}
+=
+U_{0} \Psi^{2}
+$$
+
+
+Видим, что введенная ранее постоянная $\mu_{0}$ есть химический потенциал. 
+
+При этом $E_{00}=\frac{1}{2} \mu_{0} N_{0} .$ 
+
+В отличие от идеального газа, 
+неидеальный бозе-газ в основном состоянии обладает отличным от нуля давлением
+$$
+P=-\frac{\partial E_{00}}{\partial V}=\frac{U_{0} N_{0}^{2}}{2 V^{2}}
+$$
+и гидродинамической скоростью звука
+
+
+
+
+$$
+c=\sqrt{\frac{\partial P}{\partial \rho}}=\sqrt{\frac{U_{0} \rho}{m^{2}}}=\sqrt{\frac{\mu_{0}}{m}}
+$$
+$\left(\rho=m N_{0} / V\right.$ - плотность газа ). Здесь мы пренебрегаем отличием $N_{0}$ от полного числа частиц $N$.
+
+
+
+
+Таким образом, мы получили скорость звука.
+
+
+
+
+
+
+
+
+
+Теперь рассмотрим элементарные возбуждения неидельного бозе-газа.
+
+
+Даже при нулевой температуре небольшая часть частиц не принадлежит 
+конденсату и имеет отличные от нуля импульсы. 
+Свойства этих частиц описываются операторной функцией $\hat{\Psi}_{1}$. 
+
+Эволюция этого оператора описывается линейной по $\hat{\Psi}_{1}$ 
+частью основного уравнения 
+
+\[ i \hbar \frac{\partial}{\partial t} \hat{\Psi}(t, \vec{r})
+=
+\left(\frac{\hat{p}^{2}}{2 m}+V(\vec{r})-\mu_{0}\right) 
+\hat{\Psi}(t, \vec{r})
++
+U_{0} \hat{\Psi}^{+}(t, \vec{r}) \hat{\Psi}(t, \vec{r}) \hat{\Psi}(t, \vec{r}) \]
+
+
+то есть решаем уравнение:
+$$
+i \hbar \frac{\partial}{\partial t} \hat{\Psi}_{1}(t, \vec{r})
+=
+\frac{\hat{p}^{2}}{2 m} \hat{\Psi}_{1}(t, \vec{r})
++
+2 U_{0} \Psi^{2} \hat{\Psi}_{1}(t, \vec{r})
++
+U_{0} \Psi^{2} \hat{\Psi}_{1}^{+}(t, \vec{r})
+-
+\mu \hat{\Psi}_{1}(t, \vec{r})
+$$
+
+
+
+
+С учетом $\mu_{0}=U_{0} \Psi^{2}$ приводим это уравнение к компактному виду
+$$
+i \hbar \frac{\partial}{\partial t} \hat{\Psi}_{1}
+=
+\left(\frac{\hat{p}^{2}}{2 m}+\mu\right) \hat{\Psi}_{1}+\mu \hat{\Psi}_{1}^{+}
+$$
+
+Подставим разложение по собственным функциям одночастичной задачи:
+$$
+i \hbar \frac{\partial}{\partial t} \hat{a}_{k}(t)=\xi_{k} \hat{a}_{k}(t)+\mu \hat{a}_{-k}^{+}(t)
+$$
+
+
+В этом уравнении удивительным образом перемешаны бозе-операторы $\hat{a}_{k}(t)$ и $\hat{a}_{-k}^{+}(t) .$ 
+
+Первый член справа описывает свободное движение частицы, 
+а последний член в приближении самосогласованного поля 
+отражает виртуальное поглощение частицы конденсатом.
+
+
+
+
+
+далее преобразование Боголюбова
+
+
+
+Для диагонализации последнего уравнения  применим каноническое преобразование Боголюбова:
+$$
+\hat{a}_{k}(t)=\left[u_{k} \hat{b}_{k} e^{-i \varepsilon_{k} t / \hbar}-v_{k} \hat{b}_{-k}^{+} e^{i \varepsilon_{k} t / \hbar}\right]
+$$
+и его эрмитово сопряженное выражение (с заменой знака импульса)
+$$
+\hat{a}_{-k}^{+}(t)=\left[u_{k} \hat{b}_{-k}^{+} e^{+i \varepsilon_{k} t / \hbar}-v_{k} \hat{b}_{k} e^{-i \varepsilon_{k} t / \hbar}\right]
+$$
+Здесь введены операторы поглошения $\hat{b}_{k}$ и рожления $\hat{b}_{k}^{+}$ квазичастиІ, которые удовлетворяют таким же правилам коммутаІии, что и исходные операторы "голых частиІ".
+
+
+
+$$
+\left[\hat{b}_{k}, \hat{b}_{k^{\prime}}^{+}\right]=\delta_{k, k^{\prime}}, \quad\left[\hat{b}_{k}, \hat{b}_{k^{\prime}}\right]=\left[\hat{b}_{k}^{+}, \hat{b}_{k^{\prime}}^{+}\right]=0
+$$
+Отсюда
+$$
+u_{k}^{2}-v_{k}^{2}=1
+$$
+
+
+
+В рассматриваемом приближении квазичастицы ведут себя как частиІы идеального газа, и соответсвуюшие операторы являются собственными "функциями" оператора энергии
+$$
+i \hbar \frac{\partial}{\partial t} \hat{b}_{k}=\varepsilon_{k} \hat{b}_{k}, i \hbar \frac{\partial}{\partial t} \hat{b}_{k}^{+}=-\varepsilon_{k} \hat{b}_{k}^{+}
+$$
+с неизвестными пока собственными значениями $\pm \varepsilon_{k} .$ КоэффиІиенты преобразования $u_{k}, v_{k}$ полагаются действительными, четными функциями вектора $k .$ Это всегда можно сделать удачным выбором фаз у операторов $\hat{b}_{k}$.
+
+
+
+Смысл формулы (126) состоит в том, что поглощение бозе-частицы, из состояния с импульсом $k$ 
+эквивалентно поглощению с вероятностью $u_{k}^{2}$ конденсатом одного кванта элементарного возбуждения и 
+рождению с вероятностью $v_{k}^{2}$ из конденсата кванта с противоположным импульсом. 
+
+
+Подставив преобразование Боголюбова, находим энергию квазичастицы
+$$
+\varepsilon_{k}=\sqrt{\xi_{k}^{2}-\mu^{2}}=\sqrt{\frac{(\hbar k)^{2}}{m} \mu+\left(\frac{(\hbar k)^{2}}{2 m}\right)^{2}}
+$$
+
+
+
+и коэффициенты преобразования
+$$
+u_{k}=\sqrt{\frac{1}{2}\left(\frac{\xi_{k}}{\varepsilon_{k}}+1\right)}, 
+\quad
+v_{k}=\sqrt{\frac{1}{2}\left(\frac{\xi_{k}}{\varepsilon_{k}}-1\right)}, 
+\quad
+u_{k}^{2}+v_{k}^{2}=\frac{\xi_{k}}{\varepsilon_{k}}, 
+\quad
+2 u_{k} v_{k}=\frac{\mu}{\varepsilon_{k}}
+$$
+
+
+
+
+Фактически, это коэффициенты поворота в пространстве 
+с гиперболической метрикой $u_{k}^{2}-v_{k}^{2}=1$.
+
+
+
+
+
+
+При больших импульсах $\varepsilon_{k}$ совпадает с энергией свободной частицы
+$$
+\varepsilon_{k} \simeq \frac{(\hbar k)^{2}}{2 m}, 
+\quad 
+\varepsilon_{k} \gg \mu
+$$
+а длинноволновая часть спектра имеет форму звукового спектра, т.е. линейно зависит от импульса.
+$$
+\varepsilon_{k}=c \hbar k, \quad c=\sqrt{\frac{\mu}{m}}=\sqrt{\frac{U_{0} N_{0}}{m V}}, \quad \varepsilon_{k} \ll \mu
+$$
+Величина $c$ численно равна гидродинамической скорости звука, которая найдена в первой половине задачи. 
 
 
 
@@ -2254,7 +3111,7 @@ $$
 Чтобы при росте температуры интеграл падал как $T^{-3 / 2},$ необходимо падение подынтегрального выражения, 
 т.е. член $e^{z-\beta \mu}$ должен расти с $z$.
 Поэтому при достаточно высоких температурах единицей в 
-подынтегральном выражении можно пренебречь и, считая $ \mu(T)\ne \mu(z)$ (????), 
+подынтегральном выражении можно пренебречь и, считая $ \mu(T)\ne \mu(z)$, 
 запишем равенство через гамма функцию:
 %
 $$
@@ -2434,9 +3291,213 @@ $$
 
 
 
-\begin{ttask}
+\begin{ttask} \textbf{22}. 
 
-22. Для ферромагнетика в модели Гейзенберга при $ T \ll T_c $ определить спектр возбуждений (магнонов) и найти температурную зависимость намагниченности и теплоемкости спиновых волн.
+Для ферромагнетика в модели Гейзенберга при $ T \ll T_c $ определить спектр возбуждений (магнонов) 
+и найти температурную зависимость намагниченности и теплоемкости спиновых волн.
+
+
+
+
+
+
+
+Рассмотрим спектр возбуждений в системе в модели Гайзенберга, 
+гамильтониан которой представляет собой 
+сумму обменных и зеемановских членов
+$$
+H=
+-
+J \sum_{\mathbf{j}, \delta} 
+\mathbf{S}_{\mathbf{j}} \mathbf{S}_{\mathbf{j}+\delta}
+-
+2 \mu_{0} h 
+\sum_{\mathbf{j}} S_{\mathbf{j}}^{z}
+$$
+
+Здесь $\mathrm{S}_{\mathrm{j}}-$ оператор спина, 
+находящегося в узле решетки $\mathrm{j}$, 
+которая для простоты считается кубической; 
+
+$\delta$ - нумерует множество узлов решетки, ближайших к j; 
+
+$h-$ магнитное поле, направленное по оси $z .$ 
+
+Предполагается, что взаимодействуют только ближайшие соседи. 
+Компоненты спина связаны соотношением $\mathrm{S}_{\mathrm{j}} \mathrm{S}_{\mathrm{j}}=S(S+1)$
+
+
+
+
+Для перехода от спиновых операторов к бозеевским 
+выполним преобразование Холстейна-Примакова
+$$
+\begin{aligned}
+	S_{j}^{+} &=
+	S_{j}^{x}+i S_{j}^{y}
+	=
+	(2 S)^{1 / 2}\left(1-\frac{a_{j}^{+} a_{j}}{2 S}\right)^{1 / 2} a_{j} 
+	\\
+	S_{j}^{-} &=
+	S_{j}^{x}-i S_{j}^{y}
+	=
+	(2 S)^{1 / 2} a_{j}^{+}\left(1-\frac{a_{j}^{+} a_{j}}{2 S}\right)^{1 / 2} 
+	\\
+	S^{z} &=S-a_{j}^{+} a_{j}
+\end{aligned}
+$$
+
+
+
+при этом мы требуем выполнения условия
+$$
+\left[a_{j}, a_{i}^{+}\right]=\delta_{i j}
+$$
+
+
+Можно проверить, что введенные таким образом преобразования непротиворечивы, 
+так как по-прежнему выполняются коммутационные соотношения
+$$
+\begin{aligned}
+	\left[S_{j}^{\pm}, S_{j}^{z}\right] &=\mp S_{j}^{\pm} 
+	\\
+	\left[S_{j}^{+}, S_{j}^{-}\right] &=2 S_{z}
+\end{aligned}
+$$
+Нас будут в основном интересовать слабовозбужденные состояния системы, когда
+$$
+\frac{\left\langle a_{j}^{+} a_{j}\right\rangle}{S}
+=
+\frac{\left\langle n_{j}\right\rangle}{S} 
+\ll 1
+$$
+
+
+Поэтому преобразование Холстейна-Примакова приближенно запишется в виде
+$$
+\begin{aligned}
+	S_{J}^{+} & \approx(2 S)^{1 / 2} a_{j} 
+	\\
+	S_{j}^{-} & \approx(2 S)^{1 / 2} a_{j}^{+} 
+	\\
+	S_{j}^{z} & \approx S-a_{j}^{+} a_{j}
+\end{aligned}
+$$
+
+
+
+Перейдем от операторов $a_{j}^{+}, a_{j}$ к новым операторам $a_{k}^{+}, a_{k}$
+$$
+a_{\mathbf{j}}=\frac{1}{N^{1 / 2}} \sum_{k} e^{-i \mathbf{k} \mathbf{j}} a_{\mathbf{k}}, a_{\mathbf{j}}^{+}=\frac{1}{N^{1 / 2}} \sum_{k} e^{i \mathbf{k} \mathbf{j}} a_{\mathbf{k}}^{+}
+$$
+Легко проверить, что имеет место преобразование
+$$
+a_{k}
+=
+\frac{1}{N^{1 / 2}} 
+\sum_{j} e^{i \mathbf{k} \mathbf{j}} a_{\mathbf{j}}, a_{k}^{+}
+=
+\frac{1}{N^{1 / 2}} 
+\sum_{j} e^{-i \mathbf{k} \mathbf{j}} a_{\mathbf{j}}^{+}
+$$
+
+
+Поэтому
+$$
+\left[a_{\mathbf{k}}, a_{\mathbf{k}^{\prime}}^{+}\right]=\delta_{\mathbf{k k}^{\prime}},
+\quad
+\left[a_{\mathbf{k}}, a_{\mathbf{k}^{\prime}}\right]=0,
+\quad
+\left[a_{\mathbf{k}}^{+}, a_{\mathbf{k}^{\prime}}^{+}\right]=0
+$$
+
+
+
+Поскольку
+$$
+S_{i}^{x} S_{j}^{x}+S_{i}^{y} S_{j}^{y}
+=
+\frac{S_{i}^{+} S_{j}^{-}+S_{j}^{-} S_{i}^{+}}{2}, i \neq j
+$$
+
+то
+$\mathrm{S}_{\mathrm{i}} \mathrm{S}_{\mathrm{j}}
+=
+\frac{S_{i}^{+} S_{j}^{-}+S_{j}^{-} S_{i}^{+}}{2}
++
+S_{i}^{z} S_{j}^{z}$
+
+
+В результате, последовательно делая подстановки 
+для переходов к новым операторам, получим
+
+$$\begin{aligned} 
+	H &=
+	-J \sum_{\mathbf{j}, \delta}
+	\left(
+	\frac{S_{\mathbf{j}}^{+} S_{\mathbf{j}+\delta}^{-}+S_{\mathbf{j}+\delta}^{-} S_{\mathbf{j}}^{+}}{2}
+	+
+	S_{\mathbf{j}}^{z} S_{\mathbf{j}+\delta}^{z}
+	\right)
+	-
+	2 \mu_{0} h \sum_{\mathbf{j}} S_{\mathbf{j}}^{z} 
+	\\ 
+	&=-J \sum_{\mathbf{j}, \delta}\left[S\left(a_{\mathbf{j}} a_{\mathbf{j}+\delta}^{+}+a_{\mathbf{j}+\delta}^{+} a_{\mathbf{j}}\right)+\left(S-a_{\mathbf{j}}^{+} a_{\mathbf{j}}\right)\left(S-a_{\mathbf{j}+\delta}^{+} a_{\mathbf{j}+\delta}\right)\right]-2 \mu_{0} h \sum_{\mathbf{j}} S_{\mathbf{j}}^{z}=\\ &=-J S / N \sum_{\mathbf{j}, \delta, \mathbf{k}, \mathbf{q}} e^{i \mathbf{k} \mathbf{j}} e^{-i \mathbf{q}(\mathbf{j}+\delta)} a_{\mathbf{k}} a_{\mathbf{q}}^{+}+e^{i \mathbf{q}(\mathbf{j}+\delta)} e^{-i \mathbf{k} \mathbf{j}} a_{\mathbf{q}} a_{\mathbf{k}}^{+}+J S \sum_{\mathbf{j}, \delta} a_{\mathbf{j}}^{+} a_{\mathbf{j}}+a_{\mathbf{j}+\delta}^{+} a_{\mathbf{j}+\delta} . \\ H &=-J N z S^{2}-2 \mu_{0} H_{0} N S+H_{0} \\ H_{0} &=-J z S \sum_{\mathbf{k}}\left(\gamma_{\mathbf{k}} a_{\mathbf{k}} a_{\mathbf{k}}^{+}+\gamma_{-\mathbf{k}} a_{\mathbf{k}}^{+} a_{\mathbf{k}}-2 a_{\mathbf{k}}^{+} a_{\mathbf{k}}\right)+2 \mu_{0} h \sum_{\mathbf{k}} a_{\mathbf{k}}^{+} a_{\mathbf{k}} \\ \gamma_{\mathbf{k}} &=\frac{1}{z} \sum_{\delta} e^{-i \mathbf{k} \delta}
+\end{aligned}$$
+
+
+
+
+Для кристаллов имеющих центр симметрии $\gamma_{\mathrm{k}}=\gamma_{-\mathrm{k}},$ 
+делая подстановку $a_{\mathrm{k}} a_{\mathrm{k}}^{+}=1+a_{\mathrm{k}}^{+} a_{\mathrm{k}}$ 
+и опуская постоянный член, получим
+$$
+\begin{aligned}
+	H_{0} 
+	=
+	\sum_{\mathrm{k}}\left[
+	2 J z S\left(1-\gamma_{\mathrm{k}}\right)+2 \mu_{0} h
+	\right] a_{\mathrm{k}}^{+} a_{\mathrm{k}}
+	=
+	\sum_{\mathrm{k}} 
+	\omega_{\mathrm{k}} a_{\mathrm{k}}^{+} a_{\mathrm{k}}
+\end{aligned}
+$$
+
+
+
+Таким образом, при низких температурах (когда число возбуждений мало и можно пренебречь их взаимодействием ) 
+гамильтониан Гейзенбрега изморфен системе независимых осцилляторов (спиновых волн). 
+
+
+
+Этот вывод аналогичен результату, 
+полученному для колебательного спектра кристаллов, 
+для которых гамильтониан также сводится к системе независимых осцилляторов, 
+а элементарные возбуждения являются фононами.
+
+
+
+Для длинноволновых возбуждений, когда $|\mathrm{k} \delta| \ll 1,$ имеем
+$$
+z\left(1-\gamma_{\mathrm{k}}\right) \approx \frac{1}{2} \sum_{\delta}(\mathrm{k} \delta)^{2}=(k a)^{2}
+$$
+
+Мы воспользовались тем, что для кубической решетки 
+$\left|\delta_{i}\right|=a$. 
+
+
+Поэтому элементарные возбуждения в модели Гайзенберга с ферромагнитным взаимодействием 
+представляют собой магноны (спиновые волны ) с квадратичным законом дисперсии
+$$
+\omega_{\mathrm{k}}=2 \mu_{0} H_{0}+2 J S(k a)^{2}
+$$
+В отсутствие внешнего поля в соответствии с теоремой Голдстоуна 
+спектр возбуждений является безщелевым.
+
+
+
+
 
 
 
@@ -2458,11 +3519,279 @@ $$
 
 
 
-\begin{ttask}
+\begin{ttask} \textbf{23.} 
 
-23. Для ферромагнетика в модели Гейзенберга в приближении самосогласованного поля определить температуру Кюри Tc, 
-температурную зависимость магнитной восприимчивости  и спонтанной намагниченности вблизи Tc. 
+
+Для ферромагнетика в модели Гейзенберга 
+в приближении самосогласованного поля определить температуру Кюри $T_c$, 
+температурную зависимость магнитной восприимчивости  и спонтанной намагниченности вблизи $ T_c $. 
+
 Сравнить с результатами теории Ландау.
+
+
+
+
+1) B эффективном поле появляется намагниченность:
+$$
+M=n \mu \mathbb{B}\left(\frac{\mu \mathcal{B}_{e f f}}{T}\right)=n \mu \mathbb{B}(x) \underset{x \ll 1}{\approx} n \mu\left(\alpha x-\beta x^{3}\right)
+$$
+где $\alpha=\frac{S+1}{3 S}, \beta=\alpha \frac{2 S^{2}+2 S+1}{30 S^{2}}$.
+$ \mathbb{B}(x)$- функция Бриллюэна.
+
+
+
+Пусть $M \| \mathcal{B}:$
+
+Зависимость намагниченности $ \mathcal{M} $ от приложенного поля $ \mathcal{B} $ определяется системой двух уравнений
+$$
+\left\{\begin{array}{l}
+	\mathcal{M}=n \mu \mathbb{B}\left(\frac{\mu \mathcal{B}_{e f f}}{T}\right) \\
+	\mathcal{B}_{e f f}=\mathcal{B}+b \mathcal{M}
+\end{array} \rightarrow\left\{\begin{array}{l}
+	\mathcal{M} \approx n \mu\left(\alpha x-\beta x^{3}\right) \\
+	\mathcal{M}=\frac{\mathcal{B}_{e f f}-\mathcal{B}}{b}=\frac{T}{\mu b} x-\frac{\mathcal{B}}{b}
+\end{array} .\right.\right.
+$$
+
+
+
+здесь и далее $ x= \frac{\mu \mathcal{B}_{e f f}}{T} $
+
+При $\mathcal{B}=0:$
+
+
+$$
+\left\{\begin{array}{l}
+	\mathcal{M} 
+	\underset{x \ll 1}{\approx}
+	n \mu\left(\alpha x-\beta x^{3}\right) 
+	\\
+	\mathcal{M}=\frac{T}{\mu b} x
+\end{array}\right.
+$$
+
+$$
+\frac{T}{\mu b} x \underset{x \ll 1}{\approx} n \mu\left(\alpha x-\beta x^{3}\right)
+$$
+
+
+
+$$
+\left\{\begin{array}{l}
+	\frac{T}{\mu^{2} b n} \approx_{x \ll 1} \alpha-\beta x^{2} \\
+	x=0
+\end{array}\right.
+$$
+
+
+
+$$
+\frac{T}{\mu^{2} b n}-\alpha \underset{x \ll 1}{\approx}-\beta x^{2}
+$$
+
+
+$$
+\frac{T_{C}}{\mu^{2} b n}=\alpha \rightarrow T_{C}=n \mu^{2} \alpha b
+$$
+
+
+Тогда, решая квадратное уравнение на $x$, получаем:
+$$
+\begin{array}{c}
+	x^{2} 
+	\underset{x \ll 1}{\approx}
+	\frac{\alpha}{\beta} 
+	-
+	\frac{T}{\mu^{2} b n \beta}
+	\\
+	x 
+	\underset{x \ll 1}{\approx}
+	\sqrt{\frac{T{C}-T}{\mu^2 b n \beta}} 
+	\\
+	\mathcal{M}_{0}(T) 
+	\approx 
+	\frac{T_{C}}{\mu b} 
+	\sqrt{\frac{T_{C}-T}{\mu^{2} b n \beta}}
+	=
+	\sqrt{\frac{\alpha T_{C}\left(T_{C}-T\right)}
+		{\mu^{2} b^{2} \beta}}
+\end{array}
+$$
+
+
+
+Теперь для слабых полей и $T>T_{C}$ ;  
+$\mathcal{M}(T)=\mathcal{M}_{0}(T)+\delta(\mathcal{M})=\delta(\mathcal{M})$ 
+и 
+$x=x_{0}+\delta(x)=\delta(x):$
+
+
+
+
+
+$$
+\left\{\begin{array}{l}
+	\delta(\mathcal{M}) \approx n \mu\left(\alpha \delta(x)-\beta \delta(x)^{3}\right) \\
+	\delta(\mathcal{M})=\frac{T}{\mu b} \delta(x)-\frac{\mathcal{B}}{b}
+\end{array}\right.
+$$
+
+
+
+
+$$
+\left\{\begin{array}{l}
+	\delta(\mathcal{M}) \approx n \mu\left(\alpha \delta(x)-\beta \delta(x)^{3}\right) \\
+	\delta(\mathcal{M})=\frac{T}{\mu b} \delta(x)-\frac{\mathcal{B}}{b}
+\end{array}\right.
+$$
+
+
+
+$$
+\delta(\mathcal{M})=\frac{T}{\mu b} \frac{\delta(\mathcal{M})}{n \mu \alpha}-\frac{\mathcal{B}}{b}
+$$
+
+
+
+$$
+\delta(\mathcal{M})\left(\frac{T}{\mu b} \frac{1}{n \mu \alpha}-1\right)=\frac{\mathcal{B}}{b}
+$$
+
+
+
+
+$$
+\chi=\frac{\delta(\mathcal{M})}{\mathcal{B}}=\frac{1}{b} \frac{T_{C}}{T-T_{C}}
+$$
+
+
+
+Для слабых полей и $T<T_{C} \mathcal{M}(T)=\mathcal{M}_{0}(T)+\delta(\mathcal{M})$ и $x=x_{0}+\delta(x)$ :
+$$
+\left\{\begin{array}{l}
+	\mathcal{M} \approx n \mu\left(\alpha\left(x_{0}+\delta(x)\right)-\beta\left(x_{0}+\delta(x)\right)^{3}\right) \\
+	\mathcal{M}=\frac{T}{\mu b}\left(x_{0}+\delta(x)\right)-\frac{\mathcal{B}}{b}
+\end{array}\right.
+$$
+
+
+
+
+
+\[ \left\{\begin{array}{l}
+	\mathcal{M}_{0}(T)+\delta(\mathcal{M}) \approx n \mu\left(\alpha\left(x_{0}+\delta(x)\right)-\beta\left(x_{0}^{3}+3 x_{0}^{2} \delta(x)+3 x_{0} \delta(x)^{2}+\delta(x)^{3}\right)\right) \\
+	\mathcal{M}_{0}(T)+\delta(\mathcal{M})=\frac{T}{\mu b}\left(x_{0}+\delta(x)\right)-\frac{\mathcal{B}}{b}
+\end{array}\right. \]
+
+
+
+$$
+\left\{\begin{array}{l}
+	\delta(\mathcal{M}) \approx n \mu\left(\alpha \delta(x)-\beta\left(3 x_{0}^{2} \delta(x)+3 x_{0} \delta(x)^{2}+\delta(x)^{3}\right)\right) \\
+	\delta(\mathcal{M})=\frac{T}{\mu b} \delta(x)-\frac{\mathcal{B}}{b}
+\end{array}\right.
+$$
+
+
+$$
+\left\{\begin{array}{l}
+	\delta(\mathcal{M}) \approx n \mu\left(\alpha-3 \beta x_{0}^{2}\right) \delta(x) \\
+	\delta(\mathcal{M})=\frac{T}{\mu b} \delta(x)-\frac{\mathcal{B}}{b}
+\end{array}\right.
+$$
+
+
+
+
+
+$$
+\delta(\mathcal{M})\left(-1+\frac{T}{\mu b} \frac{1}{n \mu\left(\alpha-3 \beta x_{0}^{2}\right)}\right) \approx \frac{\mathcal{B}}{b}
+$$
+
+
+
+$$
+\delta(\mathcal{M})\left(-1+\frac{T}{T_{C}\left(1-3 \frac{T_{C}-T}{T_{C}}\right)}\right) \approx \frac{\mathcal{B}}{b}
+$$
+
+
+$$
+\delta(\mathcal{M})\left(-\frac{-2 T_{C}+3 T}{-2 T_{C}+3 T}+\frac{T}{-2 T_{C}+3 T}\right) \approx \frac{\mathcal{B}}{b}
+$$
+
+$$
+\chi=\frac{\delta(\mathcal{M})}{\mathcal{B}} \approx \frac{1}{2 b} \frac{3 T-2 T_{C}}{T_{C}-T} \approx \frac{1}{2 b} \frac{T_{C}}{T_{C}-T}
+$$
+
+
+
+
+
+
+2) Гамильтониан в модели Гейзенберга:
+
+
+
+
+\[ \hat{H}=-\mu_{B} g \sum_{i}\left(\hat{S}_{i} \mathcal{B}\right)-\frac{1}{2} \sum_{i \neq j}\left(J_{i j} \hat{S}_{i} \hat{S}_{j}\right)=-\mu_{B} g \sum_{i}\left(\hat{S}_{i} \mathcal{B}\right)-\frac{1}{2} \sum_{i \neq j}\left(J_{i j} \hat{S}_{i}\left(\hat{S}_{j}+\langle S\rangle-\langle S\rangle\right)\right)= \]
+
+
+
+\[ =-\mu_{B} g \sum_{i}\left(\hat{S}_{i} \mathcal{B}\right)-\frac{1}{2} \sum_{i \neq j}\left(J_{i j} \hat{S}_{i}\langle S\rangle\right)-\frac{1}{2} \sum_{i \neq j}\left(J_{i j} \hat{S}_{i}\left(\hat{S}_{j}-\langle S\rangle\right)\right)= \]
+
+
+
+
+
+$$
+=-\mu_{B} g \sum_{i}\left(\hat{S}_{i}\left(\mathcal{B}+\frac{1}{\mu_{B} g} \sum_{i \neq j}\left(J_{i j}\langle S\rangle\right)\right)\right)-\frac{1}{2} \sum_{i \neq j}\left(J_{i j} \hat{S}_{i}\left(\hat{S}_{j}-\langle S\rangle\right)\right)  \approx
+$$
+
+
+
+$$
+-\mu_{B} g \sum_{i}\left(\hat{S}_{i}\left(\mathcal{B}+\frac{1}{\mu_{B} g} \sum_{i \neq j}\left(J_{i j}\langle S\rangle\right)\right)\right)
+$$
+
+
+С учётом $M=\mu_{B} g n\langle S\rangle i$ - ый спин находится в эффективном поле:
+$$
+\mathcal{B}_{e f f, i}=\mathcal{B}+\frac{1}{\mu_{B} g} \sum_{i \neq j}\left(J_{i j}\langle S\rangle\right)=\mathcal{B}+\frac{1}{\mu_{B}^{2} g^{2} n} \sum_{i \neq j}\left(J_{i j}\right) M
+$$
+
+
+
+
+
+
+
+
+Считаем, что каждый спин взаимодействует сильно только с $z$ ближайшими соседями:
+$$
+\mathcal{B}_{e f f}=\mathcal{B}_{e f f, i}=\mathcal{B}+\frac{1}{\mu_{B}^{2} g^{2} n} \sum_{i \neq j}\left(J_{i j}\right) M=\mathcal{B}+\frac{J z}{\mu_{B}^{2} g^{2} n} M=\mathcal{B}+b M
+$$
+По известному выражению находим температуру Кюри:
+$$
+T_{C}=n \mu^{2} \frac{S+1}{3 S} b=n \mu_{B}^{2} g^{2} S^{2} \frac{S+1}{3 S} b=\frac{S(S+1)}{3} J z
+$$
+
+
+
+
+
+
+Для температурной зависимости теплоемкости имеем:
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2498,6 +3827,132 @@ $$
 
 
 
+1) Разложение омега-потенциала $\Omega(\theta, \mu, \eta)$ по параметру порядка $\eta$ вблизи точки фазового перехода II рода в отсутствие внешнего поля:
+$$
+\Omega(\theta, \mu, \eta)=\Omega_{0}(\theta, \mu)+\int\left(a t \eta^{2}+\frac{b}{2} \eta^{4}+c \nabla(\eta)^{2}\right) d(V)
+$$
+где $t=\theta-\theta_{C}, a>0, b>0$
+При $\theta \rightarrow \theta_{C}-0$ область разбивается на домены, в которых значение параметра порядка различно. Условие разбиения на такие области означает, что градиентный член в разложении $\Omega(\theta, \mu, \eta)$ сравним с остальными:
+$$
+c \nabla(\eta)^{2} \approx c\left(\frac{\delta(\eta)}{R_{C}}\right)^{2} \sim a|t| \delta(\eta)^{2} \rightarrow R_{C} \sim \sqrt{\frac{c}{a|t|}}
+$$
+
+
+
+
+
+
+Получим оценку для $\Delta(\eta)^{2}$. При $t<0:$
+$$
+\begin{array}{c}
+	\Omega(\theta, \mu, \eta)=/ h=0 /=\Omega_{0}(\theta, \mu)+V a t \eta^{2}+\frac{V b}{2} \eta^{4} \rightarrow \frac{\partial^{2}(\Omega)}{\partial(\eta)^{2}}=\frac{\partial^{2}}{\partial(\eta)^{2}}\left(\Omega_{0}(\theta, \mu)+\operatorname{Vat} \eta^{2}+\frac{V b}{2} \eta^{4}\right)=2 V a t+6 V b \eta^{2} \rightarrow \\
+	\left.\rightarrow \frac{\partial^{2}(\Omega)}{\partial(\eta)^{2}}\right|_{\eta=\eta_{0}}=2 V a t+6 V b \eta_{0}^{2}=/ \eta_{0}^{2}=\frac{a|t|}{b} /=2 V a t+6 V b \frac{a|t|}{b}=2 V a(t-3 t)=4 V a|t|=\frac{V}{\chi} \rightarrow \\
+	\rightarrow \Delta(\Omega)=\left.\frac{1}{2} \frac{\partial^{2}(\Omega)}{\partial(\eta)^{2}}\right|_{\eta=\eta_{0}} \Delta(\eta)^{2}=\frac{\Delta(\eta)^{2}}{2 \chi} V=/ \frac{1}{\chi}=4 a|t| /=2 V a|t| \Delta(\eta)^{2}
+\end{array}
+$$
+
+
+
+По принципу Больцмана:
+$$
+\begin{array}{c}
+	w(\eta) \propto \exp \left(-\frac{\Delta(\Omega)}{\theta}\right)=/ \Delta(\Omega)=2 V a|t| \Delta(\eta)^{2} /=\exp \left(-\frac{2 V a|t| \Delta(\eta)^{2}}{\theta}\right) \rightarrow \\
+	\rightarrow \overline{\Delta(\eta)^{2}}=\frac{\theta_{C} \chi}{V}=/ \frac{1}{\chi}=4 a|t| /=\frac{\theta_{C}}{4 a|t| V}
+\end{array}
+$$
+
+
+
+Подставляем $V \sim R_{C}^{3}:$
+$$
+\overline{\Delta(\eta)^{2}}=\frac{\theta_{C}}{4 a|t| V} \sim \frac{\theta_{C}}{a|t|}\left(\frac{a|t|}{c}\right)^{\frac{3}{2}}=\frac{\theta_{C}(a|t|)^{\frac{1}{2}}}{c^{\frac{3}{2}}}
+$$
+Лобавка к $\Omega$ - потенциалу, обусловленная флуктуациями параметра порядка, равна
+$$
+\Delta(\Omega)=2 V a|t| \overline{\Delta(\eta)^{2}} \sim 2 V a|t| \frac{\theta_{C}(a|t|)^{\frac{1}{2}}}{c^{\frac{3}{2}}} \sim \frac{V \theta_{C}(a|t|)^{\frac{3}{2}}}{c^{\frac{3}{2}}}
+$$
+
+
+
+
+Флуктуационная поправка:
+$$
+\Delta(C)=\left|\theta \frac{\partial^{2}(\Delta(\Omega))}{\partial(\theta)^{2}}\right| \sim \theta \frac{\partial^{2}}{\partial(\theta)^{2}}\left(\frac{V \theta_{C}(a|t|)^{\frac{3}{2}}}{c^{\frac{3}{2}}}\right)=V \theta_{C}\left(\frac{a}{c}\right)^{\frac{3}{2}} \theta \frac{3}{4} \frac{1}{|t|^{\frac{1}{2}}} \sim\left(\frac{a}{c}\right)^{\frac{3}{2}} \frac{V \theta_{C}^{2}}{|t|^{\frac{1}{2}}}
+$$
+
+
+
+
+
+
+
+
+Теперь рассмотрим теорию Гинзбурга-Ландау.
+
+
+
+в ней $c=\frac{\hbar^{2}}{4 m}$. Оценим $a$. 
+
+Выйгрыш в энергии сверхпроводящей фазы в отсутствии внешнего поля:
+$$
+\Omega_{n}-\left.\Omega_{s}\left(\Psi_{0}, \mathcal{A}(r)\right)\right|_{\mathcal{H}=0}=\frac{\alpha^{2} V}{2 b}
+$$
+
+
+Считаем, что это есть энергия конденсации куперовских пар. 
+
+
+Оценим её. Так как $\Delta \ll \epsilon_{F},$ то эту энегию можно оценить, как произведение энергии куперовской пары $2 \Delta$ на число состояний на уровне Ферми на ширину узкого слоя $\Delta$ :
+$$
+\frac{\alpha^{2} V}{2 b} \sim 2 \Delta \cdot g\left(\epsilon_{F}\right) 2 \Delta=4 \Delta^{2} \frac{3}{2} \frac{N}{\epsilon_{F}} \rightarrow \frac{\alpha^{2}}{2 b} \sim 6 \Delta^{2} \frac{n}{\epsilon_{F}}
+$$
+Отсюда при $\theta=0$ :
+$$
+\frac{a^{2}}{b} \sim \frac{12}{\theta_{C}^{2}} \Delta_{0}^{2} \frac{n_{s}}{\epsilon_{F}} \approx \frac{n_{s}}{\epsilon_{F}}
+$$
+С другой стороны
+$$
+\frac{n_{s}}{2}=\frac{a}{b} \theta_{C}
+$$
+Тогда
+$$
+a \frac{n_{s}}{2 \theta_{C}} \approx \frac{n_{s}}{\epsilon_{F}} \rightarrow a \approx \frac{\theta_{C}}{\epsilon_{F}}
+$$
+
+
+
+
+
+
+В результате флуктуационная поправка:
+$$
+\Delta(C) \sim\left(\frac{a}{c}\right)^{\frac{3}{2}} \frac{V \theta_{C}^{2}}{|t|^{\frac{1}{2}}}=\left(\frac{\theta_{C}}{\epsilon_{F}} \frac{4 m}{\hbar^{2}}\right)^{\frac{3}{2}} \frac{V \theta_{C}^{2}}{|t|^{\frac{1}{2}}}=\left(\frac{4 m}{\hbar^{2} \epsilon_{F}}\right)^{\frac{3}{2}} \frac{V \theta_{C}^{\frac{7}{2}}}{|t|^{\frac{1}{2}}}
+$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2518,9 +3973,122 @@ $$
 
 
 
-\begin{ttask}
+\begin{ttask} \textbf{25.} 
 
-25. Доказать, что плотность сверхтекучей компоненты электронного газа при T = 0 равна полной плотности числа частиц.  
+Доказать, что плотность сверхтекучей компоненты электронного газа 
+при $T = 0$ равна полной плотности числа частиц.  
+
+
+
+
+
+
+
+
+Рассмотрим газ ферми-квазичастин, движунийся как целое относительно жидкости со скоростью $v .$ Функция распределения д,ля этого газа получается из ферми-распределения неподвижного газа заменой
+$$
+\epsilon_{p} \rightarrow \epsilon_{p}-p v
+$$
+где $p-$ её нмпульс. Тогда функция распределения газа ферми-квазичастиц, движунегося как целое, есть
+$$
+n_{F}\left(\epsilon_{p}-p v\right) \approx \frac{1}{\exp \left(\frac{1}{\theta}\left(\epsilon_{p}-p v\right)\right)+1}
+$$
+Полный импульс единицы объёма газа квазичастин равен (с учётом спина):
+$$
+\boldsymbol{P}=2 \int \frac{d(p)^{3}}{(2 \pi \hbar)^{3}} \boldsymbol{p} \cdot n_{F}\left(\epsilon_{p}-\boldsymbol{p} \boldsymbol{v}\right)
+$$
+При малых скоростях можно разложить подынтегральное выражение по степеням $p v$ :
+$$
+\boldsymbol{P}
+=
+2 \int \frac{d(p)^{3}}{(2 \pi \hbar)^{3}} \boldsymbol{p} \cdot n_{F}\left(\epsilon_{p}-\boldsymbol{p} \boldsymbol{v}\right)
+=
+2 \int \frac{d(p)^{3}}{(2 \pi \hbar)^{3}} \boldsymbol{p} \cdot\left(n_{F}\left(\epsilon_{p}\right)-p \boldsymbol{v} \frac{d\left(n_{F}(\epsilon)\right)}{d(\epsilon)}+\ldots\right) 
+\approx
+$$
+\[ 
+\approx
+-2 \int 
+\frac{d(p)^{3}}{(2 \pi \hbar)^{3}} 
+\boldsymbol{p} \cdot(\boldsymbol{p} \boldsymbol{v}) 
+\frac{d\left(n_{F}(\epsilon)\right)}{d(\epsilon)}
+ \]
+
+Здесь у нас получился интеграл вида $\int p(p v) f(p) d(p)^{3},$ то есть направленный вдоль $v$ вектор длиной
+$$
+\int 4 \pi p^{2} p_{z}^{2} f(p) d(p)=\frac{1}{3} \int 4 \pi p^{4} f(p) d(p)
+$$
+
+
+
+
+Таким образом, после усреднения по направлениям $p$, получаем
+$$
+\boldsymbol{P}=-\boldsymbol{v} \frac{8 \pi}{3(2 \pi \hbar)^{3}} \int_{\mathbb{R}^{+}} d(p) p^{4} \frac{d\left(n_{F}(\epsilon)\right)}{d(\epsilon)}
+$$
+
+
+
+Так как
+$$
+\rho=\rho_{s}+\rho_{n}=\frac{m N}{V}=\frac{p_{F}^{3} m}{3 \pi^{2} \hbar^{3}}
+$$
+
+
+то
+$$
+\begin{array}{c}
+	\frac{\rho_{n}}{\rho}=-\frac{1}{\rho} \frac{8 \pi}{3(2 \pi \hbar)^{3}} \int_{\mathbb{R}^{+}} d(p) p^{4} \frac{d\left(n_{F}(\epsilon)\right)}{d(\epsilon)}=-\frac{3 \pi^{2} \hbar^{3}}{p_{F}^{3} m} \frac{8 \pi}{3(2 \pi \hbar)^{3}} \int_{\mathbb{R}^{+}} d(p) p^{4} \frac{d\left(n_{F}(\epsilon)\right)}{d(\epsilon)}= \\
+	=-\frac{1}{p_{F}^{3} m} \int_{\mathbb{R}^{+}} d(p) p^{4} \frac{d\left(n_{F}(\epsilon)\right)}{d(\epsilon)}
+\end{array}
+$$
+
+
+
+
+
+Интеграл набирается вблизи $p_{F}$. Тогда:
+$$
+\frac{\rho_{n}}{\rho}=-\frac{1}{p_{F}^{3} m} \int_{\mathbb{R}^{+}} d(p) p^{4} \frac{d\left(n_{F}(\epsilon)\right)}{d(\epsilon)} \approx-\frac{1}{p_{F}^{3} m} \int_{\mathbb{R}} d(p) p_{F}^{4} \frac{d\left(n_{F}(\epsilon)\right)}{d(\epsilon)}=
+$$
+
+
+
+
+
+\[ -\int_{\mathbb{R}} d\left(v_{F}\left(p-p_{F}\right)\right) \frac{d\left(n_{F}(\epsilon)\right)}{d(\epsilon)}=-\int_{\mathbb{R}} d(\xi) \frac{d\left(n_{F}(\epsilon)\right)}{d(\epsilon)}=-2 \int_{\mathbb{R}^{+}} d(\xi) \frac{d\left(n_{F}(\epsilon)\right)}{d(\epsilon)}=-\int_{\mathbb{R}} d(\xi) \frac{d\left(n_{F}(\epsilon)\right)}{d(\epsilon)} \]
+
+
+
+
+
+\[ \begin{array}{l}
+	\text { При } \theta \rightarrow+0 \Delta \rightarrow \Delta_{0}: \\
+	\qquad \frac{d\left(n_{F}(\epsilon)\right)}{d(\epsilon)} \approx_{\theta \rightarrow 0} \frac{1}{\theta} \exp \left(-\frac{\epsilon}{\theta}\right) \rightarrow \frac{\rho_{n}}{\rho} \underset{\theta \rightarrow 0}{\approx} \frac{1}{\theta} \int_{\mathbb{R}} d(\xi) \exp \left(-\frac{\sqrt{\xi^{2}+\Delta_{0}^{2}}}{\theta}\right)=\int_{\mathbb{R}} d(\xi) \frac{1}{\theta} \exp \left(-\sqrt{\frac{\xi^{2}}{\theta^{2}}+\frac{\Delta_{0}^{2}}{\theta^{2}}}\right)=
+\end{array} \]
+
+
+
+
+$$
+\begin{array}{c}
+	=\int_{\mathbb{R}} d(x) \exp \left(-\frac{\Delta_{0}}{\theta} \sqrt{1+\frac{\theta^{2}}{\Delta_{0}^{2}} x^{2}}\right) \underset{\theta \rightarrow 0}{\approx} \int_{\mathbb{R}} d(x) \exp \left(-\frac{\Delta_{0}}{\theta}\left(1+\frac{\theta^{2}}{\Delta_{0}^{2}} \frac{x^{2}}{2}\right)\right)= \\
+	=\exp \left(-\frac{\Delta_{0}}{\theta}\right) \int_{\mathbb{R}} d(x) \exp \left(-\frac{\theta}{\Delta_{0}} \frac{x^{2}}{2}\right)=\exp \left(-\frac{\Delta_{0}}{\theta}\right) \sqrt{\frac{2 \pi \Delta_{0}}{\theta}}
+\end{array}
+$$
+Видно, что $\rho_{n} \underset{\theta \rightarrow 0}{\rightarrow} 0 .$ Следовательно, при $\theta=0$ вся жидкость состоит из сверхтекучей компоненты.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
